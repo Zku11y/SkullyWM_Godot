@@ -1,0 +1,1470 @@
+00:00:02.090 [DEBUG] [dwl.c:1209] [bridge] CREATE client=0x55a25c80bfb0
+00:00:02.090 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=1 mapped=0
+00:00:02.090 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=1 buffer_committed=0 surface=0x0 pixels=0x0
+00:00:02.090 [DEBUG] [dwl.c:889] [bridge] BUFFER client=0x55a25c80bfb0 source-unavailable wrapper=0
+00:00:02.095 [DEBUG] [dwl.c:1829] [bridge] MAP client=0x55a25c80bfb0
+00:00:02.095 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:02.095 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=2 buffer_committed=1 surface=684x473 pixels=684x473
+00:00:02.095 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=684x473 format=0x34325241 fd=45 offset=134217728 stride=2816
+00:00:02.101 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:02.101 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=3 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:02.101 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:02.113 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:02.113 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=4 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:02.113 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:02.123 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:02.123 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=5 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:02.123 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:02.624 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:02.624 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=6 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:02.624 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:03.121 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:03.122 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=7 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:03.122 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:03.621 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:03.621 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=8 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:03.621 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:04.121 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:04.122 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=9 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:04.122 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:04.621 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:04.621 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=10 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:04.621 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:05.122 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:05.122 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=11 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:05.122 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:05.625 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:05.625 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=12 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:05.625 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:06.121 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:06.121 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=13 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:06.121 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:06.621 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:06.621 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=14 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:06.621 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:06.870 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:06.870 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=15 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:06.870 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:06.941 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:06.941 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=16 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:06.941 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:07.060 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:07.060 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=17 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:07.060 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:07.263 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:07.263 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=18 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:07.263 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:07.415 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:07.415 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=19 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:07.415 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:07.544 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:07.544 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=20 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:07.544 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:07.678 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:07.678 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=21 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:07.678 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:07.874 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:07.874 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=22 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:07.874 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:08.047 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:08.047 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=23 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:08.047 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:08.390 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:08.390 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=24 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:08.390 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:08.392 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:08.393 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=25 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:08.393 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:08.393 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:08.393 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=26 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:08.393 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:08.409 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:08.409 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=27 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:08.409 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:08.783 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:08.783 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=28 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:08.783 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:08.849 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:08.849 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=29 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:08.849 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:08.966 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:08.966 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=30 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:08.966 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:09.046 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:09.046 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=31 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:09.046 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:09.309 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:09.309 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=32 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:09.309 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:09.465 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:09.465 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=33 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:09.465 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:09.525 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:09.525 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=34 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:09.525 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:09.637 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:09.637 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=35 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:09.637 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:09.697 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:09.697 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=36 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:09.697 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:09.845 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:09.845 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=37 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:09.845 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:10.091 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:10.091 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=38 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:10.091 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:10.093 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:10.093 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=39 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:10.093 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:10.107 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:10.107 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=40 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:10.107 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:10.607 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:10.607 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=41 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:10.607 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:11.106 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:11.106 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=42 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:11.106 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:11.606 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:11.606 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=43 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:11.606 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:12.106 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.106 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=44 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:12.106 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=46 offset=134217728 stride=5632
+00:00:12.253 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.253 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=45 buffer_committed=1 surface=1403x1404 pixels=1403x1404
+00:00:12.253 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1403x1404 format=0x34325241 fd=41 offset=134217728 stride=5632
+00:00:12.267 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.267 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=46 buffer_committed=1 surface=1391x1404 pixels=1391x1404
+00:00:12.267 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1391x1404 format=0x34325241 fd=44 offset=134217728 stride=5632
+00:00:12.273 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.273 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=47 buffer_committed=1 surface=1386x1404 pixels=1386x1404
+00:00:12.273 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1386x1404 format=0x34325241 fd=34 offset=134217728 stride=5632
+00:00:12.292 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.292 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=48 buffer_committed=1 surface=1350x1404 pixels=1350x1404
+00:00:12.292 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1350x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:12.298 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.298 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=49 buffer_committed=1 surface=1343x1404 pixels=1343x1404
+00:00:12.298 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1343x1404 format=0x34325241 fd=40 offset=134217728 stride=5376
+00:00:12.319 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.319 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=50 buffer_committed=1 surface=1313x1404 pixels=1313x1404
+00:00:12.319 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1313x1404 format=0x34325241 fd=44 offset=134217728 stride=5376
+00:00:12.329 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.329 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=51 buffer_committed=1 surface=1296x1404 pixels=1296x1404
+00:00:12.329 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1296x1404 format=0x34325241 fd=39 offset=134217728 stride=5376
+00:00:12.336 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.336 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=52 buffer_committed=1 surface=1290x1404 pixels=1290x1404
+00:00:12.336 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1290x1404 format=0x34325241 fd=44 offset=134217728 stride=5376
+00:00:12.344 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.344 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=53 buffer_committed=1 surface=1273x1404 pixels=1273x1404
+00:00:12.344 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1273x1404 format=0x34325241 fd=41 offset=134217728 stride=5120
+00:00:12.354 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.354 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=54 buffer_committed=1 surface=1262x1403 pixels=1262x1403
+00:00:12.354 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1262x1403 format=0x34325241 fd=34 offset=134217728 stride=5120
+00:00:12.362 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.362 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=55 buffer_committed=1 surface=1251x1402 pixels=1251x1402
+00:00:12.362 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1251x1402 format=0x34325241 fd=40 offset=134217728 stride=5120
+00:00:12.373 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.373 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=56 buffer_committed=1 surface=1245x1401 pixels=1245x1401
+00:00:12.373 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1245x1401 format=0x34325241 fd=39 offset=134217728 stride=5120
+00:00:12.378 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.378 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=57 buffer_committed=1 surface=1241x1401 pixels=1241x1401
+00:00:12.378 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1241x1401 format=0x34325241 fd=40 offset=134217728 stride=5120
+00:00:12.388 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.388 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=58 buffer_committed=1 surface=1234x1400 pixels=1234x1400
+00:00:12.388 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1234x1400 format=0x34325241 fd=39 offset=134217728 stride=5120
+00:00:12.393 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.393 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=59 buffer_committed=1 surface=1233x1400 pixels=1233x1400
+00:00:12.393 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1233x1400 format=0x34325241 fd=40 offset=134217728 stride=5120
+00:00:12.398 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.398 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=60 buffer_committed=1 surface=1231x1400 pixels=1231x1400
+00:00:12.398 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1231x1400 format=0x34325241 fd=34 offset=134217728 stride=5120
+00:00:12.405 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.405 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=61 buffer_committed=1 surface=1230x1400 pixels=1230x1400
+00:00:12.405 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1230x1400 format=0x34325241 fd=44 offset=134217728 stride=5120
+00:00:12.412 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.412 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=62 buffer_committed=1 surface=1228x1400 pixels=1228x1400
+00:00:12.412 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1228x1400 format=0x34325241 fd=36 offset=134217728 stride=5120
+00:00:12.428 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.428 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=63 buffer_committed=1 surface=1227x1400 pixels=1227x1400
+00:00:12.428 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1227x1400 format=0x34325241 fd=34 offset=134217728 stride=5120
+00:00:12.461 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.461 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=64 buffer_committed=1 surface=1226x1400 pixels=1226x1400
+00:00:12.461 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1226x1400 format=0x34325241 fd=41 offset=134217728 stride=5120
+00:00:12.469 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.469 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=65 buffer_committed=1 surface=1225x1400 pixels=1225x1400
+00:00:12.469 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1225x1400 format=0x34325241 fd=44 offset=134217728 stride=5120
+00:00:12.475 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.475 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=66 buffer_committed=1 surface=1223x1399 pixels=1223x1399
+00:00:12.475 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1223x1399 format=0x34325241 fd=34 offset=134217728 stride=5120
+00:00:12.481 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.481 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=67 buffer_committed=1 surface=1222x1399 pixels=1222x1399
+00:00:12.481 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1222x1399 format=0x34325241 fd=44 offset=134217728 stride=5120
+00:00:12.488 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.488 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=68 buffer_committed=1 surface=1218x1398 pixels=1218x1398
+00:00:12.488 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1218x1398 format=0x34325241 fd=34 offset=134217728 stride=5120
+00:00:12.490 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.490 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=69 buffer_committed=1 surface=1216x1398 pixels=1216x1398
+00:00:12.490 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1216x1398 format=0x34325241 fd=44 offset=134217728 stride=4864
+00:00:12.500 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.500 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=70 buffer_committed=1 surface=1212x1398 pixels=1212x1398
+00:00:12.500 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1212x1398 format=0x34325241 fd=41 offset=134217728 stride=4864
+00:00:12.507 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.507 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=71 buffer_committed=1 surface=1210x1398 pixels=1210x1398
+00:00:12.507 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1210x1398 format=0x34325241 fd=44 offset=134217728 stride=4864
+00:00:12.517 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.517 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=72 buffer_committed=1 surface=1202x1398 pixels=1202x1398
+00:00:12.517 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1202x1398 format=0x34325241 fd=34 offset=134217728 stride=4864
+00:00:12.522 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.522 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=73 buffer_committed=1 surface=1200x1398 pixels=1200x1398
+00:00:12.522 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1200x1398 format=0x34325241 fd=44 offset=134217728 stride=4864
+00:00:12.533 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.533 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=74 buffer_committed=1 surface=1192x1397 pixels=1192x1397
+00:00:12.533 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1192x1397 format=0x34325241 fd=34 offset=134217728 stride=4864
+00:00:12.541 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.541 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=75 buffer_committed=1 surface=1186x1396 pixels=1186x1396
+00:00:12.541 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1186x1396 format=0x34325241 fd=40 offset=134217728 stride=4864
+00:00:12.548 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.548 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=76 buffer_committed=1 surface=1181x1396 pixels=1181x1396
+00:00:12.548 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1181x1396 format=0x34325241 fd=44 offset=134217728 stride=4864
+00:00:12.558 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.558 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=77 buffer_committed=1 surface=1166x1395 pixels=1166x1395
+00:00:12.558 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1166x1395 format=0x34325241 fd=34 offset=134217728 stride=4864
+00:00:12.564 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.564 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=78 buffer_committed=1 surface=1162x1395 pixels=1162x1395
+00:00:12.564 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1162x1395 format=0x34325241 fd=40 offset=134217728 stride=4864
+00:00:12.571 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.571 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=79 buffer_committed=1 surface=1151x1394 pixels=1151x1394
+00:00:12.571 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1151x1394 format=0x34325241 fd=36 offset=134217728 stride=4608
+00:00:12.577 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.577 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=80 buffer_committed=1 surface=1140x1393 pixels=1140x1393
+00:00:12.577 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1140x1393 format=0x34325241 fd=34 offset=134217728 stride=4608
+00:00:12.588 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.588 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=81 buffer_committed=1 surface=1131x1393 pixels=1131x1393
+00:00:12.588 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1131x1393 format=0x34325241 fd=36 offset=134217728 stride=4608
+00:00:12.593 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.593 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=82 buffer_committed=1 surface=1128x1393 pixels=1128x1393
+00:00:12.593 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1128x1393 format=0x34325241 fd=44 offset=134217728 stride=4608
+00:00:12.601 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.601 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=83 buffer_committed=1 surface=1119x1393 pixels=1119x1393
+00:00:12.601 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1119x1393 format=0x34325241 fd=36 offset=134217728 stride=4608
+00:00:12.607 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.607 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=84 buffer_committed=1 surface=1116x1393 pixels=1116x1393
+00:00:12.607 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1116x1393 format=0x34325241 fd=44 offset=134217728 stride=4608
+00:00:12.616 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.616 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=85 buffer_committed=1 surface=1105x1393 pixels=1105x1393
+00:00:12.616 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1105x1393 format=0x34325241 fd=39 offset=134217728 stride=4608
+00:00:12.628 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.628 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=86 buffer_committed=1 surface=1096x1394 pixels=1096x1394
+00:00:12.628 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1096x1394 format=0x34325241 fd=34 offset=134217728 stride=4608
+00:00:12.637 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.637 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=87 buffer_committed=1 surface=1090x1394 pixels=1090x1394
+00:00:12.637 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1090x1394 format=0x34325241 fd=40 offset=134217728 stride=4608
+00:00:12.644 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.644 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=88 buffer_committed=1 surface=1083x1395 pixels=1083x1395
+00:00:12.644 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1083x1395 format=0x34325241 fd=44 offset=134217728 stride=4352
+00:00:12.655 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.655 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=89 buffer_committed=1 surface=1076x1395 pixels=1076x1395
+00:00:12.655 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1076x1395 format=0x34325241 fd=39 offset=134217728 stride=4352
+00:00:12.659 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.659 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=90 buffer_committed=1 surface=1073x1395 pixels=1073x1395
+00:00:12.659 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1073x1395 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:12.674 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.674 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=91 buffer_committed=1 surface=1063x1395 pixels=1063x1395
+00:00:12.674 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1063x1395 format=0x34325241 fd=44 offset=134217728 stride=4352
+00:00:12.679 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.679 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=92 buffer_committed=1 surface=1061x1395 pixels=1061x1395
+00:00:12.679 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1061x1395 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:12.688 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.688 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=93 buffer_committed=1 surface=1058x1395 pixels=1058x1395
+00:00:12.688 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1058x1395 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:12.693 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.693 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=94 buffer_committed=1 surface=1057x1395 pixels=1057x1395
+00:00:12.693 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1057x1395 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:12.698 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.698 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=95 buffer_committed=1 surface=1056x1395 pixels=1056x1395
+00:00:12.698 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1056x1395 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:12.704 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.704 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=96 buffer_committed=1 surface=1055x1395 pixels=1055x1395
+00:00:12.704 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1055x1395 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:12.709 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.709 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=97 buffer_committed=1 surface=1054x1395 pixels=1054x1395
+00:00:12.709 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1054x1395 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:12.715 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.715 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=98 buffer_committed=1 surface=1053x1395 pixels=1053x1395
+00:00:12.715 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1053x1395 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:12.721 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.721 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=99 buffer_committed=1 surface=1052x1395 pixels=1052x1395
+00:00:12.721 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1052x1395 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:12.726 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.726 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=100 buffer_committed=1 surface=1051x1395 pixels=1051x1395
+00:00:12.726 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1051x1395 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:12.731 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.731 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=101 buffer_committed=1 surface=1050x1395 pixels=1050x1395
+00:00:12.731 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1050x1395 format=0x34325241 fd=39 offset=134217728 stride=4352
+00:00:12.739 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.739 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=102 buffer_committed=1 surface=1045x1394 pixels=1045x1394
+00:00:12.739 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1045x1394 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:12.745 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.745 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=103 buffer_committed=1 surface=1044x1394 pixels=1044x1394
+00:00:12.745 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1044x1394 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:12.756 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.756 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=104 buffer_committed=1 surface=1041x1394 pixels=1041x1394
+00:00:12.756 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1041x1394 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:12.760 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.760 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=105 buffer_committed=1 surface=1039x1394 pixels=1039x1394
+00:00:12.760 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1039x1394 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:12.767 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.767 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=106 buffer_committed=1 surface=1035x1394 pixels=1035x1394
+00:00:12.767 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1035x1394 format=0x34325241 fd=44 offset=134217728 stride=4352
+00:00:12.772 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.772 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=107 buffer_committed=1 surface=1033x1394 pixels=1033x1394
+00:00:12.772 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1033x1394 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:12.776 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.777 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=108 buffer_committed=1 surface=1032x1393 pixels=1032x1393
+00:00:12.777 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1032x1393 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:12.781 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.781 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=109 buffer_committed=1 surface=1031x1393 pixels=1031x1393
+00:00:12.781 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1031x1393 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:12.788 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.788 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=110 buffer_committed=1 surface=1029x1393 pixels=1029x1393
+00:00:12.788 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1029x1393 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:12.793 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:12.793 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=111 buffer_committed=1 surface=1028x1393 pixels=1028x1393
+00:00:12.793 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1028x1393 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:13.248 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.248 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=112 buffer_committed=1 surface=1028x1393 pixels=1028x1393
+00:00:13.248 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1028x1393 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:13.376 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.376 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=113 buffer_committed=1 surface=1029x1393 pixels=1029x1393
+00:00:13.376 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1029x1393 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:13.383 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.383 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=114 buffer_committed=1 surface=1030x1393 pixels=1030x1393
+00:00:13.383 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1030x1393 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:13.388 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.388 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=115 buffer_committed=1 surface=1030x1394 pixels=1030x1394
+00:00:13.388 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1030x1394 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:13.394 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.394 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=116 buffer_committed=1 surface=1032x1394 pixels=1032x1394
+00:00:13.394 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1032x1394 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:13.402 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.402 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=117 buffer_committed=1 surface=1034x1394 pixels=1034x1394
+00:00:13.402 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1034x1394 format=0x34325241 fd=44 offset=134217728 stride=4352
+00:00:13.408 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.408 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=118 buffer_committed=1 surface=1034x1395 pixels=1034x1395
+00:00:13.408 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1034x1395 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:13.414 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.414 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=119 buffer_committed=1 surface=1035x1395 pixels=1035x1395
+00:00:13.414 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1035x1395 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:13.419 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.419 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=120 buffer_committed=1 surface=1036x1395 pixels=1036x1395
+00:00:13.419 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1036x1395 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:13.425 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.425 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=121 buffer_committed=1 surface=1037x1396 pixels=1037x1396
+00:00:13.425 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1037x1396 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:13.430 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.430 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=122 buffer_committed=1 surface=1038x1396 pixels=1038x1396
+00:00:13.430 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1038x1396 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:13.436 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.436 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=123 buffer_committed=1 surface=1039x1396 pixels=1039x1396
+00:00:13.436 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1039x1396 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:13.443 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.443 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=124 buffer_committed=1 surface=1040x1396 pixels=1040x1396
+00:00:13.443 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1040x1396 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:13.447 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.447 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=125 buffer_committed=1 surface=1041x1396 pixels=1041x1396
+00:00:13.447 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1041x1396 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:13.452 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.452 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=126 buffer_committed=1 surface=1042x1397 pixels=1042x1397
+00:00:13.452 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1042x1397 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:13.460 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.460 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=127 buffer_committed=1 surface=1043x1397 pixels=1043x1397
+00:00:13.460 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1043x1397 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:13.463 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.463 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=128 buffer_committed=1 surface=1045x1397 pixels=1045x1397
+00:00:13.463 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1045x1397 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:13.468 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.468 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=129 buffer_committed=1 surface=1046x1398 pixels=1046x1398
+00:00:13.468 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1046x1398 format=0x34325241 fd=39 offset=134217728 stride=4352
+00:00:13.474 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.474 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=130 buffer_committed=1 surface=1047x1398 pixels=1047x1398
+00:00:13.474 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1047x1398 format=0x34325241 fd=44 offset=134217728 stride=4352
+00:00:13.481 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.481 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=131 buffer_committed=1 surface=1050x1399 pixels=1050x1399
+00:00:13.481 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1050x1399 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:13.493 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.493 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=132 buffer_committed=1 surface=1054x1400 pixels=1054x1400
+00:00:13.493 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1054x1400 format=0x34325241 fd=39 offset=134217728 stride=4352
+00:00:13.499 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.499 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=133 buffer_committed=1 surface=1055x1400 pixels=1055x1400
+00:00:13.499 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1055x1400 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:13.506 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.506 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=134 buffer_committed=1 surface=1058x1401 pixels=1058x1401
+00:00:13.506 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1058x1401 format=0x34325241 fd=39 offset=134217728 stride=4352
+00:00:13.515 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.515 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=135 buffer_committed=1 surface=1060x1401 pixels=1060x1401
+00:00:13.515 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1060x1401 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:13.520 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.520 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=136 buffer_committed=1 surface=1062x1401 pixels=1062x1401
+00:00:13.520 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1062x1401 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:13.526 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.526 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=137 buffer_committed=1 surface=1063x1401 pixels=1063x1401
+00:00:13.526 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1063x1401 format=0x34325241 fd=40 offset=134217728 stride=4352
+00:00:13.534 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.534 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=138 buffer_committed=1 surface=1067x1402 pixels=1067x1402
+00:00:13.534 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1067x1402 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:13.543 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.543 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=139 buffer_committed=1 surface=1070x1402 pixels=1070x1402
+00:00:13.543 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1070x1402 format=0x34325241 fd=39 offset=134217728 stride=4352
+00:00:13.548 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.548 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=140 buffer_committed=1 surface=1072x1402 pixels=1072x1402
+00:00:13.548 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1072x1402 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:13.554 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.554 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=141 buffer_committed=1 surface=1075x1403 pixels=1075x1403
+00:00:13.554 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1075x1403 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:13.560 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.560 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=142 buffer_committed=1 surface=1080x1403 pixels=1080x1403
+00:00:13.560 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1080x1403 format=0x34325241 fd=36 offset=134217728 stride=4352
+00:00:13.568 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.568 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=143 buffer_committed=1 surface=1087x1404 pixels=1087x1404
+00:00:13.568 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1087x1404 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:13.576 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.576 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=144 buffer_committed=1 surface=1095x1404 pixels=1095x1404
+00:00:13.576 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1095x1404 format=0x34325241 fd=36 offset=134217728 stride=4608
+00:00:13.586 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.586 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=145 buffer_committed=1 surface=1105x1404 pixels=1105x1404
+00:00:13.586 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1105x1404 format=0x34325241 fd=34 offset=134217728 stride=4608
+00:00:13.594 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.594 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=146 buffer_committed=1 surface=1118x1404 pixels=1118x1404
+00:00:13.594 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1118x1404 format=0x34325241 fd=40 offset=134217728 stride=4608
+00:00:13.599 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.599 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=147 buffer_committed=1 surface=1122x1404 pixels=1122x1404
+00:00:13.599 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1122x1404 format=0x34325241 fd=44 offset=134217728 stride=4608
+00:00:13.610 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.610 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=148 buffer_committed=1 surface=1143x1404 pixels=1143x1404
+00:00:13.610 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1143x1404 format=0x34325241 fd=34 offset=134217728 stride=4608
+00:00:13.617 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.617 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=149 buffer_committed=1 surface=1159x1404 pixels=1159x1404
+00:00:13.617 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1159x1404 format=0x34325241 fd=44 offset=134217728 stride=4864
+00:00:13.631 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.631 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=150 buffer_committed=1 surface=1183x1404 pixels=1183x1404
+00:00:13.631 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1183x1404 format=0x34325241 fd=41 offset=134217728 stride=4864
+00:00:13.638 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.638 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=151 buffer_committed=1 surface=1191x1404 pixels=1191x1404
+00:00:13.638 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1191x1404 format=0x34325241 fd=44 offset=134217728 stride=4864
+00:00:13.651 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.651 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=152 buffer_committed=1 surface=1227x1404 pixels=1227x1404
+00:00:13.651 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1227x1404 format=0x34325241 fd=39 offset=134217728 stride=5120
+00:00:13.660 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.660 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=153 buffer_committed=1 surface=1242x1404 pixels=1242x1404
+00:00:13.660 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1242x1404 format=0x34325241 fd=34 offset=134217728 stride=5120
+00:00:13.669 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.669 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=154 buffer_committed=1 surface=1257x1404 pixels=1257x1404
+00:00:13.669 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1257x1404 format=0x34325241 fd=36 offset=134217728 stride=5120
+00:00:13.675 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.675 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=155 buffer_committed=1 surface=1273x1404 pixels=1273x1404
+00:00:13.675 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1273x1404 format=0x34325241 fd=40 offset=134217728 stride=5120
+00:00:13.685 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.685 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=156 buffer_committed=1 surface=1286x1404 pixels=1286x1404
+00:00:13.685 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1286x1404 format=0x34325241 fd=39 offset=134217728 stride=5376
+00:00:13.694 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.694 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=157 buffer_committed=1 surface=1298x1404 pixels=1298x1404
+00:00:13.694 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1298x1404 format=0x34325241 fd=40 offset=134217728 stride=5376
+00:00:13.700 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.700 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=158 buffer_committed=1 surface=1308x1404 pixels=1308x1404
+00:00:13.700 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1308x1404 format=0x34325241 fd=39 offset=134217728 stride=5376
+00:00:13.711 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.711 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=159 buffer_committed=1 surface=1322x1404 pixels=1322x1404
+00:00:13.711 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1322x1404 format=0x34325241 fd=40 offset=134217728 stride=5376
+00:00:13.719 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.719 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=160 buffer_committed=1 surface=1327x1404 pixels=1327x1404
+00:00:13.719 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1327x1404 format=0x34325241 fd=44 offset=134217728 stride=5376
+00:00:13.727 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.727 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=161 buffer_committed=1 surface=1345x1404 pixels=1345x1404
+00:00:13.727 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1345x1404 format=0x34325241 fd=39 offset=134217728 stride=5632
+00:00:13.736 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.736 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=162 buffer_committed=1 surface=1356x1404 pixels=1356x1404
+00:00:13.736 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1356x1404 format=0x34325241 fd=44 offset=134217728 stride=5632
+00:00:13.743 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.743 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=163 buffer_committed=1 surface=1361x1404 pixels=1361x1404
+00:00:13.743 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1361x1404 format=0x34325241 fd=34 offset=134217728 stride=5632
+00:00:13.752 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.752 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=164 buffer_committed=1 surface=1380x1404 pixels=1380x1404
+00:00:13.752 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1380x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:13.761 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.761 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=165 buffer_committed=1 surface=1391x1404 pixels=1391x1404
+00:00:13.761 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1391x1404 format=0x34325241 fd=34 offset=134217728 stride=5632
+00:00:13.768 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.768 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=166 buffer_committed=1 surface=1398x1404 pixels=1398x1404
+00:00:13.768 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1398x1404 format=0x34325241 fd=44 offset=134217728 stride=5632
+00:00:13.778 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.778 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=167 buffer_committed=1 surface=1419x1404 pixels=1419x1404
+00:00:13.778 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1419x1404 format=0x34325241 fd=41 offset=134217728 stride=5888
+00:00:13.786 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.786 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=168 buffer_committed=1 surface=1427x1404 pixels=1427x1404
+00:00:13.786 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1427x1404 format=0x34325241 fd=44 offset=134217728 stride=5888
+00:00:13.798 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.798 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=169 buffer_committed=1 surface=1461x1404 pixels=1461x1404
+00:00:13.798 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1461x1404 format=0x34325241 fd=39 offset=134217728 stride=5888
+00:00:13.808 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.808 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=170 buffer_committed=1 surface=1479x1404 pixels=1479x1404
+00:00:13.808 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1479x1404 format=0x34325241 fd=44 offset=134217728 stride=6144
+00:00:13.815 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.815 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=171 buffer_committed=1 surface=1487x1404 pixels=1487x1404
+00:00:13.815 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1487x1404 format=0x34325241 fd=41 offset=134217728 stride=6144
+00:00:13.828 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.828 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=172 buffer_committed=1 surface=1525x1404 pixels=1525x1404
+00:00:13.828 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1525x1404 format=0x34325241 fd=34 offset=134217728 stride=6144
+00:00:13.836 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.836 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=173 buffer_committed=1 surface=1535x1404 pixels=1535x1404
+00:00:13.836 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1535x1404 format=0x34325241 fd=44 offset=134217728 stride=6144
+00:00:13.846 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.846 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=174 buffer_committed=1 surface=1559x1404 pixels=1559x1404
+00:00:13.846 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1559x1404 format=0x34325241 fd=39 offset=134217728 stride=6400
+00:00:13.854 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.854 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=175 buffer_committed=1 surface=1569x1404 pixels=1569x1404
+00:00:13.854 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1569x1404 format=0x34325241 fd=40 offset=134217728 stride=6400
+00:00:13.861 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.861 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=176 buffer_committed=1 surface=1581x1404 pixels=1581x1404
+00:00:13.861 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1581x1404 format=0x34325241 fd=39 offset=134217728 stride=6400
+00:00:13.871 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.871 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=177 buffer_committed=1 surface=1597x1404 pixels=1597x1404
+00:00:13.871 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1597x1404 format=0x34325241 fd=44 offset=134217728 stride=6400
+00:00:13.881 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.881 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=178 buffer_committed=1 surface=1604x1404 pixels=1604x1404
+00:00:13.881 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1604x1404 format=0x34325241 fd=39 offset=134217728 stride=6656
+00:00:13.888 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.888 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=179 buffer_committed=1 surface=1606x1404 pixels=1606x1404
+00:00:13.888 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1606x1404 format=0x34325241 fd=40 offset=134217728 stride=6656
+00:00:13.893 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.893 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=180 buffer_committed=1 surface=1610x1404 pixels=1610x1404
+00:00:13.894 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1610x1404 format=0x34325241 fd=39 offset=134217728 stride=6656
+00:00:13.899 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.899 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=181 buffer_committed=1 surface=1612x1404 pixels=1612x1404
+00:00:13.899 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1612x1404 format=0x34325241 fd=34 offset=134217728 stride=6656
+00:00:13.906 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.906 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=182 buffer_committed=1 surface=1613x1404 pixels=1613x1404
+00:00:13.906 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1613x1404 format=0x34325241 fd=40 offset=134217728 stride=6656
+00:00:13.912 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.912 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=183 buffer_committed=1 surface=1614x1404 pixels=1614x1404
+00:00:13.912 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1614x1404 format=0x34325241 fd=36 offset=134217728 stride=6656
+00:00:13.916 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.916 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=184 buffer_committed=1 surface=1615x1404 pixels=1615x1404
+00:00:13.916 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1615x1404 format=0x34325241 fd=39 offset=134217728 stride=6656
+00:00:13.919 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:13.919 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=185 buffer_committed=1 surface=1615x1404 pixels=1615x1404
+00:00:13.919 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1615x1404 format=0x34325241 fd=39 offset=134217728 stride=6656
+00:00:14.207 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.207 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=186 buffer_committed=1 surface=1614x1403 pixels=1614x1403
+00:00:14.207 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1614x1403 format=0x34325241 fd=36 offset=134217728 stride=6656
+00:00:14.217 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.217 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=187 buffer_committed=1 surface=1612x1400 pixels=1612x1400
+00:00:14.217 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1612x1400 format=0x34325241 fd=40 offset=134217728 stride=6656
+00:00:14.224 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.224 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=188 buffer_committed=1 surface=1612x1397 pixels=1612x1397
+00:00:14.224 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1612x1397 format=0x34325241 fd=34 offset=134217728 stride=6656
+00:00:14.231 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.231 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=189 buffer_committed=1 surface=1609x1391 pixels=1609x1391
+00:00:14.231 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1609x1391 format=0x34325241 fd=44 offset=134217728 stride=6656
+00:00:14.241 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.241 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=190 buffer_committed=1 surface=1605x1379 pixels=1605x1379
+00:00:14.241 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1605x1379 format=0x34325241 fd=34 offset=134217728 stride=6656
+00:00:14.254 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.254 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=191 buffer_committed=1 surface=1599x1364 pixels=1599x1364
+00:00:14.254 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1599x1364 format=0x34325241 fd=40 offset=134217728 stride=6400
+00:00:14.262 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.262 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=192 buffer_committed=1 surface=1598x1358 pixels=1598x1358
+00:00:14.262 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1598x1358 format=0x34325241 fd=44 offset=134217728 stride=6400
+00:00:14.269 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.269 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=193 buffer_committed=1 surface=1592x1345 pixels=1592x1345
+00:00:14.269 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1592x1345 format=0x34325241 fd=39 offset=134217728 stride=6400
+00:00:14.283 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.283 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=194 buffer_committed=1 surface=1579x1310 pixels=1579x1310
+00:00:14.283 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1579x1310 format=0x34325241 fd=40 offset=134217728 stride=6400
+00:00:14.288 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.288 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=195 buffer_committed=1 surface=1577x1301 pixels=1577x1301
+00:00:14.288 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1577x1301 format=0x34325241 fd=34 offset=134217728 stride=6400
+00:00:14.297 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.297 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=196 buffer_committed=1 surface=1571x1285 pixels=1571x1285
+00:00:14.297 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1571x1285 format=0x34325241 fd=36 offset=134217728 stride=6400
+00:00:14.308 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.308 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=197 buffer_committed=1 surface=1563x1262 pixels=1563x1262
+00:00:14.308 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1563x1262 format=0x34325241 fd=34 offset=134217728 stride=6400
+00:00:14.315 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.315 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=198 buffer_committed=1 surface=1562x1255 pixels=1562x1255
+00:00:14.315 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1562x1255 format=0x34325241 fd=44 offset=134217728 stride=6400
+00:00:14.324 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.324 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=199 buffer_committed=1 surface=1557x1234 pixels=1557x1234
+00:00:14.324 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1557x1234 format=0x34325241 fd=34 offset=134217728 stride=6400
+00:00:14.332 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.332 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=200 buffer_committed=1 surface=1553x1222 pixels=1553x1222
+00:00:14.332 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1553x1222 format=0x34325241 fd=44 offset=134217728 stride=6400
+00:00:14.339 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.339 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=201 buffer_committed=1 surface=1552x1215 pixels=1552x1215
+00:00:14.339 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1552x1215 format=0x34325241 fd=39 offset=134217728 stride=6400
+00:00:14.349 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.349 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=202 buffer_committed=1 surface=1548x1196 pixels=1548x1196
+00:00:14.349 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1548x1196 format=0x34325241 fd=34 offset=134217728 stride=6400
+00:00:14.357 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.357 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=203 buffer_committed=1 surface=1546x1185 pixels=1546x1185
+00:00:14.357 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1546x1185 format=0x34325241 fd=40 offset=134217728 stride=6400
+00:00:14.370 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.370 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=204 buffer_committed=1 surface=1542x1167 pixels=1542x1167
+00:00:14.370 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1542x1167 format=0x34325241 fd=34 offset=134217728 stride=6400
+00:00:14.378 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.378 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=205 buffer_committed=1 surface=1540x1155 pixels=1540x1155
+00:00:14.378 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1540x1155 format=0x34325241 fd=44 offset=134217728 stride=6400
+00:00:14.386 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.386 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=206 buffer_committed=1 surface=1536x1141 pixels=1536x1141
+00:00:14.386 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1536x1141 format=0x34325241 fd=39 offset=134217728 stride=6144
+00:00:14.395 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.395 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=207 buffer_committed=1 surface=1534x1124 pixels=1534x1124
+00:00:14.395 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1534x1124 format=0x34325241 fd=40 offset=134217728 stride=6144
+00:00:14.402 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.402 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=208 buffer_committed=1 surface=1531x1108 pixels=1531x1108
+00:00:14.402 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1531x1108 format=0x34325241 fd=34 offset=134217728 stride=6144
+00:00:14.419 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.419 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=209 buffer_committed=1 surface=1526x1071 pixels=1526x1071
+00:00:14.419 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1526x1071 format=0x34325241 fd=44 offset=134217728 stride=6144
+00:00:14.428 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.428 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=210 buffer_committed=1 surface=1524x1053 pixels=1524x1053
+00:00:14.428 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1524x1053 format=0x34325241 fd=41 offset=134217728 stride=6144
+00:00:14.433 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.433 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=211 buffer_committed=1 surface=1521x1042 pixels=1521x1042
+00:00:14.433 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1521x1042 format=0x34325241 fd=44 offset=134217728 stride=6144
+00:00:14.449 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.449 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=212 buffer_committed=1 surface=1510x994 pixels=1510x994
+00:00:14.449 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1510x994 format=0x34325241 fd=41 offset=134217728 stride=6144
+00:00:14.456 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.456 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=213 buffer_committed=1 surface=1503x972 pixels=1503x972
+00:00:14.456 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1503x972 format=0x34325241 fd=34 offset=134217728 stride=6144
+00:00:14.464 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.464 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=214 buffer_committed=1 surface=1492x946 pixels=1492x946
+00:00:14.464 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1492x946 format=0x34325241 fd=36 offset=134217728 stride=6144
+00:00:14.473 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.473 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=215 buffer_committed=1 surface=1480x921 pixels=1480x921
+00:00:14.473 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1480x921 format=0x34325241 fd=44 offset=134217728 stride=6144
+00:00:14.482 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.482 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=216 buffer_committed=1 surface=1469x893 pixels=1469x893
+00:00:14.482 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1469x893 format=0x34325241 fd=34 offset=134217728 stride=5888
+00:00:14.489 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.489 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=217 buffer_committed=1 surface=1454x862 pixels=1454x862
+00:00:14.489 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1454x862 format=0x34325241 fd=39 offset=134217728 stride=5888
+00:00:14.498 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.498 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=218 buffer_committed=1 surface=1438x833 pixels=1438x833
+00:00:14.498 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1438x833 format=0x34325241 fd=34 offset=134217728 stride=5888
+00:00:14.514 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.514 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=219 buffer_committed=1 surface=1398x771 pixels=1398x771
+00:00:14.514 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1398x771 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:14.517 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.517 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=220 buffer_committed=1 surface=1387x756 pixels=1387x756
+00:00:14.517 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1387x756 format=0x34325241 fd=40 offset=134217728 stride=5632
+00:00:14.523 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.523 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=221 buffer_committed=1 surface=1375x741 pixels=1375x741
+00:00:14.523 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1375x741 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:14.539 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.539 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=222 buffer_committed=1 surface=1325x679 pixels=1325x679
+00:00:14.539 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1325x679 format=0x34325241 fd=34 offset=134217728 stride=5376
+00:00:14.543 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.543 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=223 buffer_committed=1 surface=1312x666 pixels=1312x666
+00:00:14.543 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1312x666 format=0x34325241 fd=36 offset=134217728 stride=5376
+00:00:14.547 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.547 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=224 buffer_committed=1 surface=1299x652 pixels=1299x652
+00:00:14.547 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1299x652 format=0x34325241 fd=44 offset=134217728 stride=5376
+00:00:14.552 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.552 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=225 buffer_committed=1 surface=1287x638 pixels=1287x638
+00:00:14.552 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1287x638 format=0x34325241 fd=34 offset=134217728 stride=5376
+00:00:14.559 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.559 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=226 buffer_committed=1 surface=1258x609 pixels=1258x609
+00:00:14.559 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1258x609 format=0x34325241 fd=36 offset=134217728 stride=5120
+00:00:14.563 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.563 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=227 buffer_committed=1 surface=1244x597 pixels=1244x597
+00:00:14.563 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1244x597 format=0x34325241 fd=44 offset=134217728 stride=5120
+00:00:14.567 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.567 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=228 buffer_committed=1 surface=1230x586 pixels=1230x586
+00:00:14.567 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1230x586 format=0x34325241 fd=41 offset=134217728 stride=5120
+00:00:14.572 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.572 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=229 buffer_committed=1 surface=1217x574 pixels=1217x574
+00:00:14.572 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1217x574 format=0x34325241 fd=36 offset=134217728 stride=5120
+00:00:14.576 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.576 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=230 buffer_committed=1 surface=1198x561 pixels=1198x561
+00:00:14.576 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1198x561 format=0x34325241 fd=40 offset=134217728 stride=4864
+00:00:14.584 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.584 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=231 buffer_committed=1 surface=1168x542 pixels=1168x542
+00:00:14.584 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1168x542 format=0x34325241 fd=36 offset=134217728 stride=4864
+00:00:14.588 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.588 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=232 buffer_committed=1 surface=1152x533 pixels=1152x533
+00:00:14.588 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1152x533 format=0x34325241 fd=34 offset=134217728 stride=4608
+00:00:14.592 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.592 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=233 buffer_committed=1 surface=1135x526 pixels=1135x526
+00:00:14.592 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1135x526 format=0x34325241 fd=44 offset=134217728 stride=4608
+00:00:14.597 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.597 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=234 buffer_committed=1 surface=1119x519 pixels=1119x519
+00:00:14.597 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1119x519 format=0x34325241 fd=41 offset=134217728 stride=4608
+00:00:14.609 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.609 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=235 buffer_committed=1 surface=1068x501 pixels=1068x501
+00:00:14.609 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1068x501 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:14.613 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.613 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=236 buffer_committed=1 surface=1053x496 pixels=1053x496
+00:00:14.613 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1053x496 format=0x34325241 fd=44 offset=134217728 stride=4352
+00:00:14.617 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.617 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=237 buffer_committed=1 surface=1039x492 pixels=1039x492
+00:00:14.617 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1039x492 format=0x34325241 fd=41 offset=134217728 stride=4352
+00:00:14.621 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.621 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=238 buffer_committed=1 surface=1024x488 pixels=1024x488
+00:00:14.621 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1024x488 format=0x34325241 fd=44 offset=134217728 stride=4096
+00:00:14.633 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.634 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=239 buffer_committed=1 surface=984x482 pixels=984x482
+00:00:14.634 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=984x482 format=0x34325241 fd=34 offset=134217728 stride=4096
+00:00:14.638 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.638 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=240 buffer_committed=1 surface=973x481 pixels=973x481
+00:00:14.638 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=973x481 format=0x34325241 fd=40 offset=134217728 stride=4096
+00:00:14.642 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.642 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=241 buffer_committed=1 surface=963x481 pixels=963x481
+00:00:14.642 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=963x481 format=0x34325241 fd=44 offset=134217728 stride=4096
+00:00:14.646 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.646 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=242 buffer_committed=1 surface=952x482 pixels=952x482
+00:00:14.646 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=952x482 format=0x34325241 fd=41 offset=134217728 stride=3840
+00:00:14.655 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.655 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=243 buffer_committed=1 surface=930x489 pixels=930x489
+00:00:14.655 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=930x489 format=0x34325241 fd=36 offset=134217728 stride=3840
+00:00:14.659 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.659 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=244 buffer_committed=1 surface=920x496 pixels=920x496
+00:00:14.659 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=920x496 format=0x34325241 fd=39 offset=134217728 stride=3840
+00:00:14.663 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.663 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=245 buffer_committed=1 surface=910x503 pixels=910x503
+00:00:14.663 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=910x503 format=0x34325241 fd=36 offset=134217728 stride=3840
+00:00:14.667 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.667 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=246 buffer_committed=1 surface=900x512 pixels=900x512
+00:00:14.667 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=900x512 format=0x34325241 fd=44 offset=134217728 stride=3840
+00:00:14.671 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.671 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=247 buffer_committed=1 surface=888x523 pixels=888x523
+00:00:14.671 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=888x523 format=0x34325241 fd=34 offset=134217728 stride=3584
+00:00:14.679 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.679 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=248 buffer_committed=1 surface=863x553 pixels=863x553
+00:00:14.679 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=863x553 format=0x34325241 fd=36 offset=134217728 stride=3584
+00:00:14.684 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.684 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=249 buffer_committed=1 surface=853x569 pixels=853x569
+00:00:14.684 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=853x569 format=0x34325241 fd=34 offset=134217728 stride=3584
+00:00:14.688 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.688 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=250 buffer_committed=1 surface=843x586 pixels=843x586
+00:00:14.688 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=843x586 format=0x34325241 fd=44 offset=134217728 stride=3584
+00:00:14.692 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.692 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=251 buffer_committed=1 surface=833x602 pixels=833x602
+00:00:14.692 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=833x602 format=0x34325241 fd=41 offset=134217728 stride=3584
+00:00:14.705 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.705 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=252 buffer_committed=1 surface=808x653 pixels=808x653
+00:00:14.705 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=808x653 format=0x34325241 fd=34 offset=134217728 stride=3328
+00:00:14.709 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.709 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=253 buffer_committed=1 surface=802x667 pixels=802x667
+00:00:14.709 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=802x667 format=0x34325241 fd=44 offset=134217728 stride=3328
+00:00:14.713 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.713 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=254 buffer_committed=1 surface=798x679 pixels=798x679
+00:00:14.713 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=798x679 format=0x34325241 fd=39 offset=134217728 stride=3328
+00:00:14.717 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.717 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=255 buffer_committed=1 surface=795x691 pixels=795x691
+00:00:14.717 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=795x691 format=0x34325241 fd=44 offset=134217728 stride=3328
+00:00:14.731 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.731 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=256 buffer_committed=1 surface=789x710 pixels=789x710
+00:00:14.731 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=789x710 format=0x34325241 fd=34 offset=134217728 stride=3328
+00:00:14.734 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.734 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=257 buffer_committed=1 surface=788x712 pixels=788x712
+00:00:14.734 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=788x712 format=0x34325241 fd=39 offset=134217728 stride=3328
+00:00:14.739 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.739 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=258 buffer_committed=1 surface=788x714 pixels=788x714
+00:00:14.739 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=788x714 format=0x34325241 fd=36 offset=134217728 stride=3328
+00:00:14.744 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.744 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=259 buffer_committed=1 surface=788x715 pixels=788x715
+00:00:14.744 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=788x715 format=0x34325241 fd=34 offset=134217728 stride=3328
+00:00:14.999 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:14.999 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=260 buffer_committed=1 surface=785x714 pixels=785x714
+00:00:14.999 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=785x714 format=0x34325241 fd=44 offset=134217728 stride=3328
+00:00:15.006 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.006 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=261 buffer_committed=1 surface=768x711 pixels=768x711
+00:00:15.006 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=768x711 format=0x34325241 fd=34 offset=134217728 stride=3072
+00:00:15.015 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.015 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=262 buffer_committed=1 surface=761x711 pixels=761x711
+00:00:15.015 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=761x711 format=0x34325241 fd=44 offset=134217728 stride=3072
+00:00:15.022 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.022 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=263 buffer_committed=1 surface=756x711 pixels=756x711
+00:00:15.022 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=756x711 format=0x34325241 fd=39 offset=134217728 stride=3072
+00:00:15.023 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.023 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=264 buffer_committed=1 surface=756x711 pixels=756x711
+00:00:15.023 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=756x711 format=0x34325241 fd=39 offset=134217728 stride=3072
+00:00:15.027 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.027 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=265 buffer_committed=1 surface=755x712 pixels=755x712
+00:00:15.027 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=755x712 format=0x34325241 fd=34 offset=134217728 stride=3072
+00:00:15.031 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.031 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=266 buffer_committed=1 surface=753x712 pixels=753x712
+00:00:15.031 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=753x712 format=0x34325241 fd=40 offset=134217728 stride=3072
+00:00:15.035 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.035 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=267 buffer_committed=1 surface=752x714 pixels=752x714
+00:00:15.035 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=752x714 format=0x34325241 fd=39 offset=134217728 stride=3072
+00:00:15.039 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.039 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=268 buffer_committed=1 surface=751x715 pixels=751x715
+00:00:15.039 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=751x715 format=0x34325241 fd=40 offset=134217728 stride=3072
+00:00:15.044 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.044 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=269 buffer_committed=1 surface=750x717 pixels=750x717
+00:00:15.044 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=750x717 format=0x34325241 fd=39 offset=134217728 stride=3072
+00:00:15.048 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.048 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=270 buffer_committed=1 surface=749x719 pixels=749x719
+00:00:15.048 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=749x719 format=0x34325241 fd=40 offset=134217728 stride=3072
+00:00:15.052 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.052 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=271 buffer_committed=1 surface=749x721 pixels=749x721
+00:00:15.052 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=749x721 format=0x34325241 fd=34 offset=134217728 stride=3072
+00:00:15.065 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.065 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=272 buffer_committed=1 surface=751x733 pixels=751x733
+00:00:15.065 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=751x733 format=0x34325241 fd=39 offset=134217728 stride=3072
+00:00:15.068 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.068 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=273 buffer_committed=1 surface=754x738 pixels=754x738
+00:00:15.068 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=754x738 format=0x34325241 fd=44 offset=134217728 stride=3072
+00:00:15.072 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.072 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=274 buffer_committed=1 surface=756x743 pixels=756x743
+00:00:15.072 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=756x743 format=0x34325241 fd=41 offset=134217728 stride=3072
+00:00:15.075 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.075 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=275 buffer_committed=1 surface=760x749 pixels=760x749
+00:00:15.075 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=760x749 format=0x34325241 fd=36 offset=134217728 stride=3072
+00:00:15.085 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.085 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=276 buffer_committed=1 surface=773x767 pixels=773x767
+00:00:15.085 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=773x767 format=0x34325241 fd=44 offset=134217728 stride=3328
+00:00:15.088 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.088 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=277 buffer_committed=1 surface=779x776 pixels=779x776
+00:00:15.088 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=779x776 format=0x34325241 fd=41 offset=134217728 stride=3328
+00:00:15.093 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.093 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=278 buffer_committed=1 surface=787x786 pixels=787x786
+00:00:15.093 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=787x786 format=0x34325241 fd=44 offset=134217728 stride=3328
+00:00:15.098 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.098 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=279 buffer_committed=1 surface=795x795 pixels=795x795
+00:00:15.098 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=795x795 format=0x34325241 fd=36 offset=134217728 stride=3328
+00:00:15.101 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.102 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=280 buffer_committed=1 surface=803x805 pixels=803x805
+00:00:15.102 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=803x805 format=0x34325241 fd=40 offset=134217728 stride=3328
+00:00:15.114 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.114 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=281 buffer_committed=1 surface=830x835 pixels=830x835
+00:00:15.114 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=830x835 format=0x34325241 fd=44 offset=134217728 stride=3328
+00:00:15.118 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.118 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=282 buffer_committed=1 surface=838x843 pixels=838x843
+00:00:15.118 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=838x843 format=0x34325241 fd=34 offset=134217728 stride=3584
+00:00:15.123 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.123 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=283 buffer_committed=1 surface=847x853 pixels=847x853
+00:00:15.123 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=847x853 format=0x34325241 fd=39 offset=134217728 stride=3584
+00:00:15.135 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.135 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=284 buffer_committed=1 surface=872x878 pixels=872x878
+00:00:15.135 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=872x878 format=0x34325241 fd=44 offset=134217728 stride=3584
+00:00:15.140 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.140 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=285 buffer_committed=1 surface=880x884 pixels=880x884
+00:00:15.140 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=880x884 format=0x34325241 fd=36 offset=134217728 stride=3584
+00:00:15.144 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.144 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=286 buffer_committed=1 surface=889x890 pixels=889x890
+00:00:15.144 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=889x890 format=0x34325241 fd=39 offset=134217728 stride=3584
+00:00:15.148 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.148 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=287 buffer_committed=1 surface=897x896 pixels=897x896
+00:00:15.148 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=897x896 format=0x34325241 fd=36 offset=134217728 stride=3840
+00:00:15.162 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.162 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=288 buffer_committed=1 surface=922x908 pixels=922x908
+00:00:15.162 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=922x908 format=0x34325241 fd=44 offset=134217728 stride=3840
+00:00:15.169 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.169 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=289 buffer_committed=1 surface=934x913 pixels=934x913
+00:00:15.169 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=934x913 format=0x34325241 fd=34 offset=134217728 stride=3840
+00:00:15.171 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.172 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=290 buffer_committed=1 surface=934x913 pixels=934x913
+00:00:15.172 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=934x913 format=0x34325241 fd=34 offset=134217728 stride=3840
+00:00:15.357 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.357 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=291 buffer_committed=1 surface=933x911 pixels=933x911
+00:00:15.357 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=933x911 format=0x34325241 fd=36 offset=134217728 stride=3840
+00:00:15.362 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.362 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=292 buffer_committed=1 surface=932x909 pixels=932x909
+00:00:15.362 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=932x909 format=0x34325241 fd=44 offset=134217728 stride=3840
+00:00:15.364 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.364 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=293 buffer_committed=1 surface=931x905 pixels=931x905
+00:00:15.364 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=931x905 format=0x34325241 fd=34 offset=134217728 stride=3840
+00:00:15.366 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.366 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=294 buffer_committed=1 surface=931x904 pixels=931x904
+00:00:15.366 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=931x904 format=0x34325241 fd=36 offset=134217728 stride=3840
+00:00:15.370 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.370 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=295 buffer_committed=1 surface=930x903 pixels=930x903
+00:00:15.370 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=930x903 format=0x34325241 fd=40 offset=134217728 stride=3840
+00:00:15.373 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.373 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=296 buffer_committed=1 surface=930x902 pixels=930x902
+00:00:15.373 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=930x902 format=0x34325241 fd=34 offset=134217728 stride=3840
+00:00:15.374 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.374 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=297 buffer_committed=1 surface=930x902 pixels=930x902
+00:00:15.374 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=930x902 format=0x34325241 fd=34 offset=134217728 stride=3840
+00:00:15.378 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.378 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=298 buffer_committed=1 surface=930x901 pixels=930x901
+00:00:15.378 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=930x901 format=0x34325241 fd=40 offset=134217728 stride=3840
+00:00:15.380 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.380 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=299 buffer_committed=1 surface=931x900 pixels=931x900
+00:00:15.380 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=931x900 format=0x34325241 fd=36 offset=134217728 stride=3840
+00:00:15.381 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.381 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=300 buffer_committed=1 surface=931x900 pixels=931x900
+00:00:15.381 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=931x900 format=0x34325241 fd=36 offset=134217728 stride=3840
+00:00:15.385 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.385 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=301 buffer_committed=1 surface=931x899 pixels=931x899
+00:00:15.385 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=931x899 format=0x34325241 fd=34 offset=134217728 stride=3840
+00:00:15.388 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.388 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=302 buffer_committed=1 surface=932x898 pixels=932x898
+00:00:15.388 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=932x898 format=0x34325241 fd=40 offset=134217728 stride=3840
+00:00:15.395 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.395 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=303 buffer_committed=1 surface=934x897 pixels=934x897
+00:00:15.395 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=934x897 format=0x34325241 fd=36 offset=134217728 stride=3840
+00:00:15.399 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.399 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=304 buffer_committed=1 surface=937x895 pixels=937x895
+00:00:15.399 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=937x895 format=0x34325241 fd=34 offset=134217728 stride=3840
+00:00:15.403 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.403 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=305 buffer_committed=1 surface=942x894 pixels=942x894
+00:00:15.403 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=942x894 format=0x34325241 fd=36 offset=134217728 stride=3840
+00:00:15.406 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.406 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=306 buffer_committed=1 surface=948x892 pixels=948x892
+00:00:15.406 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=948x892 format=0x34325241 fd=34 offset=134217728 stride=3840
+00:00:15.411 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.411 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=307 buffer_committed=1 surface=956x888 pixels=956x888
+00:00:15.411 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=956x888 format=0x34325241 fd=36 offset=134217728 stride=3840
+00:00:15.424 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.424 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=308 buffer_committed=1 surface=993x878 pixels=993x878
+00:00:15.424 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=993x878 format=0x34325241 fd=40 offset=134217728 stride=4096
+00:00:15.428 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.428 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=309 buffer_committed=1 surface=1005x874 pixels=1005x874
+00:00:15.428 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1005x874 format=0x34325241 fd=36 offset=134217728 stride=4096
+00:00:15.432 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.432 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=310 buffer_committed=1 surface=1018x871 pixels=1018x871
+00:00:15.432 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1018x871 format=0x34325241 fd=40 offset=134217728 stride=4096
+00:00:15.437 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.437 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=311 buffer_committed=1 surface=1035x866 pixels=1035x866
+00:00:15.437 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1035x866 format=0x34325241 fd=39 offset=134217728 stride=4352
+00:00:15.444 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.444 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=312 buffer_committed=1 surface=1063x859 pixels=1063x859
+00:00:15.444 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1063x859 format=0x34325241 fd=44 offset=134217728 stride=4352
+00:00:15.449 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.449 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=313 buffer_committed=1 surface=1078x856 pixels=1078x856
+00:00:15.449 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1078x856 format=0x34325241 fd=34 offset=134217728 stride=4352
+00:00:15.453 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.453 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=314 buffer_committed=1 surface=1093x852 pixels=1093x852
+00:00:15.453 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1093x852 format=0x34325241 fd=36 offset=134217728 stride=4608
+00:00:15.457 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.457 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=315 buffer_committed=1 surface=1108x848 pixels=1108x848
+00:00:15.457 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1108x848 format=0x34325241 fd=34 offset=134217728 stride=4608
+00:00:15.461 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.461 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=316 buffer_committed=1 surface=1123x844 pixels=1123x844
+00:00:15.461 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1123x844 format=0x34325241 fd=44 offset=134217728 stride=4608
+00:00:15.470 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.470 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=317 buffer_committed=1 surface=1156x837 pixels=1156x837
+00:00:15.470 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1156x837 format=0x34325241 fd=34 offset=134217728 stride=4864
+00:00:15.478 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.478 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=318 buffer_committed=1 surface=1185x832 pixels=1185x832
+00:00:15.478 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1185x832 format=0x34325241 fd=36 offset=134217728 stride=4864
+00:00:15.482 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.482 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=319 buffer_committed=1 surface=1199x828 pixels=1199x828
+00:00:15.482 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1199x828 format=0x34325241 fd=44 offset=134217728 stride=4864
+00:00:15.487 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.487 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=320 buffer_committed=1 surface=1213x826 pixels=1213x826
+00:00:15.487 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1213x826 format=0x34325241 fd=36 offset=134217728 stride=4864
+00:00:15.495 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.495 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=321 buffer_committed=1 surface=1241x817 pixels=1241x817
+00:00:15.495 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1241x817 format=0x34325241 fd=34 offset=134217728 stride=5120
+00:00:15.498 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.498 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=322 buffer_committed=1 surface=1254x812 pixels=1254x812
+00:00:15.498 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1254x812 format=0x34325241 fd=40 offset=134217728 stride=5120
+00:00:15.503 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.503 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=323 buffer_committed=1 surface=1266x807 pixels=1266x807
+00:00:15.503 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1266x807 format=0x34325241 fd=39 offset=134217728 stride=5120
+00:00:15.508 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.508 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=324 buffer_committed=1 surface=1279x802 pixels=1279x802
+00:00:15.508 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1279x802 format=0x34325241 fd=40 offset=134217728 stride=5120
+00:00:15.520 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.520 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=325 buffer_committed=1 surface=1320x786 pixels=1320x786
+00:00:15.520 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1320x786 format=0x34325241 fd=34 offset=134217728 stride=5376
+00:00:15.529 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.529 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=326 buffer_committed=1 surface=1346x776 pixels=1346x776
+00:00:15.529 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1346x776 format=0x34325241 fd=39 offset=134217728 stride=5632
+00:00:15.541 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.541 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=327 buffer_committed=1 surface=1391x757 pixels=1391x757
+00:00:15.541 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1391x757 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:15.545 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.545 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=328 buffer_committed=1 surface=1405x749 pixels=1405x749
+00:00:15.545 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1405x749 format=0x34325241 fd=34 offset=134217728 stride=5632
+00:00:15.550 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.550 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=329 buffer_committed=1 surface=1419x743 pixels=1419x743
+00:00:15.550 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1419x743 format=0x34325241 fd=44 offset=134217728 stride=5888
+00:00:15.566 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.566 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=330 buffer_committed=1 surface=1474x713 pixels=1474x713
+00:00:15.566 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1474x713 format=0x34325241 fd=41 offset=134217728 stride=6144
+00:00:15.574 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.574 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=331 buffer_committed=1 surface=1494x698 pixels=1494x698
+00:00:15.574 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1494x698 format=0x34325241 fd=39 offset=134217728 stride=6144
+00:00:15.591 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.591 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=332 buffer_committed=1 surface=1530x664 pixels=1530x664
+00:00:15.591 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1530x664 format=0x34325241 fd=40 offset=134217728 stride=6144
+00:00:15.600 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.600 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=333 buffer_committed=1 surface=1542x649 pixels=1542x649
+00:00:15.600 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1542x649 format=0x34325241 fd=44 offset=134217728 stride=6400
+00:00:15.604 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.604 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=334 buffer_committed=1 surface=1547x642 pixels=1547x642
+00:00:15.604 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1547x642 format=0x34325241 fd=39 offset=134217728 stride=6400
+00:00:15.617 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.617 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=335 buffer_committed=1 surface=1556x626 pixels=1556x626
+00:00:15.617 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1556x626 format=0x34325241 fd=40 offset=134217728 stride=6400
+00:00:15.625 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.625 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=336 buffer_committed=1 surface=1557x619 pixels=1557x619
+00:00:15.625 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1557x619 format=0x34325241 fd=39 offset=134217728 stride=6400
+00:00:15.637 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.637 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=337 buffer_committed=1 surface=1557x610 pixels=1557x610
+00:00:15.637 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1557x610 format=0x34325241 fd=40 offset=134217728 stride=6400
+00:00:15.641 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.641 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=338 buffer_committed=1 surface=1557x608 pixels=1557x608
+00:00:15.641 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1557x608 format=0x34325241 fd=39 offset=134217728 stride=6400
+00:00:15.869 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.869 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=339 buffer_committed=1 surface=1551x609 pixels=1551x609
+00:00:15.869 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1551x609 format=0x34325241 fd=44 offset=134217728 stride=6400
+00:00:15.879 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.879 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=340 buffer_committed=1 surface=1523x619 pixels=1523x619
+00:00:15.879 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1523x619 format=0x34325241 fd=34 offset=134217728 stride=6144
+00:00:15.883 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.883 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=341 buffer_committed=1 surface=1513x624 pixels=1513x624
+00:00:15.883 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1513x624 format=0x34325241 fd=36 offset=134217728 stride=6144
+00:00:15.887 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.887 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=342 buffer_committed=1 surface=1505x629 pixels=1505x629
+00:00:15.887 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1505x629 format=0x34325241 fd=44 offset=134217728 stride=6144
+00:00:15.891 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.891 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=343 buffer_committed=1 surface=1495x635 pixels=1495x635
+00:00:15.891 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1495x635 format=0x34325241 fd=41 offset=134217728 stride=6144
+00:00:15.904 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.904 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=344 buffer_committed=1 surface=1467x655 pixels=1467x655
+00:00:15.904 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1467x655 format=0x34325241 fd=39 offset=134217728 stride=5888
+00:00:15.908 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.908 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=345 buffer_committed=1 surface=1458x662 pixels=1458x662
+00:00:15.908 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1458x662 format=0x34325241 fd=40 offset=134217728 stride=5888
+00:00:15.912 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.912 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=346 buffer_committed=1 surface=1449x670 pixels=1449x670
+00:00:15.912 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1449x670 format=0x34325241 fd=34 offset=134217728 stride=5888
+00:00:15.917 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.917 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=347 buffer_committed=1 surface=1439x677 pixels=1439x677
+00:00:15.917 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1439x677 format=0x34325241 fd=44 offset=134217728 stride=5888
+00:00:15.925 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.925 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=348 buffer_committed=1 surface=1418x693 pixels=1418x693
+00:00:15.925 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1418x693 format=0x34325241 fd=34 offset=134217728 stride=5888
+00:00:15.929 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.929 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=349 buffer_committed=1 surface=1408x701 pixels=1408x701
+00:00:15.929 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1408x701 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:15.933 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.933 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=350 buffer_committed=1 surface=1398x707 pixels=1398x707
+00:00:15.933 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1398x707 format=0x34325241 fd=34 offset=134217728 stride=5632
+00:00:15.938 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.938 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=351 buffer_committed=1 surface=1389x715 pixels=1389x715
+00:00:15.938 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1389x715 format=0x34325241 fd=40 offset=134217728 stride=5632
+00:00:15.942 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.942 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=352 buffer_committed=1 surface=1379x722 pixels=1379x722
+00:00:15.942 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1379x722 format=0x34325241 fd=34 offset=134217728 stride=5632
+00:00:15.946 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.946 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=353 buffer_committed=1 surface=1367x732 pixels=1367x732
+00:00:15.946 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1367x732 format=0x34325241 fd=40 offset=134217728 stride=5632
+00:00:15.950 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.950 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=354 buffer_committed=1 surface=1358x741 pixels=1358x741
+00:00:15.950 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1358x741 format=0x34325241 fd=44 offset=134217728 stride=5632
+00:00:15.954 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.954 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=355 buffer_committed=1 surface=1348x748 pixels=1348x748
+00:00:15.954 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1348x748 format=0x34325241 fd=34 offset=134217728 stride=5632
+00:00:15.959 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.959 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=356 buffer_committed=1 surface=1338x760 pixels=1338x760
+00:00:15.959 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1338x760 format=0x34325241 fd=44 offset=134217728 stride=5376
+00:00:15.962 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.962 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=357 buffer_committed=1 surface=1331x767 pixels=1331x767
+00:00:15.962 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1331x767 format=0x34325241 fd=41 offset=134217728 stride=5376
+00:00:15.975 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.975 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=358 buffer_committed=1 surface=1305x797 pixels=1305x797
+00:00:15.975 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1305x797 format=0x34325241 fd=34 offset=134217728 stride=5376
+00:00:15.984 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.984 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=359 buffer_committed=1 surface=1288x817 pixels=1288x817
+00:00:15.984 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1288x817 format=0x34325241 fd=36 offset=134217728 stride=5376
+00:00:15.996 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:15.996 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=360 buffer_committed=1 surface=1265x851 pixels=1265x851
+00:00:15.996 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1265x851 format=0x34325241 fd=34 offset=134217728 stride=5120
+00:00:16.000 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.000 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=361 buffer_committed=1 surface=1257x861 pixels=1257x861
+00:00:16.000 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1257x861 format=0x34325241 fd=36 offset=134217728 stride=5120
+00:00:16.009 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.009 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=362 buffer_committed=1 surface=1243x882 pixels=1243x882
+00:00:16.009 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1243x882 format=0x34325241 fd=44 offset=134217728 stride=5120
+00:00:16.021 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.021 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=363 buffer_committed=1 surface=1223x917 pixels=1223x917
+00:00:16.021 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1223x917 format=0x34325241 fd=34 offset=134217728 stride=5120
+00:00:16.030 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.030 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=364 buffer_committed=1 surface=1212x941 pixels=1212x941
+00:00:16.030 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1212x941 format=0x34325241 fd=44 offset=134217728 stride=4864
+00:00:16.047 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.047 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=365 buffer_committed=1 surface=1196x992 pixels=1196x992
+00:00:16.047 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1196x992 format=0x34325241 fd=34 offset=134217728 stride=4864
+00:00:16.056 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.056 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=366 buffer_committed=1 surface=1191x1018 pixels=1191x1018
+00:00:16.056 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1191x1018 format=0x34325241 fd=44 offset=134217728 stride=4864
+00:00:16.073 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.073 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=367 buffer_committed=1 surface=1191x1068 pixels=1191x1068
+00:00:16.073 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1191x1068 format=0x34325241 fd=34 offset=134217728 stride=4864
+00:00:16.081 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.081 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=368 buffer_committed=1 surface=1196x1086 pixels=1196x1086
+00:00:16.081 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1196x1086 format=0x34325241 fd=39 offset=134217728 stride=4864
+00:00:16.095 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.095 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=369 buffer_committed=1 surface=1209x1107 pixels=1209x1107
+00:00:16.095 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1209x1107 format=0x34325241 fd=40 offset=134217728 stride=4864
+00:00:16.100 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.100 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=370 buffer_committed=1 surface=1214x1113 pixels=1214x1113
+00:00:16.100 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1214x1113 format=0x34325241 fd=39 offset=134217728 stride=4864
+00:00:16.107 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.107 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=371 buffer_committed=1 surface=1223x1121 pixels=1223x1121
+00:00:16.107 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1223x1121 format=0x34325241 fd=44 offset=134217728 stride=5120
+00:00:16.119 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.119 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=372 buffer_committed=1 surface=1242x1132 pixels=1242x1132
+00:00:16.119 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1242x1132 format=0x34325241 fd=39 offset=134217728 stride=5120
+00:00:16.127 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.127 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=373 buffer_committed=1 surface=1257x1139 pixels=1257x1139
+00:00:16.127 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1257x1139 format=0x34325241 fd=40 offset=134217728 stride=5120
+00:00:16.144 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.144 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=374 buffer_committed=1 surface=1300x1158 pixels=1300x1158
+00:00:16.144 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1300x1158 format=0x34325241 fd=34 offset=134217728 stride=5376
+00:00:16.153 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.153 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=375 buffer_committed=1 surface=1325x1168 pixels=1325x1168
+00:00:16.153 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1325x1168 format=0x34325241 fd=44 offset=134217728 stride=5376
+00:00:16.160 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.160 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=376 buffer_committed=1 surface=1339x1171 pixels=1339x1171
+00:00:16.160 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1339x1171 format=0x34325241 fd=39 offset=134217728 stride=5376
+00:00:16.172 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.172 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=377 buffer_committed=1 surface=1406x1186 pixels=1406x1186
+00:00:16.172 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1406x1186 format=0x34325241 fd=44 offset=134217728 stride=5632
+00:00:16.183 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.183 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=378 buffer_committed=1 surface=1439x1189 pixels=1439x1189
+00:00:16.183 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1439x1189 format=0x34325241 fd=41 offset=134217728 stride=5888
+00:00:16.199 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.199 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=379 buffer_committed=1 surface=1500x1185 pixels=1500x1185
+00:00:16.199 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1500x1185 format=0x34325241 fd=44 offset=134217728 stride=6144
+00:00:16.206 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.206 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=380 buffer_committed=1 surface=1511x1181 pixels=1511x1181
+00:00:16.206 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1511x1181 format=0x34325241 fd=34 offset=134217728 stride=6144
+00:00:16.220 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.220 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=381 buffer_committed=1 surface=1542x1155 pixels=1542x1155
+00:00:16.220 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1542x1155 format=0x34325241 fd=44 offset=134217728 stride=6400
+00:00:16.229 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.229 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=382 buffer_committed=1 surface=1547x1147 pixels=1547x1147
+00:00:16.229 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1547x1147 format=0x34325241 fd=41 offset=134217728 stride=6400
+00:00:16.236 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.236 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=383 buffer_committed=1 surface=1558x1115 pixels=1558x1115
+00:00:16.236 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1558x1115 format=0x34325241 fd=44 offset=134217728 stride=6400
+00:00:16.244 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.244 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=384 buffer_committed=1 surface=1562x1082 pixels=1562x1082
+00:00:16.244 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1562x1082 format=0x34325241 fd=39 offset=134217728 stride=6400
+00:00:16.252 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.252 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=385 buffer_committed=1 surface=1562x1046 pixels=1562x1046
+00:00:16.252 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1562x1046 format=0x34325241 fd=44 offset=134217728 stride=6400
+00:00:16.261 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.261 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=386 buffer_committed=1 surface=1557x1001 pixels=1557x1001
+00:00:16.261 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1557x1001 format=0x34325241 fd=41 offset=134217728 stride=6400
+00:00:16.269 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.269 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=387 buffer_committed=1 surface=1544x957 pixels=1544x957
+00:00:16.269 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1544x957 format=0x34325241 fd=39 offset=134217728 stride=6400
+00:00:16.285 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.285 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=388 buffer_committed=1 surface=1503x868 pixels=1503x868
+00:00:16.285 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1503x868 format=0x34325241 fd=34 offset=134217728 stride=6144
+00:00:16.293 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.293 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=389 buffer_committed=1 surface=1478x832 pixels=1478x832
+00:00:16.293 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1478x832 format=0x34325241 fd=44 offset=134217728 stride=6144
+00:00:16.309 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.309 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=390 buffer_committed=1 surface=1423x768 pixels=1423x768
+00:00:16.309 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1423x768 format=0x34325241 fd=39 offset=134217728 stride=5888
+00:00:16.318 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.318 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=391 buffer_committed=1 surface=1398x746 pixels=1398x746
+00:00:16.318 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1398x746 format=0x34325241 fd=34 offset=134217728 stride=5632
+00:00:16.330 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.330 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=392 buffer_committed=1 surface=1361x713 pixels=1361x713
+00:00:16.330 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1361x713 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:16.338 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.338 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=393 buffer_committed=1 surface=1338x696 pixels=1338x696
+00:00:16.338 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1338x696 format=0x34325241 fd=34 offset=134217728 stride=5376
+00:00:16.342 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.342 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=394 buffer_committed=1 surface=1328x688 pixels=1328x688
+00:00:16.342 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1328x688 format=0x34325241 fd=36 offset=134217728 stride=5376
+00:00:16.346 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.346 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=395 buffer_committed=1 surface=1320x681 pixels=1320x681
+00:00:16.346 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1320x681 format=0x34325241 fd=44 offset=134217728 stride=5376
+00:00:16.354 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.354 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=396 buffer_committed=1 surface=1301x668 pixels=1301x668
+00:00:16.354 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1301x668 format=0x34325241 fd=41 offset=134217728 stride=5376
+00:00:16.358 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.358 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=397 buffer_committed=1 surface=1296x665 pixels=1296x665
+00:00:16.358 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1296x665 format=0x34325241 fd=44 offset=134217728 stride=5376
+00:00:16.364 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.364 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=398 buffer_committed=1 surface=1293x662 pixels=1293x662
+00:00:16.364 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1293x662 format=0x34325241 fd=34 offset=134217728 stride=5376
+00:00:16.371 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.371 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=399 buffer_committed=1 surface=1290x661 pixels=1290x661
+00:00:16.371 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1290x661 format=0x34325241 fd=36 offset=134217728 stride=5376
+00:00:16.372 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.372 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=400 buffer_committed=1 surface=1290x661 pixels=1290x661
+00:00:16.372 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1290x661 format=0x34325241 fd=36 offset=134217728 stride=5376
+00:00:16.634 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.634 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=401 buffer_committed=1 surface=1291x661 pixels=1291x661
+00:00:16.634 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1291x661 format=0x34325241 fd=40 offset=134217728 stride=5376
+00:00:16.646 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.646 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=402 buffer_committed=1 surface=1305x667 pixels=1305x667
+00:00:16.646 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1305x667 format=0x34325241 fd=44 offset=134217728 stride=5376
+00:00:16.655 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.655 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=403 buffer_committed=1 surface=1320x675 pixels=1320x675
+00:00:16.655 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1320x675 format=0x34325241 fd=39 offset=134217728 stride=5376
+00:00:16.668 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.668 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=404 buffer_committed=1 surface=1355x697 pixels=1355x697
+00:00:16.668 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1355x697 format=0x34325241 fd=44 offset=134217728 stride=5632
+00:00:16.672 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.672 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=405 buffer_committed=1 surface=1366x706 pixels=1366x706
+00:00:16.672 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1366x706 format=0x34325241 fd=39 offset=134217728 stride=5632
+00:00:16.676 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.676 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=406 buffer_committed=1 surface=1378x716 pixels=1378x716
+00:00:16.676 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1378x716 format=0x34325241 fd=34 offset=134217728 stride=5632
+00:00:16.680 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.680 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=407 buffer_committed=1 surface=1392x726 pixels=1392x726
+00:00:16.680 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1392x726 format=0x34325241 fd=44 offset=134217728 stride=5632
+00:00:16.693 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.693 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=408 buffer_committed=1 surface=1441x766 pixels=1441x766
+00:00:16.693 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1441x766 format=0x34325241 fd=34 offset=134217728 stride=5888
+00:00:16.698 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.698 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=409 buffer_committed=1 surface=1457x781 pixels=1457x781
+00:00:16.698 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1457x781 format=0x34325241 fd=40 offset=134217728 stride=5888
+00:00:16.706 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.706 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=410 buffer_committed=1 surface=1495x811 pixels=1495x811
+00:00:16.706 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1495x811 format=0x34325241 fd=34 offset=134217728 stride=6144
+00:00:16.714 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.715 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=411 buffer_committed=1 surface=1541x851 pixels=1541x851
+00:00:16.715 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1541x851 format=0x34325241 fd=36 offset=134217728 stride=6400
+00:00:16.724 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.724 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=412 buffer_committed=1 surface=1586x890 pixels=1586x890
+00:00:16.724 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1586x890 format=0x34325241 fd=44 offset=134217728 stride=6400
+00:00:16.729 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.729 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=413 buffer_committed=1 surface=1611x910 pixels=1611x910
+00:00:16.729 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1611x910 format=0x34325241 fd=34 offset=134217728 stride=6656
+00:00:16.734 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.734 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=414 buffer_committed=1 surface=1635x930 pixels=1635x930
+00:00:16.734 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1635x930 format=0x34325241 fd=44 offset=134217728 stride=6656
+00:00:16.744 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.744 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=415 buffer_committed=1 surface=1717x995 pixels=1717x995
+00:00:16.744 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1717x995 format=0x34325241 fd=41 offset=134217728 stride=6912
+00:00:16.753 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.753 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=416 buffer_committed=1 surface=1768x1034 pixels=1768x1034
+00:00:16.753 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1768x1034 format=0x34325241 fd=39 offset=134217728 stride=7168
+00:00:16.767 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.767 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=417 buffer_committed=1 surface=1852x1092 pixels=1852x1092
+00:00:16.767 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1852x1092 format=0x34325241 fd=44 offset=134217728 stride=7424
+00:00:16.781 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.781 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=418 buffer_committed=1 surface=1930x1141 pixels=1930x1141
+00:00:16.781 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1930x1141 format=0x34325241 fd=41 offset=134217728 stride=7936
+00:00:16.802 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.802 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=419 buffer_committed=1 surface=2066x1215 pixels=2066x1215
+00:00:16.802 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2066x1215 format=0x34325241 fd=39 offset=134217728 stride=8448
+00:00:16.821 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.821 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=420 buffer_committed=1 surface=2091x1227 pixels=2091x1227
+00:00:16.821 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2091x1227 format=0x34325241 fd=40 offset=134217728 stride=8448
+00:00:16.846 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.846 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=421 buffer_committed=1 surface=2271x1289 pixels=2271x1289
+00:00:16.846 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2271x1289 format=0x34325241 fd=34 offset=134217728 stride=9216
+00:00:16.866 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.866 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=422 buffer_committed=1 surface=2279x1290 pixels=2279x1290
+00:00:16.866 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2279x1290 format=0x34325241 fd=44 offset=134217728 stride=9216
+00:00:16.873 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.873 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=423 buffer_committed=1 surface=2295x1290 pixels=2295x1290
+00:00:16.873 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2295x1290 format=0x34325241 fd=34 offset=134217728 stride=9216
+00:00:16.875 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.875 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=424 buffer_committed=1 surface=2295x1290 pixels=2295x1290
+00:00:16.875 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=2295x1290 format=0x34325241 fd=34 offset=134217728 stride=9216
+00:00:16.885 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.885 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=425 buffer_committed=1 surface=2296x1289 pixels=2296x1289
+00:00:16.885 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2296x1289 format=0x34325241 fd=40 offset=134217728 stride=9216
+00:00:16.886 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.886 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=426 buffer_committed=1 surface=2296x1289 pixels=2296x1289
+00:00:16.886 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=2296x1289 format=0x34325241 fd=40 offset=134217728 stride=9216
+00:00:16.899 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.899 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=427 buffer_committed=1 surface=2297x1289 pixels=2297x1289
+00:00:16.899 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2297x1289 format=0x34325241 fd=44 offset=134217728 stride=9216
+00:00:16.906 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.906 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=428 buffer_committed=1 surface=2297x1287 pixels=2297x1287
+00:00:16.906 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2297x1287 format=0x34325241 fd=41 offset=134217728 stride=9216
+00:00:16.918 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.918 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=429 buffer_committed=1 surface=2297x1281 pixels=2297x1281
+00:00:16.918 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2297x1281 format=0x34325241 fd=39 offset=134217728 stride=9216
+00:00:16.928 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.928 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=430 buffer_committed=1 surface=2297x1276 pixels=2297x1276
+00:00:16.928 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2297x1276 format=0x34325241 fd=40 offset=134217728 stride=9216
+00:00:16.935 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:16.935 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=431 buffer_committed=1 surface=2294x1265 pixels=2294x1265
+00:00:16.935 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2294x1265 format=0x34325241 fd=39 offset=134217728 stride=9216
+00:00:17.101 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.101 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=432 buffer_committed=1 surface=2273x1260 pixels=2273x1260
+00:00:17.101 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2273x1260 format=0x34325241 fd=44 offset=134217728 stride=9216
+00:00:17.126 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.126 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=433 buffer_committed=1 surface=2153x1248 pixels=2153x1248
+00:00:17.126 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2153x1248 format=0x34325241 fd=39 offset=134217728 stride=8704
+00:00:17.149 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.149 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=434 buffer_committed=1 surface=2088x1243 pixels=2088x1243
+00:00:17.149 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2088x1243 format=0x34325241 fd=34 offset=134217728 stride=8448
+00:00:17.166 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.166 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=435 buffer_committed=1 surface=2037x1236 pixels=2037x1236
+00:00:17.166 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=2037x1236 format=0x34325241 fd=36 offset=134217728 stride=8192
+00:00:17.181 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.181 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=436 buffer_committed=1 surface=1976x1228 pixels=1976x1228
+00:00:17.181 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1976x1228 format=0x34325241 fd=40 offset=134217728 stride=7936
+00:00:17.194 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.194 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=437 buffer_committed=1 surface=1923x1220 pixels=1923x1220
+00:00:17.194 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1923x1220 format=0x34325241 fd=44 offset=134217728 stride=7936
+00:00:17.206 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.206 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=438 buffer_committed=1 surface=1883x1215 pixels=1883x1215
+00:00:17.206 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1883x1215 format=0x34325241 fd=39 offset=134217728 stride=7680
+00:00:17.213 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.213 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=439 buffer_committed=1 surface=1870x1214 pixels=1870x1214
+00:00:17.213 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1870x1214 format=0x34325241 fd=44 offset=134217728 stride=7680
+00:00:17.223 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.223 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=440 buffer_committed=1 surface=1827x1210 pixels=1827x1210
+00:00:17.223 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1827x1210 format=0x34325241 fd=41 offset=134217728 stride=7424
+00:00:17.232 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.232 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=441 buffer_committed=1 surface=1815x1209 pixels=1815x1209
+00:00:17.232 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1815x1209 format=0x34325241 fd=34 offset=134217728 stride=7424
+00:00:17.241 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.241 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=442 buffer_committed=1 surface=1795x1206 pixels=1795x1206
+00:00:17.241 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1795x1206 format=0x34325241 fd=44 offset=134217728 stride=7424
+00:00:17.250 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.250 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=443 buffer_committed=1 surface=1767x1204 pixels=1767x1204
+00:00:17.250 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1767x1204 format=0x34325241 fd=39 offset=134217728 stride=7168
+00:00:17.259 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.259 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=444 buffer_committed=1 surface=1761x1203 pixels=1761x1203
+00:00:17.259 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1761x1203 format=0x34325241 fd=34 offset=134217728 stride=7168
+00:00:17.267 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.267 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=445 buffer_committed=1 surface=1757x1203 pixels=1757x1203
+00:00:17.267 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1757x1203 format=0x34325241 fd=40 offset=134217728 stride=7168
+00:00:17.274 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.274 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=446 buffer_committed=1 surface=1756x1202 pixels=1756x1202
+00:00:17.274 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1756x1202 format=0x34325241 fd=34 offset=134217728 stride=7168
+00:00:17.771 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.771 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=447 buffer_committed=1 surface=1756x1202 pixels=1756x1202
+00:00:17.771 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1756x1202 format=0x34325241 fd=34 offset=134217728 stride=7168
+00:00:17.877 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.877 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=448 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:17.877 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1404x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:17.883 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:17.883 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=449 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:17.883 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:18.385 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:18.386 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=450 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:18.386 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:18.882 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:18.882 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=451 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:18.882 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:19.378 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.378 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=452 buffer_committed=1 surface=1403x1404 pixels=1403x1404
+00:00:19.378 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1403x1404 format=0x34325241 fd=40 offset=134217728 stride=5632
+00:00:19.385 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.385 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=453 buffer_committed=1 surface=1402x1404 pixels=1402x1404
+00:00:19.385 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1402x1404 format=0x34325241 fd=34 offset=134217728 stride=5632
+00:00:19.391 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.391 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=454 buffer_committed=1 surface=1399x1404 pixels=1399x1404
+00:00:19.391 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1399x1404 format=0x34325241 fd=44 offset=134217728 stride=5632
+00:00:19.400 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.400 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=455 buffer_committed=1 surface=1392x1404 pixels=1392x1404
+00:00:19.400 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1392x1404 format=0x34325241 fd=41 offset=134217728 stride=5632
+00:00:19.409 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.409 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=456 buffer_committed=1 surface=1385x1404 pixels=1385x1404
+00:00:19.409 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1385x1404 format=0x34325241 fd=39 offset=134217728 stride=5632
+00:00:19.416 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.416 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=457 buffer_committed=1 surface=1381x1404 pixels=1381x1404
+00:00:19.416 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1381x1404 format=0x34325241 fd=44 offset=134217728 stride=5632
+00:00:19.425 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.425 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=458 buffer_committed=1 surface=1366x1404 pixels=1366x1404
+00:00:19.425 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1366x1404 format=0x34325241 fd=41 offset=134217728 stride=5632
+00:00:19.432 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.432 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=459 buffer_committed=1 surface=1361x1404 pixels=1361x1404
+00:00:19.432 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1361x1404 format=0x34325241 fd=44 offset=134217728 stride=5632
+00:00:19.447 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.447 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=460 buffer_committed=1 surface=1332x1404 pixels=1332x1404
+00:00:19.447 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1332x1404 format=0x34325241 fd=39 offset=134217728 stride=5376
+00:00:19.453 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.453 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=461 buffer_committed=1 surface=1323x1404 pixels=1323x1404
+00:00:19.453 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1323x1404 format=0x34325241 fd=40 offset=134217728 stride=5376
+00:00:19.467 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.467 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=462 buffer_committed=1 surface=1284x1404 pixels=1284x1404
+00:00:19.467 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1284x1404 format=0x34325241 fd=34 offset=134217728 stride=5376
+00:00:19.474 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.474 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=463 buffer_committed=1 surface=1275x1404 pixels=1275x1404
+00:00:19.474 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1275x1404 format=0x34325241 fd=39 offset=134217728 stride=5120
+00:00:19.490 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.490 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=464 buffer_committed=1 surface=1216x1404 pixels=1216x1404
+00:00:19.490 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1216x1404 format=0x34325241 fd=44 offset=134217728 stride=4864
+00:00:19.500 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.500 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=465 buffer_committed=1 surface=1191x1404 pixels=1191x1404
+00:00:19.500 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1191x1404 format=0x34325241 fd=41 offset=134217728 stride=4864
+00:00:19.505 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.505 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=466 buffer_committed=1 surface=1178x1403 pixels=1178x1403
+00:00:19.505 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1178x1403 format=0x34325241 fd=39 offset=134217728 stride=4864
+00:00:19.512 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.512 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=467 buffer_committed=1 surface=1165x1403 pixels=1165x1403
+00:00:19.512 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1165x1403 format=0x34325241 fd=34 offset=134217728 stride=4864
+00:00:19.521 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.521 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=468 buffer_committed=1 surface=1122x1399 pixels=1122x1399
+00:00:19.521 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1122x1399 format=0x34325241 fd=36 offset=134217728 stride=4608
+00:00:19.530 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.530 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=469 buffer_committed=1 surface=1097x1398 pixels=1097x1398
+00:00:19.530 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1097x1398 format=0x34325241 fd=34 offset=134217728 stride=4608
+00:00:19.542 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.542 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=470 buffer_committed=1 surface=1054x1395 pixels=1054x1395
+00:00:19.542 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1054x1395 format=0x34325241 fd=44 offset=134217728 stride=4352
+00:00:19.548 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.548 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=471 buffer_committed=1 surface=1041x1395 pixels=1041x1395
+00:00:19.548 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1041x1395 format=0x34325241 fd=39 offset=134217728 stride=4352
+00:00:19.562 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.562 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=472 buffer_committed=1 surface=983x1393 pixels=983x1393
+00:00:19.562 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=983x1393 format=0x34325241 fd=34 offset=134217728 stride=4096
+00:00:19.570 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.570 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=473 buffer_committed=1 surface=958x1392 pixels=958x1392
+00:00:19.570 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=958x1392 format=0x34325241 fd=40 offset=134217728 stride=3840
+00:00:19.587 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.587 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=474 buffer_committed=1 surface=906x1389 pixels=906x1389
+00:00:19.587 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=906x1389 format=0x34325241 fd=39 offset=134217728 stride=3840
+00:00:19.595 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.595 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=475 buffer_committed=1 surface=885x1389 pixels=885x1389
+00:00:19.595 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=885x1389 format=0x34325241 fd=34 offset=134217728 stride=3584
+00:00:19.612 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.612 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=476 buffer_committed=1 surface=853x1387 pixels=853x1387
+00:00:19.612 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=853x1387 format=0x34325241 fd=36 offset=134217728 stride=3584
+00:00:19.620 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.620 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=477 buffer_committed=1 surface=845x1387 pixels=845x1387
+00:00:19.620 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=845x1387 format=0x34325241 fd=40 offset=134217728 stride=3584
+00:00:19.625 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.625 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=478 buffer_committed=1 surface=842x1387 pixels=842x1387
+00:00:19.625 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=842x1387 format=0x34325241 fd=34 offset=134217728 stride=3584
+00:00:19.630 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.630 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=479 buffer_committed=1 surface=839x1386 pixels=839x1386
+00:00:19.630 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=839x1386 format=0x34325241 fd=44 offset=134217728 stride=3584
+00:00:19.637 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:19.638 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=480 buffer_committed=1 surface=838x1386 pixels=838x1386
+00:00:19.638 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=838x1386 format=0x34325241 fd=34 offset=134217728 stride=3584
+00:00:20.118 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:20.118 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=481 buffer_committed=1 surface=838x1386 pixels=838x1386
+00:00:20.118 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=838x1386 format=0x34325241 fd=34 offset=134217728 stride=3584
+00:00:20.504 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:20.504 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=482 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:20.504 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=current type=SHM size=1404x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:20.511 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:20.511 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=483 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:20.511 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:21.011 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:21.011 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=484 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:21.011 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:21.511 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:21.511 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=485 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:21.511 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:22.011 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:22.011 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=486 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:22.011 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:22.510 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:22.510 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=487 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:22.510 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:23.011 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:23.011 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=488 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:23.011 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:23.140 [DEBUG] [dwl.c:931] [bridge] COMMIT client=0x55a25c80bfb0 initial=0 mapped=1
+00:00:23.140 [DEBUG] [dwl.c:871] [bridge] STATE client=0x55a25c80bfb0 seq=489 buffer_committed=1 surface=1404x1404 pixels=1404x1404
+00:00:23.140 [DEBUG] [dwl.c:913] [bridge] BUFFER client=0x55a25c80bfb0 origin=source type=SHM size=1404x1404 format=0x34325241 fd=36 offset=134217728 stride=5632
+00:00:24.479 warn: [DEBUG] wayland.c:1736: [dwl.c:1413] [bridge] DESTROY client=0x55a25c80bfb0unknown global removed: 0x00000024

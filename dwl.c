@@ -1,6 +1,12 @@
 /*
  * See LICENSE file for copyright and license details.
  */
+#include <inttypes.h>
+#include <wlr/types/wlr_buffer.h>
+#include <wlr/render/dmabuf.h>
+#include <drm_fourcc.h>
+#include <string.h>
+
 #include <getopt.h>
 #include <libinput.h>
 #include <linux/input-event-codes.h>
@@ -12,6 +18,7 @@
 #include <time.h>
 #include <unistd.h>
 #include <wayland-server-core.h>
+#include <wayland-util.h>
 #include <wlr/backend.h>
 #include <wlr/backend/libinput.h>
 #include <wlr/render/allocator.h>
@@ -121,6 +128,7 @@ typedef struct {
 	} surface;
 	struct wlr_xdg_toplevel_decoration_v1 *decoration;
 	struct wl_listener commit;
+	struct wl_listener capture_commit;
 	struct wl_listener map;
 	struct wl_listener maximize;
 	struct wl_listener unmap;
@@ -853,10 +861,82 @@ commitlayersurfacenotify(struct wl_listener *listener, void *data)
 	arrangelayers(l->mon);
 }
 
-void
-commitnotify(struct wl_listener *listener, void *data)
+static void
+logbuffer(Client *c)
+{
+	struct wlr_surface *surface = client_surface(c);
+	struct wlr_buffer *buffer;
+	struct wlr_dmabuf_attributes dmabuf = {0};
+	struct wlr_shm_attributes shm = {0};
+	const char *origin = "current";
+	int i;
+
+	wlr_log(WLR_DEBUG,
+			"[bridge] STATE client=%p seq=%" PRIu32
+			" buffer_committed=%d surface=%dx%d pixels=%dx%d",
+			(void *)c,
+			surface->current.seq,
+			!!(surface->current.committed & WLR_SURFACE_STATE_BUFFER),
+			surface->current.width,
+			surface->current.height,
+			surface->current.buffer_width,
+			surface->current.buffer_height);
+
+	buffer = surface->current.buffer;
+	if (!buffer && surface->buffer) {
+		buffer = surface->buffer->source;
+		origin = "source";
+	}
+
+	if (!buffer) {
+		wlr_log(WLR_DEBUG,
+				"[bridge] BUFFER client=%p source-unavailable wrapper=%d",
+				(void *)c, surface->buffer != NULL);
+		return;
+	}
+
+	if (wlr_buffer_get_dmabuf(buffer, &dmabuf)) {
+		wlr_log(WLR_DEBUG,
+				"[bridge] BUFFER client=%p origin=%s type=DMA-BUF"
+				" size=%" PRId32 "x%" PRId32
+				" format=0x%08" PRIx32
+				" modifier=0x%016" PRIx64 " planes=%d",
+				(void *)c, origin,
+				dmabuf.width, dmabuf.height,
+				dmabuf.format, dmabuf.modifier, dmabuf.n_planes);
+
+		for (i = 0; i < dmabuf.n_planes; i++) {
+			wlr_log(WLR_DEBUG,
+					"[bridge] PLANE index=%d fd=%d"
+					" offset=%" PRIu32 " stride=%" PRIu32,
+					i, dmabuf.fd[i],
+					dmabuf.offset[i], dmabuf.stride[i]);
+		}
+	} else if (wlr_buffer_get_shm(buffer, &shm)) {
+		wlr_log(WLR_DEBUG,
+				"[bridge] BUFFER client=%p origin=%s type=SHM"
+				" size=%dx%d format=0x%08" PRIx32
+				" fd=%d offset=%" PRIdMAX " stride=%d",
+				(void *)c, origin,
+				shm.width, shm.height, shm.format,
+				shm.fd, (intmax_t)shm.offset, shm.stride);
+	} else {
+		wlr_log(WLR_DEBUG,
+				"[bridge] BUFFER client=%p origin=%s type=OTHER size=%dx%d",
+				(void *)c, origin, buffer->width, buffer->height);
+	}
+}
+
+void commitnotify(struct wl_listener *listener, void *data)
 {
 	Client *c = wl_container_of(listener, c, commit);
+
+	wlr_log(WLR_DEBUG, "[bridge] COMMIT client=%p initial=%d mapped=%d",
+	        (void *)c,
+	      	(int)c->surface.xdg->initial_commit,
+	      	(int)client_surface(c)->mapped);
+
+	logbuffer(c);
 
 	if (c->surface.xdg->initial_commit) {
 		/*
@@ -1117,6 +1197,115 @@ createmon(struct wl_listener *listener, void *data)
 		wlr_output_layout_add(output_layout, wlr_output, m->m.x, m->m.y);
 }
 
+static void
+capturecommit(struct wl_listener *listener, void *data)
+{
+	Client *c = wl_container_of(listener, c, capture_commit);
+	struct wlr_surface *surface = client_surface(c);
+	struct wlr_buffer *buffer;
+	struct wlr_shm_attributes shm;
+	void *pixels;
+	unsigned char *rgb;
+	const unsigned char *row;
+	uint32_t format, pixel;
+	size_t stride, width, height, size, pos;
+	size_t x, y;
+	FILE *file;
+	int ok;
+
+	if (access("bridge-capture.request", F_OK) != 0)
+		return;
+
+	if (!(surface->pending.committed & WLR_SURFACE_STATE_BUFFER))
+		return;
+
+	buffer = surface->pending.buffer;
+	if (!buffer || !wlr_buffer_get_shm(buffer, &shm))
+		return;
+
+	if (buffer->width <= 0 || buffer->height <= 0)
+		return;
+
+	width = (size_t)buffer->width;
+	height = (size_t)buffer->height;
+
+	if (width > SIZE_MAX / 4 || height > SIZE_MAX / (width * 3))
+		return;
+
+	size = width * height * 3;
+	rgb = malloc(size);
+	if (!rgb) {
+		wlr_log(WLR_ERROR, "[bridge] Capture allocation failed");
+		return;
+	}
+
+	wlr_buffer_lock(buffer);
+
+	if (!wlr_buffer_begin_data_ptr_access(buffer,
+			WLR_BUFFER_DATA_PTR_ACCESS_READ,
+			&pixels, &format, &stride)) {
+		wlr_buffer_unlock(buffer);
+		free(rgb);
+		wlr_log(WLR_ERROR, "[bridge] Cannot access SHM pixels");
+		return;
+	}
+
+	ok = (format == DRM_FORMAT_ARGB8888
+			|| format == DRM_FORMAT_XRGB8888);
+	ok = ok && pixels != NULL && stride >= width * 4;
+	ok = ok && stride <= SIZE_MAX / height;
+
+	if (ok) {
+		for (y = 0; y < height; y++) {
+			row = (const unsigned char *)pixels + y * stride;
+			for (x = 0; x < width; x++) {
+				memcpy(&pixel, row + x * 4, sizeof(pixel));
+				pos = (y * width + x) * 3;
+				rgb[pos] = (pixel >> 16) & 0xff;
+				rgb[pos + 1] = (pixel >> 8) & 0xff;
+				rgb[pos + 2] = pixel & 0xff;
+			}
+		}
+	}
+
+	wlr_buffer_end_data_ptr_access(buffer);
+	wlr_buffer_unlock(buffer);
+
+	if (!ok) {
+		free(rgb);
+		wlr_log(WLR_ERROR,
+				"[bridge] Unsupported capture format or layout");
+		return;
+	}
+
+	file = fopen("bridge-frame.ppm", "wb");
+	if (!file) {
+		free(rgb);
+		wlr_log(WLR_ERROR, "[bridge] Cannot open capture file");
+		return;
+	}
+
+	ok = fprintf(file, "P6\n%zu %zu\n255\n", width, height) > 0;
+	if (ok)
+		ok = fwrite(rgb, 1, size, file) == size;
+	if (fclose(file) != 0)
+		ok = 0;
+
+	free(rgb);
+
+	if (!ok) {
+		wlr_log(WLR_ERROR, "[bridge] Failed to write capture");
+		return;
+	}
+
+	if (unlink("bridge-capture.request") != 0)
+		wlr_log(WLR_ERROR, "[bridge] Cannot remove capture request");
+
+	wlr_log(WLR_DEBUG,
+			"[bridge] CAPTURE saved bridge-frame.ppm size=%zux%zu",
+			width, height);
+}
+
 void
 createnotify(struct wl_listener *listener, void *data)
 {
@@ -1129,7 +1318,10 @@ createnotify(struct wl_listener *listener, void *data)
 	c->surface.xdg = toplevel->base;
 	c->bw = borderpx;
 
+	wlr_log(WLR_DEBUG, "[bridge] CREATE client=%p", (void *)c);
+
 	LISTEN(&toplevel->base->surface->events.commit, &c->commit, commitnotify);
+	LISTEN(&toplevel->base->surface->events.client_commit, &c->capture_commit, capturecommit);
 	LISTEN(&toplevel->base->surface->events.map, &c->map, mapnotify);
 	LISTEN(&toplevel->base->surface->events.unmap, &c->unmap, unmapnotify);
 	LISTEN(&toplevel->events.destroy, &c->destroy, destroynotify);
@@ -1330,6 +1522,8 @@ destroynotify(struct wl_listener *listener, void *data)
 {
 	/* Called when the xdg_toplevel is destroyed. */
 	Client *c = wl_container_of(listener, c, destroy);
+	if (c->type == XDGShell)
+    wlr_log(WLR_DEBUG, "[bridge] DESTROY client=%p", (void *)c);
 	wl_list_remove(&c->destroy.link);
 	wl_list_remove(&c->set_title.link);
 	wl_list_remove(&c->fullscreen.link);
@@ -1344,6 +1538,7 @@ destroynotify(struct wl_listener *listener, void *data)
 #endif
 	{
 		wl_list_remove(&c->commit.link);
+		wl_list_remove(&c->capture_commit.link);
 		wl_list_remove(&c->map.link);
 		wl_list_remove(&c->unmap.link);
 		wl_list_remove(&c->maximize.link);
@@ -1743,6 +1938,9 @@ mapnotify(struct wl_listener *listener, void *data)
 	Client *w, *c = wl_container_of(listener, c, map);
 	Monitor *m;
 	int i;
+
+	if(c->type == XDGShell)
+		wlr_log(WLR_DEBUG, "[bridge] MAP client=%p", (void *)c);
 
 	/* Create scene tree for this client and its border */
 	c->scene = client_surface(c)->data = wlr_scene_tree_create(layers[LyrTile]);
@@ -2817,6 +3015,10 @@ unmapnotify(struct wl_listener *listener, void *data)
 {
 	/* Called when the surface is unmapped, and should no longer be shown. */
 	Client *c = wl_container_of(listener, c, unmap);
+
+	if(c == XDGShell)
+   wlr_log(WLR_DEBUG, "[bridge] UNMAP client=%p", (void *)c);
+
 	if (c == grabc) {
 		cursor_mode = CurNormal;
 		grabc = NULL;
