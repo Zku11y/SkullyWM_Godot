@@ -1,0 +1,5 @@
+{
+	"copied": 0,
+	"error": "Acquire descriptor is not a sync_file",
+	"success": false
+}

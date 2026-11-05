@@ -1,0 +1,33 @@
+diff --git a/core/config/project_settings.cpp b/core/config/project_settings.cpp
+index 0e078c3..90f4661 100644
+--- a/core/config/project_settings.cpp
++++ b/core/config/project_settings.cpp
+@@ -1828,6 +1828,7 @@ ProjectSettings::ProjectSettings() {
+ 	GLOBAL_DEF(PropertyInfo(Variant::INT, "rendering/rendering_device/staging_buffer/texture_download_region_size_px", PROPERTY_HINT_RANGE, "1,256,1,or_greater"), 64);
+ 	GLOBAL_DEF_RST(PropertyInfo(Variant::BOOL, "rendering/rendering_device/pipeline_cache/enable"), true);
+ 	GLOBAL_DEF(PropertyInfo(Variant::FLOAT, "rendering/rendering_device/pipeline_cache/save_chunk_size_mb", PROPERTY_HINT_RANGE, "0.000001,64.0,0.001,or_greater"), 3.0);
++	GLOBAL_DEF_RST("rendering/rendering_device/vulkan/additional_device_extensions", PackedStringArray());
+ 	GLOBAL_DEF(PropertyInfo(Variant::INT, "rendering/rendering_device/vulkan/max_descriptors_per_pool", PROPERTY_HINT_RANGE, "1,256,1,or_greater"), 64);
+ 
+ 	GLOBAL_DEF_RST("rendering/rendering_device/d3d12/max_resource_descriptors", 65536);
+diff --git a/drivers/vulkan/rendering_device_driver_vulkan.cpp b/drivers/vulkan/rendering_device_driver_vulkan.cpp
+index 4b1bd9f..bf5937a 100644
+--- a/drivers/vulkan/rendering_device_driver_vulkan.cpp
++++ b/drivers/vulkan/rendering_device_driver_vulkan.cpp
+@@ -617,6 +617,16 @@
+ 
+ 	_register_requested_device_extension(VK_KHR_DRIVER_PROPERTIES_EXTENSION_NAME, false);
+ 
++	// Extensions are enabled only at device creation. Requests are optional and
++	// do not automatically enable feature structs or manage dependencies.
++	const PackedStringArray additional_extensions = GLOBAL_GET("rendering/rendering_device/vulkan/additional_device_extensions");
++	for (const String &extension : additional_extensions) {
++		const CharString name = extension.utf8();
++		if (!extension.is_empty() && !requested_device_extensions.has(name)) {
++			_register_requested_device_extension(name, false);
++		}
++	}
++
+ 	uint32_t device_extension_count = 0;
+ 	VkResult err = vkEnumerateDeviceExtensionProperties(physical_device, nullptr, &device_extension_count, nullptr);
+ 	ERR_FAIL_COND_V_MSG(err != VK_SUCCESS, ERR_CANT_CREATE, vformat("Couldn't get Vulkan device extension count (VkResult error %d).", err));

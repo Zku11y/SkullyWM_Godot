@@ -1,0 +1,27 @@
+{
+  "base_revision": "ed1daf0bf001b61586d9930840f2f1394092c079",
+  "built_at_utc": "2026-11-05T19:17:42.619621+00:00",
+  "command": [
+    "/home/skully/projects/SkullyWM_Godot/engine/venv/bin/scons",
+    "platform=linuxbsd",
+    "target=editor",
+    "use_llvm=yes",
+    "linker=lld",
+    "debug_symbols=no",
+    "optimize=none",
+    "lto=none",
+    "extra_suffix=dwl_bridge",
+    "-j6"
+  ],
+  "patch_sha256": {
+    "0001-optional-vulkan-extension-requests.patch": "2414cb4b33412462bd7e5f4656c6c16d65bfd19bdd314fdbe5941957b2131278",
+    "0002-expose-enabled-device-extensions.patch": "105b87a1f30800dc2580ebcbeefc8d504a720c70f2218ca23e49c5b7c39ae4da"
+  },
+  "working_diff_sha256": "95a578c3f2d4c8ebd8cf4393bd38e57d340b0bafaaf5db84046b088bf67b9f7c",
+  "binary": "/home/skully/projects/SkullyWM_Godot/engine/source/bin/godot.linuxbsd.editor.x86_64.llvm.dwl_bridge",
+  "binary_sha256": "7f65b48ce9f7eda1187d00d7b3a701116a90f3eaea5f8347dd362f2995a72169",
+  "version": "4.7.2.stable.custom_build.ed1daf0bf",
+  "scons": "4.10.1",
+  "compiler": "clang version 22.1.8",
+  "linker": "LLD 22.1.8 (compatible with GNU linkers)"
+}

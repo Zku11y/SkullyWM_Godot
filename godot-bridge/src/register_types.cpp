@@ -1,5 +1,6 @@
 #include "bridge_receiver.h"
 #include "vulkan_probe.h"
+#include "dmabuf_receiver.h"
 #include <godot_cpp/godot.hpp>
 
 using namespace godot;
@@ -7,6 +8,7 @@ static void initialize(ModuleInitializationLevel level) {
 	if (level == MODULE_INITIALIZATION_LEVEL_SCENE) {
 		ClassDB::register_class<BridgeReceiver>();
 		ClassDB::register_class<BridgeVulkanProbe>();
+		ClassDB::register_class<BridgeDMABufReceiver>();
 	}
 }
 static void terminate(ModuleInitializationLevel) {}

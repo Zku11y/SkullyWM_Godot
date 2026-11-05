@@ -1,0 +1,80 @@
+diff --git a/drivers/vulkan/rendering_device_driver_vulkan.cpp b/drivers/vulkan/rendering_device_driver_vulkan.cpp
+index bf5937a..f78ee6e 100644
+--- a/drivers/vulkan/rendering_device_driver_vulkan.cpp
++++ b/drivers/vulkan/rendering_device_driver_vulkan.cpp
+@@ -7452,6 +7452,15 @@
+ 	return "Vulkan";
+ }
+ 
++PackedStringArray RenderingDeviceDriverVulkan::get_enabled_extensions() const {
++	PackedStringArray extensions;
++	for (const CharString &name : enabled_device_extension_names) {
++		extensions.push_back(String::utf8(name.get_data()));
++	}
++	extensions.sort();
++	return extensions;
++}
++
+ String RenderingDeviceDriverVulkan::get_api_version() const {
+ 	uint32_t api_version = physical_device_properties.apiVersion;
+ 	return vformat("%d.%d.%d", VK_API_VERSION_MAJOR(api_version), VK_API_VERSION_MINOR(api_version), VK_API_VERSION_PATCH(api_version));
+diff --git a/drivers/vulkan/rendering_device_driver_vulkan.h b/drivers/vulkan/rendering_device_driver_vulkan.h
+index 6d17386..299136b 100644
+--- a/drivers/vulkan/rendering_device_driver_vulkan.h
++++ b/drivers/vulkan/rendering_device_driver_vulkan.h
+@@ -799,6 +799,7 @@ public:
+ 	virtual const FragmentShadingRateCapabilities &get_fragment_shading_rate_capabilities() override final;
+ 	virtual const FragmentDensityMapCapabilities &get_fragment_density_map_capabilities() override final;
+ 	virtual String get_api_name() const override final;
++	virtual PackedStringArray get_enabled_extensions() const override final;
+ 	virtual String get_api_version() const override final;
+ 	virtual String get_pipeline_cache_uuid() const override final;
+ 	virtual const Capabilities &get_capabilities() const override final;
+diff --git a/servers/rendering/rendering_device.cpp b/servers/rendering/rendering_device.cpp
+index 7574038..a76219e 100644
+--- a/servers/rendering/rendering_device.cpp
++++ b/servers/rendering/rendering_device.cpp
+@@ -7849,6 +7849,11 @@ String RenderingDevice::get_device_api_name() const {
+ 	return driver->get_api_name();
+ }
+ 
++PackedStringArray RenderingDevice::get_device_enabled_extensions() const {
++	ERR_RENDER_THREAD_GUARD_V(PackedStringArray());
++	return driver->get_enabled_extensions();
++}
++
+ bool RenderingDevice::is_composite_alpha_supported() const {
+ 	return driver->is_composite_alpha_supported(main_queue);
+ }
+@@ -9219,6 +9224,7 @@ void RenderingDevice::_bind_methods() {
+ 
+ 	ClassDB::bind_method(D_METHOD("get_device_vendor_name"), &RenderingDevice::get_device_vendor_name);
+ 	ClassDB::bind_method(D_METHOD("get_device_name"), &RenderingDevice::get_device_name);
++	ClassDB::bind_method(D_METHOD("get_device_enabled_extensions"), &RenderingDevice::get_device_enabled_extensions);
+ 	ClassDB::bind_method(D_METHOD("get_device_pipeline_cache_uuid"), &RenderingDevice::get_device_pipeline_cache_uuid);
+ 
+ 	ClassDB::bind_method(D_METHOD("get_memory_usage", "type"), &RenderingDevice::get_memory_usage);
+diff --git a/servers/rendering/rendering_device.h b/servers/rendering/rendering_device.h
+index 38c4b14..dfaa053 100644
+--- a/servers/rendering/rendering_device.h
++++ b/servers/rendering/rendering_device.h
+@@ -1945,6 +1945,7 @@ public:
+ 	String get_device_name() const;
+ 	RenderingDeviceEnums::DeviceType get_device_type() const;
+ 	String get_device_api_name() const;
++	PackedStringArray get_device_enabled_extensions() const;
+ 	String get_device_api_version() const;
+ 	String get_device_pipeline_cache_uuid() const;
+ 
+diff --git a/servers/rendering/rendering_device_driver.h b/servers/rendering/rendering_device_driver.h
+index 103bd99..6146fe2 100644
+--- a/servers/rendering/rendering_device_driver.h
++++ b/servers/rendering/rendering_device_driver.h
+@@ -943,6 +943,7 @@ public:
+ 	virtual const FragmentShadingRateCapabilities &get_fragment_shading_rate_capabilities() = 0;
+ 	virtual const FragmentDensityMapCapabilities &get_fragment_density_map_capabilities() = 0;
+ 	virtual String get_api_name() const = 0;
++	virtual PackedStringArray get_enabled_extensions() const { return PackedStringArray(); }
+ 	virtual String get_api_version() const = 0;
+ 	virtual String get_pipeline_cache_uuid() const = 0;
+ 	virtual const Capabilities &get_capabilities() const = 0;

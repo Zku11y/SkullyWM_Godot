@@ -1,0 +1,31 @@
+{
+  "base_repository_head": "81e1333f5869a2c9426ebed1aa202238608dc828",
+  "branch": "main",
+  "source_sha256": {
+    "Makefile": "8ffc61d421fcf8fbeb8f8e44a87b2ed4de21cc63ce85693f2ef30aa1b0290b79",
+    "dwl.c": "f36e3bd31caf1152ea526f5662ff2ae4cce837484a713b5f8b1da85d8ef20288",
+    "gpu_bridge.c": "b52adeec9f30e27a1f99e5a6e4722cf40f890e9946d59da6508befffc03e4b80",
+    "gpu_bridge.h": "58d7afd556f1ecbcfbd8622e6f10ce84c981151ef755202e1c0de76c5f5c5b77",
+    "gpu_protocol.h": "37f36529d2a0c3cf883d0e5c03288513db73e3627d7c634d765a5d01def49c63",
+    "tools/run_gpu_client.py": "072e2420428d959a713622a5174fdfeec4d8dc1dfab55851172d91e71280cafb",
+    "tests/test_gpu_bridge.py": "1ecd3df6c728960f4cb893f51b525924422ad3da7c813831f4f69ef47620715c",
+    "tests/test_gpu_client_interactive.py": "a1a405cfe1e8025ae54f68acb718f208660d4640da8cf0c5b8c5f4a089745db2",
+    "godot-bridge/src/dmabuf_receiver.cpp": "d55e3c28fb4736bacca83579ab74e7abacfe5be12d960921cfb437b1405608c2",
+    "godot-bridge/src/dmabuf_receiver.h": "fd69d4321b125d5f58d20e2fed632e44cc290296bcee1c15ccbbe33babb6287b",
+    "godot-bridge/demo/dmabuf_proof.gd": "7e83e5b59cad910dc0f3d1a777918b5effa11482a167eb99c56f5da533c9bbb8",
+    "dmabuf-proof/protocol.h": "3f3fe6a4c675500a1cf378afc42e6c385d62576ca41e6b395827837cbdbd6b71",
+    "engine/build.py": "99be6692f77394e7f2bac9954943d1864f7cfc955d6e530e78139dfa6868716b",
+    "engine/patches/0001-optional-vulkan-extension-requests.patch": "2414cb4b33412462bd7e5f4656c6c16d65bfd19bdd314fdbe5941957b2131278",
+    "engine/patches/0002-expose-enabled-device-extensions.patch": "105b87a1f30800dc2580ebcbeefc8d504a720c70f2218ca23e49c5b7c39ae4da",
+    "engine/patches/0003-controlled-external-snapshot-copy.patch": "371fba3b90c74535cb19da83dfb0646550fb6510f3f3cd19898ec95eeffd9c6b",
+    "engine/patches/0004-async-external-copy-retirement.patch": "61e8beb7946d43fca78ac3feaebc7dbe3769e90dfd9daa2d72bbf0c2a14e5f58",
+    "engine/patches/0005-foreign-compositor-image-ownership.patch": "d91ec757b92a3fadeeba3d84ab538eddfa4818f9ae55f133e21d5dae0f46e4bc"
+  },
+  "binary_sha256": {
+    "dwl": "550435af15848bf728274ebdb2caf740689c50ddd6e3011d8b26d9ad2d7f7ed2",
+    "godot-bridge/demo/bin/libdwl_bridge.so": "bbee65da826c92027d28f896b50a864fb741c83bb015d8e209aff7d0ff970964",
+    "engine/source/bin/godot.linuxbsd.editor.x86_64.llvm.dwl_bridge": "4dfbf02ccc6e95cb466ca6af425a5b23acdda838efe5b05c6bdd6aace750eff2"
+  },
+  "wlroots_version": "0.19.3",
+  "reviewed_wlroots_archive_sha256": "a6ff89b64ea15e424d1b0db4a22145fccf5ec2ff2e7b8af0fa35e2ac8975986f"
+}

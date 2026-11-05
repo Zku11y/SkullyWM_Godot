@@ -1,0 +1,295 @@
+{
+  "foot": {
+    "artifacts": "/tmp/dwl-gpu-client-elajpxxc",
+    "files_sha256": {
+      "export-0.rgba": "465e75a313f42bb762521d6e0cd839d468d6fe39f5e601626631f2b0d1f43012",
+      "export-1.rgba": "1dafa00ab1c0968858dafaef56315d8d319de8ca6546d85dabe23e298069da84",
+      "export-2.rgba": "2a6d556f34ea95fc2f48700deed4979148bf18477f8df9fb1b27da6988ca8cc7",
+      "export-3.rgba": "835f9dfdb9c6e7c34c7b019f7f13e5e518396c5adc14d6bb54508a2f0847f843",
+      "frame-0.rgba": "465e75a313f42bb762521d6e0cd839d468d6fe39f5e601626631f2b0d1f43012",
+      "frame-1.rgba": "1dafa00ab1c0968858dafaef56315d8d319de8ca6546d85dabe23e298069da84",
+      "frame-2.rgba": "2a6d556f34ea95fc2f48700deed4979148bf18477f8df9fb1b27da6988ca8cc7",
+      "frame-3.rgba": "835f9dfdb9c6e7c34c7b019f7f13e5e518396c5adc14d6bb54508a2f0847f843"
+    },
+    "input_kinds": [
+      "SHM",
+      "uploaded-texture"
+    ],
+    "export_sizes": [
+      "1404x1404"
+    ],
+    "allocations": 1,
+    "result.json": {
+      "asynchronous": true,
+      "compositor": true,
+      "copied": 4,
+      "height": 1404,
+      "success": true,
+      "verification_readback": true,
+      "wait_frames": 0,
+      "width": 1404
+    },
+    "screenshot_sha256": "185f825dc7ecb2ec8075e89f8405d272cd06ac926d1b48dca960f7dc03fd4705"
+  },
+  "egl-client": {
+    "artifacts": "/tmp/dwl-gpu-client-imhp8dnd",
+    "files_sha256": {
+      "export-0.rgba": "4ddadd74d578d8a56da7294de7102d12572c3996f72575ced62042d27057f2ab",
+      "export-1.rgba": "5efab9de96e17f61480a81c86e1ee86bc5ed1650c2b61f4e4e8bd1436a390b1a",
+      "export-2.rgba": "ec9b26b3281ba8ff5ee7ba9e7d7138bf10df6d8e0fc78733e8e889d353e12c63",
+      "export-3.rgba": "fe6b34352b4199f49666293502bb10d7abb0ca90691ce14a71092f5019886d00",
+      "export-4.rgba": "7fb6e3b2d291322843482bbab7e14269da8c5846ddde4a3217dacb243921050d",
+      "export-5.rgba": "767e3dd12770f7895c8af1c4869e4b510ea2637dc728499fde1ab11c471b3179",
+      "export-6.rgba": "b93f5c519f3d9f938bd5a24b9311d3b10b45b5d6721cdf33536343a04153871d",
+      "export-7.rgba": "f579f76e0003c8ef1fdb222c68989380afbd696f88e68c90b18fe15014ef8a36",
+      "frame-0.rgba": "4ddadd74d578d8a56da7294de7102d12572c3996f72575ced62042d27057f2ab",
+      "frame-1.rgba": "5efab9de96e17f61480a81c86e1ee86bc5ed1650c2b61f4e4e8bd1436a390b1a",
+      "frame-2.rgba": "ec9b26b3281ba8ff5ee7ba9e7d7138bf10df6d8e0fc78733e8e889d353e12c63",
+      "frame-3.rgba": "fe6b34352b4199f49666293502bb10d7abb0ca90691ce14a71092f5019886d00",
+      "frame-4.rgba": "7fb6e3b2d291322843482bbab7e14269da8c5846ddde4a3217dacb243921050d",
+      "frame-5.rgba": "767e3dd12770f7895c8af1c4869e4b510ea2637dc728499fde1ab11c471b3179",
+      "frame-6.rgba": "b93f5c519f3d9f938bd5a24b9311d3b10b45b5d6721cdf33536343a04153871d",
+      "frame-7.rgba": "f579f76e0003c8ef1fdb222c68989380afbd696f88e68c90b18fe15014ef8a36"
+    },
+    "input_kinds": [
+      "DMA-BUF"
+    ],
+    "export_sizes": [
+      "1404x1404",
+      "250x250"
+    ],
+    "allocations": 2,
+    "result.json": {
+      "asynchronous": true,
+      "compositor": true,
+      "copied": 8,
+      "height": 1404,
+      "success": true,
+      "verification_readback": true,
+      "wait_frames": 5,
+      "width": 1404
+    },
+    "screenshot_sha256": "87effb1563e51a40aba8d50db625f87606504cfd67c89bfda0b039d6abebaa5e"
+  },
+  "vulkan-client": {
+    "artifacts": "/tmp/dwl-gpu-client-fu2pn9o4",
+    "files_sha256": {
+      "export-0.rgba": "6da1cd4fca718cdc6a1a7a70cf0a4691f18c9a937c19ab646437bc919188c013",
+      "export-1.rgba": "c8bf3c716aea2b53ee39397c98e0269d58e356421823ed9adcdbf052916585f6",
+      "export-2.rgba": "234f13f2fdb26200ded1ceb5de8fc6648c54d6280a738e0e1b444145bfc6c300",
+      "export-3.rgba": "ba633d76c7d2ebd7109002ed1ce3c60df087c02208a67d99e741485339515833",
+      "export-4.rgba": "9ff4e19e9c1e32853a2dd0d2ae4d8eedbe0ec9600ad38b9236b88fd7d2c961cb",
+      "export-5.rgba": "fda2108e5f988e556992bfe89be303c94b050bb76d4d307f4e6f1dd436de44b1",
+      "export-6.rgba": "8e96f7684957fc1b573045280e475fd22484076c5e106b134bf767e09aeb948d",
+      "export-7.rgba": "54f0ecffd9594c61f8dd44d0381cee7c32b3664403cee5a1b15eaa6668158014",
+      "frame-0.rgba": "6da1cd4fca718cdc6a1a7a70cf0a4691f18c9a937c19ab646437bc919188c013",
+      "frame-1.rgba": "c8bf3c716aea2b53ee39397c98e0269d58e356421823ed9adcdbf052916585f6",
+      "frame-2.rgba": "234f13f2fdb26200ded1ceb5de8fc6648c54d6280a738e0e1b444145bfc6c300",
+      "frame-3.rgba": "ba633d76c7d2ebd7109002ed1ce3c60df087c02208a67d99e741485339515833",
+      "frame-4.rgba": "9ff4e19e9c1e32853a2dd0d2ae4d8eedbe0ec9600ad38b9236b88fd7d2c961cb",
+      "frame-5.rgba": "fda2108e5f988e556992bfe89be303c94b050bb76d4d307f4e6f1dd436de44b1",
+      "frame-6.rgba": "8e96f7684957fc1b573045280e475fd22484076c5e106b134bf767e09aeb948d",
+      "frame-7.rgba": "54f0ecffd9594c61f8dd44d0381cee7c32b3664403cee5a1b15eaa6668158014"
+    },
+    "input_kinds": [
+      "DMA-BUF"
+    ],
+    "export_sizes": [
+      "1404x1404",
+      "500x500"
+    ],
+    "allocations": 2,
+    "result.json": {
+      "asynchronous": true,
+      "compositor": true,
+      "copied": 8,
+      "height": 1404,
+      "success": true,
+      "verification_readback": true,
+      "wait_frames": 1,
+      "width": 1404
+    },
+    "screenshot_sha256": "2f51c9e62961eedd5de6e598499915555480fee1a3c38f6b927e75f5a3fffe21"
+  },
+  "resize": {
+    "artifacts": "/tmp/dwl-gpu-client-c98rwpm1",
+    "files_sha256": {
+      "export-0.rgba": "465e75a313f42bb762521d6e0cd839d468d6fe39f5e601626631f2b0d1f43012",
+      "export-1.rgba": "1dafa00ab1c0968858dafaef56315d8d319de8ca6546d85dabe23e298069da84",
+      "export-10.rgba": "bbfd1f6b3ac53a8e839ef0ca7d948d4ced39bdd7911814515e12e754b3cc0b2b",
+      "export-11.rgba": "f71324c7d7b87f29c547c26bfdf19aea27af66b3cfdbc84b84355ab4ed9cd26a",
+      "export-12.rgba": "c93af431f6aa307b5893fd51a35c7edf2cfb637e67aa97db82f9c0c1871fd34c",
+      "export-13.rgba": "2c08f5ff66d6fef968843c66ccf88420d6669644cfecdc7004c157a7274b2e1e",
+      "export-14.rgba": "bc7842a9150defc779b2de850c98244fe69735c64660bcf22df6b6cbe51bfd4a",
+      "export-15.rgba": "637eff491b1442ef1e9b230345dd6b004ae83b55ff67baa91824640d36f82597",
+      "export-16.rgba": "fcf30837dc84a1738882948e3c0c06530d04eaaed9f722b12689ee06b9236e61",
+      "export-2.rgba": "2a6d556f34ea95fc2f48700deed4979148bf18477f8df9fb1b27da6988ca8cc7",
+      "export-3.rgba": "835f9dfdb9c6e7c34c7b019f7f13e5e518396c5adc14d6bb54508a2f0847f843",
+      "export-4.rgba": "d6d7ed89368d81d465445f6f6597c972b219514b5d757cd4dde9872d59e031c5",
+      "export-5.rgba": "73a37dd05f0e995b0653c18b136a0cb4c158aa3846d0cd4958f70e2a118a0eff",
+      "export-6.rgba": "75a790417e21e780ffd835ae877d227c4c7ec7c0218b932290d314add42ebaca",
+      "export-7.rgba": "5d9678c0cb38090049bff58f7b25a119c029560718484c73f7737aa9d877c6b4",
+      "export-8.rgba": "f56a5b7d5cb08a4afdb3eed95ca68d20b054dca326951858bf31ce67c930caf9",
+      "export-9.rgba": "00a56014ca8f07230f951289ea4de69e0a697819c0a72ccf878c91fb1f040f37",
+      "frame-0.rgba": "465e75a313f42bb762521d6e0cd839d468d6fe39f5e601626631f2b0d1f43012",
+      "frame-1.rgba": "1dafa00ab1c0968858dafaef56315d8d319de8ca6546d85dabe23e298069da84",
+      "frame-10.rgba": "bbfd1f6b3ac53a8e839ef0ca7d948d4ced39bdd7911814515e12e754b3cc0b2b",
+      "frame-11.rgba": "f71324c7d7b87f29c547c26bfdf19aea27af66b3cfdbc84b84355ab4ed9cd26a",
+      "frame-12.rgba": "c93af431f6aa307b5893fd51a35c7edf2cfb637e67aa97db82f9c0c1871fd34c",
+      "frame-13.rgba": "2c08f5ff66d6fef968843c66ccf88420d6669644cfecdc7004c157a7274b2e1e",
+      "frame-14.rgba": "bc7842a9150defc779b2de850c98244fe69735c64660bcf22df6b6cbe51bfd4a",
+      "frame-15.rgba": "637eff491b1442ef1e9b230345dd6b004ae83b55ff67baa91824640d36f82597",
+      "frame-2.rgba": "2a6d556f34ea95fc2f48700deed4979148bf18477f8df9fb1b27da6988ca8cc7",
+      "frame-3.rgba": "835f9dfdb9c6e7c34c7b019f7f13e5e518396c5adc14d6bb54508a2f0847f843",
+      "frame-4.rgba": "d6d7ed89368d81d465445f6f6597c972b219514b5d757cd4dde9872d59e031c5",
+      "frame-5.rgba": "73a37dd05f0e995b0653c18b136a0cb4c158aa3846d0cd4958f70e2a118a0eff",
+      "frame-6.rgba": "75a790417e21e780ffd835ae877d227c4c7ec7c0218b932290d314add42ebaca",
+      "frame-7.rgba": "5d9678c0cb38090049bff58f7b25a119c029560718484c73f7737aa9d877c6b4",
+      "frame-8.rgba": "f56a5b7d5cb08a4afdb3eed95ca68d20b054dca326951858bf31ce67c930caf9",
+      "frame-9.rgba": "00a56014ca8f07230f951289ea4de69e0a697819c0a72ccf878c91fb1f040f37"
+    },
+    "input_kinds": [
+      "SHM",
+      "uploaded-texture"
+    ],
+    "export_sizes": [
+      "1404x1404",
+      "798x598",
+      "998x698"
+    ],
+    "allocations": 3,
+    "result.json": {
+      "asynchronous": true,
+      "compositor": true,
+      "copied": 16,
+      "height": 698,
+      "success": true,
+      "verification_readback": true,
+      "wait_frames": 0,
+      "width": 998
+    },
+    "screenshot_sha256": "cd8fc92941e8bc3d12ca49e2cb3b735d7c7c6bab9e0157ec5282ce5029068fbd"
+  },
+  "final-idle-update": {
+    "artifacts": "/tmp/dwl-gpu-client-y6az97pp",
+    "files_sha256": {
+      "export-0.rgba": "a671c6c6953f431dddb1ea19f8a26ae2f414597eaec95f35342669f87b4c4e88",
+      "export-1.rgba": "5f5ac04a89a9634da913bd93960b7834aa2aa1857e969f06801b266db834b1d7",
+      "frame-0.rgba": "a671c6c6953f431dddb1ea19f8a26ae2f414597eaec95f35342669f87b4c4e88",
+      "frame-1.rgba": "5f5ac04a89a9634da913bd93960b7834aa2aa1857e969f06801b266db834b1d7"
+    },
+    "input_kinds": [
+      "SHM",
+      "uploaded-texture"
+    ],
+    "export_sizes": [
+      "1404x1404"
+    ],
+    "allocations": 1,
+    "result.json": {
+      "asynchronous": true,
+      "compositor": true,
+      "copied": 2,
+      "height": 1404,
+      "success": true,
+      "verification_readback": true,
+      "wait_frames": 0,
+      "width": 1404
+    },
+    "screenshot_sha256": "9784a9eb643826ec616c9b0314269d10b239d7be9fdc33bea1fd1b8640af3745"
+  },
+  "interactive": {
+    "artifacts": "/tmp/dwl-gpu-client-ro0ozfu4",
+    "files_sha256": {},
+    "input_kinds": [
+      "SHM",
+      "uploaded-texture"
+    ],
+    "export_sizes": [
+      "1404x1404"
+    ],
+    "allocations": 1,
+    "interactive-test.json": {
+      "success": true,
+      "frames": 35,
+      "no_texture_readback": true,
+      "ctrl_c_cleanup": true
+    }
+  },
+  "backpressure": {
+    "artifacts": "/tmp/dwl-gpu-backpressure-e41fxfqq",
+    "files_sha256": {},
+    "input_kinds": [
+      "SHM",
+      "uploaded-texture"
+    ],
+    "export_sizes": [
+      "1404x1404"
+    ],
+    "allocations": 2
+  },
+  "controlled-v2": {
+    "artifacts": "/tmp/dwl-dmabuf-proof-0o2x_4cy",
+    "files_sha256": {
+      "frame-0.rgba": "9cbb8313ae420eb499e5be26b72193b406805e10796d8793d19b2e0e57a24ebd",
+      "frame-1.rgba": "d2aa4af64d68818f369b6790fabb7217bbf79cd9bdca85728ef60dd989fc2f2a",
+      "frame-2.rgba": "6f9831dd41d40ea262155c66bf3ca15817ff5b393969fa86e01569b6039c17e4",
+      "frame-3.rgba": "17bd2ad6dc9d7a30c7614a8e381e5e66eb2e8dfc5b33abb29c0f52d49339e76c"
+    },
+    "result.json": {
+      "asynchronous": true,
+      "compositor": false,
+      "copied": 4,
+      "height": 256,
+      "success": true,
+      "verification_readback": true,
+      "wait_frames": 0,
+      "width": 512
+    },
+    "screenshot_sha256": "c5fb52baa6e8403cfbfb712d7741d368f227727395e77ff68a8db23406c0cdd5"
+  },
+  "legacy-v1": {
+    "artifacts": "/tmp/dwl-dmabuf-proof-ahmrti4x",
+    "files_sha256": {
+      "frame-0.rgba": "9cbb8313ae420eb499e5be26b72193b406805e10796d8793d19b2e0e57a24ebd",
+      "frame-1.rgba": "d2aa4af64d68818f369b6790fabb7217bbf79cd9bdca85728ef60dd989fc2f2a"
+    },
+    "result.json": {
+      "asynchronous": false,
+      "compositor": false,
+      "copied": 2,
+      "height": 256,
+      "success": true,
+      "verification_readback": true,
+      "wait_frames": 0,
+      "width": 512
+    },
+    "screenshot_sha256": "d2566d1da4a84978fac5e8724ee3af38b4a7955154c00026a56f6dc3b2abe6cf"
+  },
+  "bad-fence": {
+    "artifacts": "/tmp/dwl-dmabuf-proof-zhxfzwki",
+    "files_sha256": {},
+    "result.json": {
+      "copied": 0,
+      "error": "Acquire descriptor is not a sync_file",
+      "success": false
+    }
+  },
+  "truncated": {
+    "artifacts": "/tmp/dwl-dmabuf-proof-t8fq61dj",
+    "files_sha256": {},
+    "result.json": {
+      "copied": 0,
+      "error": "Invalid DMB1 header, format, plane count or usage",
+      "success": false
+    }
+  },
+  "shm-transport": {
+    "artifacts": "/tmp/dwl-godot-visual-cwdv2jvy",
+    "files_sha256": {},
+    "input_kinds": [],
+    "export_sizes": [],
+    "allocations": 0,
+    "screenshot_sha256": "1b947f92f7c397e3548d246514b4f8e9efc1c595ee073dc45d7bcc3d871b0cfd"
+  }
+}

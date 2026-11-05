@@ -1,5 +1,9 @@
 Vulkan feasibility checkpoint — 2026-11-05
 
+Update: the subsequent engine capability build and runtime verification are
+complete; see [patched-engine/README.md](patched-engine/README.md). The findings
+below remain the stock-engine baseline, not the patched build's behavior.
+
 The proposed same-GPU DMA-BUF + sync-FD path cannot run on the supplied stock
 Godot device yet. Hardware support is present on AMD, but the engine does not
 enable several required extensions. A small engine capability patch is the next

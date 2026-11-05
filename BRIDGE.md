@@ -1,5 +1,9 @@
 # One-frame SHM bridge
 
+For the newer live compositor-owned DMA-BUF path and choosing your own programs,
+see [GPU_BRIDGE.md](GPU_BRIDGE.md). This document retains the original SHM
+diagnostic and transport instructions.
+
 The next step, receiving this frame in a C++ Godot extension and displaying it
 in 2D and 3D, is now available in [godot-bridge/README.md](godot-bridge/README.md).
 

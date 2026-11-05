@@ -1,0 +1,9 @@
+{
+  "command": "weston-simple-egl",
+  "app_id": "org.freedesktop.weston.simple-egl",
+  "fps": 60,
+  "gpu_index": 0,
+  "verify": false,
+  "auto_exit": true,
+  "engine": "/home/skully/projects/SkullyWM_Godot/engine/source/bin/godot.linuxbsd.editor.x86_64.llvm.dwl_bridge"
+}

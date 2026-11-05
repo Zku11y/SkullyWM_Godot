@@ -251,7 +251,8 @@ The read-only probe and measured results are described in
 default Vulkan device is NVIDIA, while nested dwl uses AMD. Selecting GPU index
 0 aligns them. Both drivers support the queried external-memory features, but
 the stock Godot device leaves DMA-BUF, DRM modifiers and semaphore-FD extensions
-disabled. An isolated engine capability patch is the next step before import.
+disabled. The isolated engine patch series enables the controlled import proof
+described below.
 
 ```sh
 python3 tools/probe_vulkan.py --gpu-index 0 --validation
@@ -260,4 +261,43 @@ python3 tests/test_godot_nested.py --vulkan --gpu-index 0
 
 The latter verifies our existing CPU-upload path with Vulkan rendering and was
 pixel-exact against the PPM diagnostic. The demo's saved renderer setting stays
-OpenGL; `--vulkan` is a test override. No DMA-BUF image has been imported yet.
+OpenGL; `--vulkan` is a test override. This particular SHM test performs no
+DMA-BUF image import.
+
+The separate patched Godot build is now available; see
+[engine/README.md](../engine/README.md) and its
+[verification results](../reports/vulkan/patched-engine/README.md). The interactive
+editor runner also accepts `--engine`, `--project`, `--vulkan` and `--gpu-index`
+to select it. Capability requests are opt-in per project; the audit runner's
+`--request-bridge-extensions` option creates a private configured project.
+
+**Controlled DMA-BUF proof**
+
+`BridgeDMABufReceiver` and `demo/dmabuf_proof.tscn` now exercise actual DMA-BUF
+import into Godot's Vulkan device and a GPU copy into a `Texture2DRD`, displayed
+in 2D and on a mesh. A standalone Vulkan producer provides a bounded test pattern
+and waits for a copy-complete ACK before reusing its source. This is separate
+from the SHM receiver/editor scene. The patched engine's third diagnostic patch
+is required; no imported image handles are available on the stock engine.
+
+See [dmabuf-proof/README.md](../dmabuf-proof/README.md) for build/run commands,
+the function-by-function explanation, protocol, ownership and remaining limits.
+Real client capture and editor DMA-BUF lifecycle remain future milestones.
+
+The default proof now uses v2 acquire/release sync-files and a bounded
+asynchronous engine copy. `submit_next()` transfers import ownership to the
+engine, `poll_copy()` publishes a completed texture, and `discard_copy()` requests
+safe retirement. The receiver waits for acquire readiness on its worker; the
+render thread does not wait for the producer/copy fence. See
+[the async guide](../dmabuf-proof/ASYNC.md) and
+[verification report](../reports/dmabuf-async/README.md).
+
+**Real application GPU exports**
+
+The runtime viewer now receives compositor-owned DMA-BUF exports of a selected
+native application's applied main surface, including SHM and GPU-backed clients.
+Use `python3 tools/run_gpu_client.py` from the repository root. It stays open
+until Ctrl+C; `--command '...' --app-id ...` selects your own program. See
+[GPU_BRIDGE.md](../GPU_BRIDGE.md) for examples, ownership, limits and tests.
+This path requires engine patch 0005 for FOREIGN queue ownership. The existing
+SHM editor-preview runner remains separate; this is a runtime GPU viewer.

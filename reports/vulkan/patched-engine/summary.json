@@ -1,0 +1,27 @@
+[
+  {
+    "case": "stock-requested",
+    "passed": true,
+    "report": "/tmp/dwl-engine-capabilities-h68l90ok/stock-requested/report.json"
+  },
+  {
+    "case": "patched-default",
+    "passed": true,
+    "report": "/tmp/dwl-engine-capabilities-h68l90ok/patched-default/report.json"
+  },
+  {
+    "case": "patched-amd-requested",
+    "passed": true,
+    "report": "/tmp/dwl-engine-capabilities-h68l90ok/patched-amd-requested/report.json"
+  },
+  {
+    "case": "patched-optional-requests",
+    "passed": true,
+    "report": "/tmp/dwl-engine-capabilities-h68l90ok/patched-optional-requests/report.json"
+  },
+  {
+    "case": "patched-other-gpu",
+    "passed": true,
+    "report": "/tmp/dwl-engine-capabilities-h68l90ok/patched-other-gpu/report.json"
+  }
+]

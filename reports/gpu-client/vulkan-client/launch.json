@@ -1,0 +1,9 @@
+{
+  "command": "vkcube --wsi wayland --gpu_number 0",
+  "app_id": "broken",
+  "fps": 10,
+  "gpu_index": 0,
+  "verify": true,
+  "auto_exit": true,
+  "engine": "/home/skully/projects/SkullyWM_Godot/engine/source/bin/godot.linuxbsd.editor.x86_64.llvm.dwl_bridge"
+}

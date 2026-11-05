@@ -1,0 +1,10 @@
+{
+	"asynchronous": false,
+	"compositor": false,
+	"copied": 2,
+	"height": 256,
+	"success": true,
+	"verification_readback": true,
+	"wait_frames": 0,
+	"width": 512
+}

@@ -1,0 +1,12 @@
+{
+  "source_sha256": {
+    "gpu_bridge.c": "a27fa1f84c23da8289bef0af7dcd2cc3f557eb67353e56750ba71308fdbedd7b",
+    "tools/run_gpu_client.py": "362141d0f189b5309799c8dd5cecde6268ba63b1e7ee0f91ced02a0fa5fdc950"
+  },
+  "binary_sha256": {
+    "dwl": "7375ea6b683ea8e50130639393776afd04269f0ee3b69839193753d5e02bc15c",
+    "godot-bridge/demo/bin/libdwl_bridge.so": "bbee65da826c92027d28f896b50a864fb741c83bb015d8e209aff7d0ff970964",
+    "engine/source/bin/godot.linuxbsd.editor.x86_64.llvm.dwl_bridge": "4dfbf02ccc6e95cb466ca6af425a5b23acdda838efe5b05c6bdd6aace750eff2"
+  },
+  "note": "GPU FPS and cadence update; default 10 and single export slot retained."
+}

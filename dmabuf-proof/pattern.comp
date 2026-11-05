@@ -1,0 +1,14 @@
+#version 450
+layout(local_size_x=16, local_size_y=16) in;
+layout(set=0,binding=0,rgba8) uniform writeonly image2D target_image;
+layout(push_constant) uniform Pattern { uint frame; } pattern;
+void main() {
+    ivec2 p=ivec2(gl_GlobalInvocationID.xy), size=imageSize(target_image);
+    if(any(greaterThanEqual(p,size))) return;
+    uint quadrant=uint(p.x>=size.x/2)+2u*uint(p.y>=size.y/2);
+    uint color=(quadrant+pattern.frame)%4u;
+    vec4 c=color==0u?vec4(1,0,0,1):color==1u?vec4(0,1,0,1):color==2u?vec4(0,0,1,1):vec4(1,1,0,1);
+    // Asymmetric white corner makes flips/transposes easy to detect.
+    if(p.x<16 && p.y<16) c=vec4(1);
+    imageStore(target_image,p,c);
+}

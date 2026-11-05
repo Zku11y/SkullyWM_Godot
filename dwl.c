@@ -80,6 +80,7 @@
 
 #include "util.h"
 #include "bridge.h"
+#include "gpu_bridge.h"
 
 /* macros */
 #define MAX(A, B)               ((A) > (B) ? (A) : (B))
@@ -711,6 +712,7 @@ checkidleinhibitor(struct wlr_surface *exclude)
 void
 cleanup(void)
 {
+	gpu_bridge_finish();
 	bridge_finish();
 	cleanuplisteners();
 #ifdef XWAYLAND
@@ -941,6 +943,7 @@ void commitnotify(struct wl_listener *listener, void *data)
 	      	(int)client_surface(c)->mapped);
 
 	logbuffer(c);
+	gpu_bridge_commit(client_surface(c), client_get_appid(c));
 
 	if (c->surface.xdg->initial_commit) {
 		/*
@@ -1978,7 +1981,7 @@ mapnotify(struct wl_listener *listener, void *data)
 	int i;
 
 	if(c->type == XDGShell)
-		wlr_log(WLR_DEBUG, "[bridge] MAP client=%p", (void *)c);
+		wlr_log(WLR_DEBUG, "[bridge] MAP client=%p app-id=%s", (void *)c, client_get_appid(c));
 
 	/* Create scene tree for this client and its border */
 	c->scene = client_surface(c)->data = wlr_scene_tree_create(layers[LyrTile]);
@@ -2749,6 +2752,7 @@ setup(void)
 	 * screen */
 	if (!(alloc = wlr_allocator_autocreate(backend, drw)))
 		die("couldn't create allocator");
+	gpu_bridge_init(event_loop, drw, alloc);
 
 	/* This creates some hands-off wlroots interfaces. The compositor is
 	 * necessary for clients to allocate surfaces and the data device manager

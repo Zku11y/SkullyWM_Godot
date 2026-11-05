@@ -1,0 +1,6 @@
+{
+  "success": true,
+  "frames": 35,
+  "no_texture_readback": true,
+  "ctrl_c_cleanup": true
+}

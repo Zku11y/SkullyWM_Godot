@@ -1,0 +1,88 @@
+{
+  "eight-frames": {
+    "original_artifacts": "/tmp/dwl-dmabuf-proof-rzfna2xh",
+    "result": {
+      "copied": 8,
+      "success": true,
+      "verification_readback": true
+    },
+    "verification_pixel_sha256": {
+      "frame-0.rgba": "9cbb8313ae420eb499e5be26b72193b406805e10796d8793d19b2e0e57a24ebd",
+      "frame-1.rgba": "d2aa4af64d68818f369b6790fabb7217bbf79cd9bdca85728ef60dd989fc2f2a",
+      "frame-2.rgba": "6f9831dd41d40ea262155c66bf3ca15817ff5b393969fa86e01569b6039c17e4",
+      "frame-3.rgba": "17bd2ad6dc9d7a30c7614a8e381e5e66eb2e8dfc5b33abb29c0f52d49339e76c",
+      "frame-4.rgba": "9cbb8313ae420eb499e5be26b72193b406805e10796d8793d19b2e0e57a24ebd",
+      "frame-5.rgba": "d2aa4af64d68818f369b6790fabb7217bbf79cd9bdca85728ef60dd989fc2f2a",
+      "frame-6.rgba": "6f9831dd41d40ea262155c66bf3ca15817ff5b393969fa86e01569b6039c17e4",
+      "frame-7.rgba": "17bd2ad6dc9d7a30c7614a8e381e5e66eb2e8dfc5b33abb29c0f52d49339e76c"
+    },
+    "screenshot_sha256": "c5fb52baa6e8403cfbfb712d7741d368f227727395e77ff68a8db23406c0cdd5"
+  },
+  "no-readback": {
+    "original_artifacts": "/tmp/dwl-dmabuf-proof-hacru5gk",
+    "result": {
+      "copied": 8,
+      "success": true,
+      "verification_readback": false
+    },
+    "verification_pixel_sha256": {},
+    "screenshot_sha256": "c5fb52baa6e8403cfbfb712d7741d368f227727395e77ff68a8db23406c0cdd5"
+  },
+  "invalid-size": {
+    "original_artifacts": "/tmp/dwl-dmabuf-proof-tjca63ns",
+    "result": {
+      "copied": 0,
+      "error": "Unsupported or oversized single-plane linear layout",
+      "success": false
+    },
+    "verification_pixel_sha256": {}
+  },
+  "wrong-uuid": {
+    "original_artifacts": "/tmp/dwl-dmabuf-proof-olrsy_rb",
+    "result": {
+      "copied": 0,
+      "error": "Producer GPU/driver UUID differs from Godot",
+      "success": false
+    },
+    "verification_pixel_sha256": {}
+  },
+  "extra-fd": {
+    "original_artifacts": "/tmp/dwl-dmabuf-proof-5jntdgrk",
+    "result": {
+      "copied": 0,
+      "error": "Expected exactly one complete metadata packet and FD",
+      "success": false
+    },
+    "verification_pixel_sha256": {}
+  },
+  "truncated": {
+    "original_artifacts": "/tmp/dwl-dmabuf-proof-r17pp2n2",
+    "result": {
+      "copied": 0,
+      "error": "Invalid DMB1 header, format, plane count or usage",
+      "success": false
+    },
+    "verification_pixel_sha256": {}
+  },
+  "empty-with-fd": {
+    "original_artifacts": "/tmp/dwl-dmabuf-proof-4tzqiywa",
+    "result": {
+      "copied": 0,
+      "error": "Invalid DMB1 header, format, plane count or usage",
+      "success": false
+    },
+    "verification_pixel_sha256": {}
+  },
+  "producer-disconnect": {
+    "original_artifacts": "/tmp/dwl-dmabuf-proof-993loyri",
+    "result": {
+      "copied": 1,
+      "success": true,
+      "verification_readback": true
+    },
+    "verification_pixel_sha256": {
+      "frame-0.rgba": "9cbb8313ae420eb499e5be26b72193b406805e10796d8793d19b2e0e57a24ebd"
+    },
+    "screenshot_sha256": "2d0a7cf909108736df77ee18789d945a85c76fd24fa3288c22e160dddd712a5a"
+  }
+}

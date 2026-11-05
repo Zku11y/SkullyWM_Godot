@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import tempfile
 import time
@@ -18,6 +19,7 @@ REQUIRED = (
     "VK_EXT_image_drm_format_modifier",
     "VK_KHR_external_semaphore_fd",
 )
+BRIDGE_REQUESTS = (*REQUIRED, "VK_EXT_queue_family_foreign")
 
 
 def parse_creation_capture(text):
@@ -67,6 +69,9 @@ def nested_identity(folder, env):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--engine", type=Path, default=REPO / "godot/Godot_v4.7.2-stable_linux.x86_64")
+    parser.add_argument("--request-bridge-extensions", action="store_true", help="request the bridge extensions in an isolated project")
+    parser.add_argument("--request-extension", action="append", default=[], help="additional optional request (repeatable)")
     parser.add_argument("--validation", action="store_true", help="also enable the SDK validation layer")
     parser.add_argument("--gpu-index", type=int, help="Godot GPU index; omit to audit its default selection")
     parser.add_argument("--output", type=Path, help="new artifact directory (must not already exist)")
@@ -93,13 +98,26 @@ def main():
     env.update(XDG_DATA_HOME=str(folder / "data"), XDG_CONFIG_HOME=str(folder / "config"),
                XDG_CACHE_HOME=str(folder / "cache"))
     renderer = nested_identity(folder, env)
+    requests = list(BRIDGE_REQUESTS if args.request_bridge_extensions else ()) + args.request_extension
+    project = REPO / "godot-bridge/demo"
+    if requests:
+        project = folder / "project"
+        shutil.copytree(REPO / "godot-bridge/demo", project, ignore=shutil.ignore_patterns(".godot", "bin"))
+        (project / "bin").mkdir()
+        (project / "bin/libdwl_bridge.so").symlink_to(REPO / "godot-bridge/demo/bin/libdwl_bridge.so")
+        (project / ".godot").mkdir()
+        (project / ".godot/extension_list.cfg").write_text("res://bridge.gdextension\n")
+        with (project / "project.godot").open("a") as config:
+            config.write("\nrendering_device/vulkan/additional_device_extensions=PackedStringArray(" +
+                         ", ".join(json.dumps(name) for name in requests) + ")\n")
     gpu_env = env.copy()
     capture = folder / "api.txt"
     gpu_env.update(VK_LAYER_PATH=str(layer_dir), VK_INSTANCE_LAYERS="VK_LAYER_LUNARG_api_dump" + (":VK_LAYER_KHRONOS_validation" if args.validation else ""),
                    VK_APIDUMP_LOG_FILENAME=str(capture), VK_APIDUMP_OUTPUT_FORMAT="text",
                    VK_APIDUMP_DETAILED="true", VK_APIDUMP_NO_ADDR="true", VK_LOADER_DEBUG="layer")
-    command = [str(REPO / "godot/Godot_v4.7.2-stable_linux.x86_64"),
-               "--path", str(REPO / "godot-bridge/demo"), "--display-driver", "wayland",
+    engine = args.engine.resolve()
+    command = [str(engine),
+               "--path", str(project), "--display-driver", "wayland",
                "--rendering-method", "mobile", "--rendering-driver", "vulkan",
                "--audio-driver", "Dummy", "--script", "res://vulkan_probe.gd"]
     if args.gpu_index is not None:
@@ -111,7 +129,16 @@ def main():
     if report["rendering_driver"] != "vulkan" or not report["on_render_thread"]:
         raise ValueError("Probe did not execute on Godot's Vulkan render thread")
     enabled = parse_creation_capture(capture.read_text())
+    engine_enabled = report["enabled_device_extensions"]
+    report["engine_reported_enabled_extensions"] = engine_enabled
+    report["engine_api_matches_capture"] = sorted(engine_enabled) == enabled if isinstance(engine_enabled, list) else None
+    if report["engine_api_matches_capture"] is False:
+        raise ValueError("Engine enabled-extension API disagrees with captured vkCreateDevice")
     report["enabled_device_extensions"] = enabled
+    report["requested_additional_extensions"] = requests
+    report["engine_binary"] = str(engine)
+    with engine.open("rb") as binary:
+        report["engine_binary_sha256"] = hashlib.file_digest(binary, "sha256").hexdigest()
     report["enabled_extension_evidence"] = {
         "source": "LunarG API-dump: sole successful vkCreateDevice in this probe run",
         "capture_sha256": hashlib.sha256(capture.read_bytes()).hexdigest(),

@@ -1,0 +1,33 @@
+{
+  "base_repository_head": "81e1333f5869a2c9426ebed1aa202238608dc828",
+  "branch": "main",
+  "godot_cpp": "e83fd0904c13356ed1d4c3d09f8bb9132bdc6b77",
+  "source_sha256": {
+    "engine/patches/0001-optional-vulkan-extension-requests.patch": "2414cb4b33412462bd7e5f4656c6c16d65bfd19bdd314fdbe5941957b2131278",
+    "engine/patches/0002-expose-enabled-device-extensions.patch": "105b87a1f30800dc2580ebcbeefc8d504a720c70f2218ca23e49c5b7c39ae4da",
+    "engine/patches/0003-controlled-external-snapshot-copy.patch": "371fba3b90c74535cb19da83dfb0646550fb6510f3f3cd19898ec95eeffd9c6b",
+    "engine/patches/0004-async-external-copy-retirement.patch": "61e8beb7946d43fca78ac3feaebc7dbe3769e90dfd9daa2d72bbf0c2a14e5f58",
+    "engine/build.py": "399e517d911a5ad83e2639cefe7e6d857af98ddddf50af9e5fbdc3efef847879",
+    "dmabuf-proof/protocol.h": "271408cba7ccce87d1a0a5460c20c5b17e51ff1346453dfcf91307026fecf235",
+    "dmabuf-proof/vulkan_helpers.h": "84a3ba8a4dc2d1658c09b85e2c39d95e2f9fcc5d0e2da1797c018b40a902c074",
+    "dmabuf-proof/producer.cpp": "08a2f679b93296d26e04289a1ec3f8bdd674c5af72254c2bf899e972b5928bf4",
+    "dmabuf-proof/pattern.comp": "cdeec6f7a7488a71a20b59c96a3745cd66caff869898966a64f6e6d61e569f35",
+    "dmabuf-proof/CMakeLists.txt": "54135269a934e61ebdeff1fe9ed77910e54bf426c026dcf94a95181734b24a74",
+    "godot-bridge/CMakeLists.txt": "9acda5294beb34e8a2c92dbcc0cd8750fb44ca43c5a7943445b95c484bd98e77",
+    "godot-bridge/src/register_types.cpp": "62daa394e217d6bd2bfe27b221b4b407f32902511fe840258bfe32a33a0b2fc3",
+    "godot-bridge/src/dmabuf_receiver.cpp": "739144c154386567f8404ae42f0c9b89465bbc96a1670104cba3128000489f68",
+    "godot-bridge/src/dmabuf_receiver.h": "e4ffe0239f90d8569baa06df7284a7e2c6de3f79743bfbb192a5c16db9b5e55d",
+    "godot-bridge/demo/dmabuf_proof.gd": "c6611f59629bcaea390735cc70ed8e4c6f5b9fb72ad1df0c8b6c0c85db512b72",
+    "godot-bridge/demo/dmabuf_proof.tscn": "58118bfa15c494505840635a54220a8303cdb914348996fe94441e85ee5f6a56",
+    "tests/test_dmabuf_proof.py": "517f4d0d96fd11f1d5e55c11c870b149a068ce38016d959f6bb2c66d01a2dd9e"
+  },
+  "binary_sha256": {
+    "engine/source/bin/godot.linuxbsd.editor.x86_64.llvm.dwl_bridge": "1daaa363443eae190993dedb054a380e89aabe3d8eb8d8015d65831d73d5edb3",
+    "godot-bridge/demo/bin/libdwl_bridge.so": "2ead583d9e60c340cf02bdceec22aeedf1927780d5ed7118df0b8bf52e7cb4de",
+    "dmabuf-proof/build/dmabuf-producer": "7de654fb700f3da9bdfa22531fcad80d3fdf0891a03e6f299cc738a465658f0b"
+  },
+  "shm_regression": {
+    "artifacts": "/tmp/dwl-godot-visual-zp_87dar",
+    "pixel_comparison": true
+  }
+}

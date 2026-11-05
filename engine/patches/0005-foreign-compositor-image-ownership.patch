@@ -1,0 +1,106 @@
+diff --git a/drivers/vulkan/rendering_device_driver_vulkan.cpp b/drivers/vulkan/rendering_device_driver_vulkan.cpp
+index e3b81a3..2cd0b94 100644
+--- a/drivers/vulkan/rendering_device_driver_vulkan.cpp
++++ b/drivers/vulkan/rendering_device_driver_vulkan.cpp
+@@ -7539,11 +7539,12 @@ Error RenderingDeviceDriverVulkan::texture_copy_external_snapshot(uint64_t p_sou
+ 	return OK;
+ }
+ 
+-uint64_t RenderingDeviceDriverVulkan::texture_external_snapshot_submit(uint64_t p_source, uint64_t p_memory, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height) {
++uint64_t RenderingDeviceDriverVulkan::texture_external_snapshot_submit(uint64_t p_source, uint64_t p_memory, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height, bool p_foreign) {
+ 	// Ready source only. Peer fences are waited on the socket worker, never on
+ 	// Godot's queue. No vkWaitForFences in the frame submission/poll path.
+ 	ERR_FAIL_COND_V(external_snapshot_copy != nullptr, 0);
+ 	ERR_FAIL_COND_V(!get_enabled_extensions().has("VK_KHR_external_semaphore_fd"), 0);
++	ERR_FAIL_COND_V(p_foreign && !get_enabled_extensions().has("VK_EXT_queue_family_foreign"), 0);
+ 	ExternalSnapshotCopy *job = memnew(ExternalSnapshotCopy);
+ 	job->source = (VkImage)p_source;
+ 	job->memory = (VkDeviceMemory)p_memory;
+@@ -7583,7 +7584,7 @@ uint64_t RenderingDeviceDriverVulkan::texture_external_snapshot_submit(uint64_t
+ 		barriers[0].image = source;
+ 		barriers[0].oldLayout = VK_IMAGE_LAYOUT_GENERAL;
+ 		barriers[0].newLayout = VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL;
+-		barriers[0].srcQueueFamilyIndex = VK_QUEUE_FAMILY_EXTERNAL;
++		barriers[0].srcQueueFamilyIndex = (p_foreign ? VK_QUEUE_FAMILY_FOREIGN_EXT : VK_QUEUE_FAMILY_EXTERNAL);
+ 		barriers[0].dstQueueFamilyIndex = queue_info->queue_family;
+ 		barriers[0].dstAccessMask = VK_ACCESS_TRANSFER_READ_BIT;
+ 		barriers[1].image = destination->vk_view_create_info.image;
+@@ -7601,7 +7602,7 @@ uint64_t RenderingDeviceDriverVulkan::texture_external_snapshot_submit(uint64_t
+ 		barriers[0].srcAccessMask = VK_ACCESS_TRANSFER_READ_BIT;
+ 		barriers[0].dstAccessMask = 0;
+ 		barriers[0].srcQueueFamilyIndex = queue_info->queue_family;
+-		barriers[0].dstQueueFamilyIndex = VK_QUEUE_FAMILY_EXTERNAL;
++		barriers[0].dstQueueFamilyIndex = (p_foreign ? VK_QUEUE_FAMILY_FOREIGN_EXT : VK_QUEUE_FAMILY_EXTERNAL);
+ 		barriers[1].oldLayout = VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL;
+ 		barriers[1].newLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+ 		barriers[1].srcAccessMask = VK_ACCESS_TRANSFER_WRITE_BIT;
+diff --git a/drivers/vulkan/rendering_device_driver_vulkan.h b/drivers/vulkan/rendering_device_driver_vulkan.h
+index 6fa2160..b457487 100644
+--- a/drivers/vulkan/rendering_device_driver_vulkan.h
++++ b/drivers/vulkan/rendering_device_driver_vulkan.h
+@@ -809,7 +809,7 @@ private:
+ 	ExternalSnapshotCopy *external_snapshot_copy = nullptr;
+ 	void _external_snapshot_free(ExternalSnapshotCopy *p_copy, bool p_owned_source);
+ public:
+-	virtual uint64_t texture_external_snapshot_submit(uint64_t p_source, uint64_t p_memory, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height) override final;
++	virtual uint64_t texture_external_snapshot_submit(uint64_t p_source, uint64_t p_memory, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height, bool p_foreign) override final;
+ 	virtual Error texture_external_snapshot_poll(bool p_wait, bool p_export_release, int &r_release_fd) override final;
+ 	virtual Error texture_copy_external_snapshot(uint64_t p_source, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height) override final;
+ 	virtual String get_api_name() const override final;
+diff --git a/servers/rendering/rendering_device.cpp b/servers/rendering/rendering_device.cpp
+index c847e4b..de839da 100644
+--- a/servers/rendering/rendering_device.cpp
++++ b/servers/rendering/rendering_device.cpp
+@@ -7849,7 +7849,7 @@ String RenderingDevice::get_device_api_name() const {
+ 	return driver->get_api_name();
+ }
+ 
+-uint64_t RenderingDevice::texture_external_snapshot_submit(uint64_t p_image, uint64_t p_memory, uint32_t p_width, uint32_t p_height) {
++uint64_t RenderingDevice::texture_external_snapshot_submit(uint64_t p_image, uint64_t p_memory, uint32_t p_width, uint32_t p_height, bool p_foreign) {
+ 	ERR_RENDER_THREAD_GUARD_V(0);
+ 	ERR_FAIL_COND_V(external_snapshot_job.ticket || driver->get_api_name() != "Vulkan" || !p_image || !p_memory || !p_width || !p_height || p_width > 2048 || p_height > 2048, 0);
+ 	TextureFormat format;
+@@ -7863,7 +7863,7 @@ uint64_t RenderingDevice::texture_external_snapshot_submit(uint64_t p_image, uin
+ 	RID destination = texture_create(format, TextureView());
+ 	ERR_FAIL_COND_V(!destination.is_valid(), 0);
+ 	Texture *texture = texture_owner.get_or_null(destination);
+-	if (!driver->texture_external_snapshot_submit(p_image, p_memory, texture->driver_id, main_queue, p_width, p_height)) {
++	if (!driver->texture_external_snapshot_submit(p_image, p_memory, texture->driver_id, main_queue, p_width, p_height, p_foreign)) {
+ 		free_rid(destination);
+ 		return 0;
+ 	}
+@@ -9340,7 +9340,7 @@ void RenderingDevice::_bind_methods() {
+ 	ClassDB::bind_method(D_METHOD("get_device_vendor_name"), &RenderingDevice::get_device_vendor_name);
+ 	ClassDB::bind_method(D_METHOD("get_device_name"), &RenderingDevice::get_device_name);
+ 	ClassDB::bind_method(D_METHOD("get_device_enabled_extensions"), &RenderingDevice::get_device_enabled_extensions);
+-	ClassDB::bind_method(D_METHOD("texture_external_snapshot_submit", "image", "memory", "width", "height"), &RenderingDevice::texture_external_snapshot_submit);
++	ClassDB::bind_method(D_METHOD("texture_external_snapshot_submit", "image", "memory", "width", "height", "foreign"), &RenderingDevice::texture_external_snapshot_submit, DEFVAL(false));
+ 	ClassDB::bind_method(D_METHOD("texture_external_snapshot_poll", "ticket"), &RenderingDevice::texture_external_snapshot_poll);
+ 	ClassDB::bind_method(D_METHOD("texture_external_snapshot_discard", "ticket"), &RenderingDevice::texture_external_snapshot_discard);
+ 	ClassDB::bind_method(D_METHOD("texture_external_snapshot_pending_count"), &RenderingDevice::texture_external_snapshot_pending_count);
+diff --git a/servers/rendering/rendering_device.h b/servers/rendering/rendering_device.h
+index 4f86fee..dc8c7aa 100644
+--- a/servers/rendering/rendering_device.h
++++ b/servers/rendering/rendering_device.h
+@@ -1956,7 +1956,7 @@ private:
+ 	uint64_t external_snapshot_sequence = 0;
+ 	Dictionary _external_snapshot_poll(bool p_wait);
+ public:
+-	uint64_t texture_external_snapshot_submit(uint64_t p_image, uint64_t p_memory, uint32_t p_width, uint32_t p_height);
++	uint64_t texture_external_snapshot_submit(uint64_t p_image, uint64_t p_memory, uint32_t p_width, uint32_t p_height, bool p_foreign);
+ 	Dictionary texture_external_snapshot_poll(uint64_t p_ticket);
+ 	void texture_external_snapshot_discard(uint64_t p_ticket);
+ 	uint32_t texture_external_snapshot_pending_count();
+diff --git a/servers/rendering/rendering_device_driver.h b/servers/rendering/rendering_device_driver.h
+index d9a3d6a..49fb58f 100644
+--- a/servers/rendering/rendering_device_driver.h
++++ b/servers/rendering/rendering_device_driver.h
+@@ -943,7 +943,7 @@ public:
+ 	virtual const FragmentShadingRateCapabilities &get_fragment_shading_rate_capabilities() = 0;
+ 	virtual const FragmentDensityMapCapabilities &get_fragment_density_map_capabilities() = 0;
+ 	// One bounded asynchronous copy; successful submission adopts source image/memory.
+-	virtual uint64_t texture_external_snapshot_submit(uint64_t p_source, uint64_t p_memory, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height) { return 0; }
++	virtual uint64_t texture_external_snapshot_submit(uint64_t p_source, uint64_t p_memory, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height, bool p_foreign) { return 0; }
+ 	virtual Error texture_external_snapshot_poll(bool p_wait, bool p_export_release, int &r_release_fd) { return ERR_UNAVAILABLE; }
+ 	// Diagnostic-only: ready RGBA8 image in GENERAL, released to EXTERNAL.
+ 	virtual Error texture_copy_external_snapshot(uint64_t p_source, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height) { return ERR_UNAVAILABLE; }

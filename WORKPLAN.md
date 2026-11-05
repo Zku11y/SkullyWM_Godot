@@ -1,7 +1,7 @@
 Research and workplan — dwl windows inside Godot
 
-Prepared 2026-11-02. This document proposes future work; it does not implement
-the Godot integration or claim that GPU interoperability has been tested.
+Prepared 2026-11-02. The milestone descriptions are the plan; dated progress
+entries below distinguish completed experiments from remaining work.
 
 Progress 2026-11-05: milestone 1 is implemented in `godot-bridge/`. The C++
 receiver and demo were built and exercised in Godot 4.7.2 using pinned 4.5
@@ -38,6 +38,74 @@ SHM demo also rendered a pixel-exact captured frame through AMD Vulkan.
 Reports, provenance, source audit, reproduction and next engine-build steps are
 in `reports/vulkan/README.md`. No external image import, GPU buffer sharing, or
 engine patch is claimed by this checkpoint.
+
+Progress 2026-11-05, engine capability build: the exact 4.7.2 engine source was
+patched and compiled separately. Two small patches add optional project-level
+Vulkan extension requests and an enabled-extension query. Five runtime controls
+passed: stock requests, patched empty defaults, AMD requests, unsupported/empty/
+duplicate requests, and NVIDIA requests. The new API agrees with captured device
+creation in every patched case. All four baseline extensions plus foreign queue
+support can now be enabled. AMD still matches dwl; NVIDIA does not. Pixel-exact
+SHM rendering passed on the rebuilt engine through Vulkan and OpenGL, and the
+Vulkan editor passed upload/reuse/resize/scene lifecycle checks. Build provenance,
+patches and results are in `engine/` and `reports/vulkan/patched-engine/`.
+The next experiment remains a controlled external allocation/import/copy with
+correct synchronization and retirement; capability enablement is not that proof.
+
+Progress 2026-11-05, controlled DMA-BUF proof: a standalone Vulkan compute
+producer now exports one LINEAR RGBA8 allocation, sends a real FD using
+SCM_RIGHTS, and waits for a copy-complete ACK before reuse. A separate bounded
+GDExtension receiver imports it on Godot's existing AMD Vulkan device. Engine
+patch 0003 performs a synchronous GPU copy using the engine queue mutex and
+initializes destination texture tracking. Texture2DRD displays the owned copy
+in a TextureRect and on a 3D quad. The protocol enforces matching GPU/driver
+UUIDs, one plane, layout/allocation bounds and a single pending source. See
+`dmabuf-proof/README.md` and `reports/dmabuf-proof/` for verification and ownership.
+This is milestone 3's controlled image experiment plus a diagnostic part of
+milestone 4, not a production synchronization/retirement implementation. CPU
+handshakes between completed fences establish readiness/reuse; sync-FD transfer,
+asynchronous rendering, real compositor buffers and editor DMA-BUF lifecycle
+remain open. The original SHM fallback is preserved.
+
+Progress 2026-11-05, asynchronous synchronization checkpoint: protocol v2 now
+passes real acquire/release sync-files with the controlled producer. The socket
+worker checks readiness with bounded cancellable polls before import. Engine
+patch 0004 adopts one imported image/memory pair at submission, returns without
+waiting, and publishes the copied RID only after fence-status polling confirms
+GPU completion. Cancellation retains GPU resources until safe retirement; normal
+device finalization handles a remaining job. The source cannot be reused before
+completion/release. This is still a finite same-GPU LINEAR RGBA8 producer test,
+not a real Wayland DMA-BUF client. See `dmabuf-proof/ASYNC.md` and the separate
+`reports/dmabuf-async/` evidence. The next implementation is a compositor-owned
+export pool and safe applied-state leases, including wlroots completion,
+cross-API ownership and format/modifier negotiation. SHM remains a separate
+working path; automatic fallback and editor DMA-BUF lifecycle remain open.
+
+Progress 2026-11-05, real client export: `gpu_bridge.c` now renders the selected
+native main surface's applied texture into one compositor-owned LINEAR RGBA8
+DMA-BUF, signals a DRM timeline and sends its real FDs. Source wrappers are held
+until that render completes, and the export is not reused until Godot's copy
+and release complete. V3 negotiates the actual DRM device and restricted layout;
+engine patch 0005 uses FOREIGN ownership for GLES2/GBM imports. SHM foot,
+DMA-BUF EGL weston-simple-egl and Vulkan vkcube reached Godot with byte-exact
+export/copy comparisons and clean validation. Resizing, final idle updates,
+bounded backpressure, disconnected-allocation abandonment and continuous
+no-readback operation past 32 frames were tested. The interactive runner accepts
+`--command` and `--app-id` and survives Ctrl+C cleanup. See `GPU_BRIDGE.md` and
+`reports/gpu-client/`. This completes the first compositor-owned export slice,
+not a full multi-window lifecycle protocol or direct client allocation sharing.
+Editor GPU lifecycle, surface trees, XWayland, input, pacing/presentation and
+cross-GPU use remain open. No active desktop restart, install or push occurred.
+
+GPU rate follow-up: the runtime GPU runner and compositor helper now accept
+1–60 FPS (default remains 10). Nanosecond cadence deadlines and a 1 ms timer for
+rates above 30 remove the prototype's validation and timer-rounding ceilings.
+Missed slots are skipped; the one-export ownership/backpressure limits remain.
+A live weston-simple-egl run delivered 120 frames at about 59.98 export updates/s
+with clean Vulkan validation, no texture readbacks and successful Ctrl+C cleanup.
+This measures export/copy throughput, not presentation FPS. The separate SHM
+editor runner retains its original limit. Follow-up evidence, including a finite
+test's engine-exit stall after successful copies, is in `reports/gpu-client/fps-60/`.
 
 The recommended target is a C++ GDExtension providing ordinary Texture2D
 resources and window nodes, supported by the smallest Godot Vulkan engine patch

@@ -26,6 +26,8 @@ def stop(proc):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--engine", type=Path, default=REPO / "godot/Godot_v4.7.2-stable_linux.x86_64")
+    parser.add_argument("--project", type=Path, default=REPO / "godot-bridge/demo")
     parser.add_argument("--live", action="store_true")
     parser.add_argument("--vulkan", action="store_true", help="override the demo's OpenGL renderer for this test")
     parser.add_argument("--gpu-index", type=int, help="Godot Vulkan device index")
@@ -47,8 +49,8 @@ def main():
     with (folder / "godot.log").open("w") as godot_log, (folder / "dwl.log").open("w") as dwl_log:
         try:
             viewer = subprocess.Popen([
-                str(REPO / "godot/Godot_v4.7.2-stable_linux.x86_64"),
-                "--path", str(REPO / "godot-bridge/demo"), "--display-driver", "wayland",
+                str(args.engine.resolve()),
+                "--path", str(args.project.resolve()), "--display-driver", "wayland",
                 "--audio-driver", "Dummy", *renderer_options, "--",
                 f"--capture-after={8 if live else 1}", f"--capture={folder / 'screenshot.png'}", f"--pixels-output={folder / 'received.rgb'}",
             ], env=env, stdout=godot_log, stderr=subprocess.STDOUT)

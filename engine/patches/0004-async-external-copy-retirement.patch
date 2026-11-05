@@ -1,0 +1,325 @@
+diff --git a/drivers/vulkan/rendering_device_driver_vulkan.cpp b/drivers/vulkan/rendering_device_driver_vulkan.cpp
+index f7460a7..e3b81a3 100644
+--- a/drivers/vulkan/rendering_device_driver_vulkan.cpp
++++ b/drivers/vulkan/rendering_device_driver_vulkan.cpp
+@@ -7539,6 +7539,138 @@ Error RenderingDeviceDriverVulkan::texture_copy_external_snapshot(uint64_t p_sou
+ 	return OK;
+ }
+ 
++uint64_t RenderingDeviceDriverVulkan::texture_external_snapshot_submit(uint64_t p_source, uint64_t p_memory, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height) {
++	// Ready source only. Peer fences are waited on the socket worker, never on
++	// Godot's queue. No vkWaitForFences in the frame submission/poll path.
++	ERR_FAIL_COND_V(external_snapshot_copy != nullptr, 0);
++	ERR_FAIL_COND_V(!get_enabled_extensions().has("VK_KHR_external_semaphore_fd"), 0);
++	ExternalSnapshotCopy *job = memnew(ExternalSnapshotCopy);
++	job->source = (VkImage)p_source;
++	job->memory = (VkDeviceMemory)p_memory;
++	CommandQueue *queue_info = (CommandQueue *)p_queue.id;
++	Queue &queue = queue_families[queue_info->queue_family][queue_info->queue_index];
++	const TextureInfo *destination = (const TextureInfo *)p_destination.id;
++	VkImage source = (VkImage)p_source;
++	VkCommandPool &pool = job->pool;
++	VkFence &fence = job->fence;
++	VkResult result = VK_SUCCESS;
++	do {
++		VkCommandPoolCreateInfo pool_info = {};
++		pool_info.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
++		pool_info.queueFamilyIndex = queue_info->queue_family;
++		result = vkCreateCommandPool(vk_device, &pool_info, nullptr, &pool);
++		if (result != VK_SUCCESS) { break; }
++		VkCommandBufferAllocateInfo allocate = {};
++		allocate.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
++		allocate.commandPool = pool;
++		allocate.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
++		allocate.commandBufferCount = 1;
++		VkCommandBuffer command;
++		result = vkAllocateCommandBuffers(vk_device, &allocate, &command);
++		if (result != VK_SUCCESS) { break; }
++		VkCommandBufferBeginInfo begin = {};
++		begin.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
++		begin.flags = VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT;
++		result = vkBeginCommandBuffer(command, &begin);
++		if (result != VK_SUCCESS) { break; }
++		VkImageMemoryBarrier barriers[2] = {};
++		for (VkImageMemoryBarrier &barrier : barriers) {
++			barrier.sType = VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER;
++			barrier.srcQueueFamilyIndex = VK_QUEUE_FAMILY_IGNORED;
++			barrier.dstQueueFamilyIndex = VK_QUEUE_FAMILY_IGNORED;
++			barrier.subresourceRange = { VK_IMAGE_ASPECT_COLOR_BIT, 0, 1, 0, 1 };
++		}
++		barriers[0].image = source;
++		barriers[0].oldLayout = VK_IMAGE_LAYOUT_GENERAL;
++		barriers[0].newLayout = VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL;
++		barriers[0].srcQueueFamilyIndex = VK_QUEUE_FAMILY_EXTERNAL;
++		barriers[0].dstQueueFamilyIndex = queue_info->queue_family;
++		barriers[0].dstAccessMask = VK_ACCESS_TRANSFER_READ_BIT;
++		barriers[1].image = destination->vk_view_create_info.image;
++		barriers[1].oldLayout = VK_IMAGE_LAYOUT_UNDEFINED;
++		barriers[1].newLayout = VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL;
++		barriers[1].dstAccessMask = VK_ACCESS_TRANSFER_WRITE_BIT;
++		vkCmdPipelineBarrier(command, VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT, VK_PIPELINE_STAGE_TRANSFER_BIT, 0, 0, nullptr, 0, nullptr, 2, barriers);
++		VkImageCopy copy = {};
++		copy.srcSubresource = { VK_IMAGE_ASPECT_COLOR_BIT, 0, 0, 1 };
++		copy.dstSubresource = copy.srcSubresource;
++		copy.extent = { p_width, p_height, 1 };
++		vkCmdCopyImage(command, source, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, destination->vk_view_create_info.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, 1, &copy);
++		barriers[0].oldLayout = VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL;
++		barriers[0].newLayout = VK_IMAGE_LAYOUT_GENERAL;
++		barriers[0].srcAccessMask = VK_ACCESS_TRANSFER_READ_BIT;
++		barriers[0].dstAccessMask = 0;
++		barriers[0].srcQueueFamilyIndex = queue_info->queue_family;
++		barriers[0].dstQueueFamilyIndex = VK_QUEUE_FAMILY_EXTERNAL;
++		barriers[1].oldLayout = VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL;
++		barriers[1].newLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
++		barriers[1].srcAccessMask = VK_ACCESS_TRANSFER_WRITE_BIT;
++		barriers[1].dstAccessMask = VK_ACCESS_SHADER_READ_BIT;
++		vkCmdPipelineBarrier(command, VK_PIPELINE_STAGE_TRANSFER_BIT, VK_PIPELINE_STAGE_ALL_COMMANDS_BIT, 0, 0, nullptr, 0, nullptr, 2, barriers);
++		result = vkEndCommandBuffer(command);
++		if (result != VK_SUCCESS) { break; }
++		VkFenceCreateInfo fence_info = {};
++		fence_info.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
++		result = vkCreateFence(vk_device, &fence_info, nullptr, &fence);
++		if (result != VK_SUCCESS) { break; }
++		VkExportSemaphoreCreateInfo export_info = {};
++		export_info.sType = VK_STRUCTURE_TYPE_EXPORT_SEMAPHORE_CREATE_INFO;
++		export_info.handleTypes = VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_SYNC_FD_BIT;
++		VkSemaphoreCreateInfo semaphore_info = {};
++		semaphore_info.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
++		semaphore_info.pNext = &export_info;
++		result = vkCreateSemaphore(vk_device, &semaphore_info, nullptr, &job->release);
++		if (result != VK_SUCCESS) { break; }
++		VkSubmitInfo submit = {};
++		submit.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
++		submit.commandBufferCount = 1;
++		submit.pCommandBuffers = &command;
++		submit.signalSemaphoreCount = 1;
++		submit.pSignalSemaphores = &job->release;
++		queue.submit_mutex.lock();
++		result = vkQueueSubmit(queue.queue, 1, &submit, fence);
++		queue.submit_mutex.unlock();
++		if (result != VK_SUCCESS) { break; }
++	} while (false);
++	if (result != VK_SUCCESS) {
++		_external_snapshot_free(job, false); // submission failed: caller still owns source
++		return 0;
++	}
++	external_snapshot_copy = job;
++	return 1;
++}
++
++void RenderingDeviceDriverVulkan::_external_snapshot_free(ExternalSnapshotCopy *p_copy, bool p_owned_source) {
++	if (p_copy->release) { vkDestroySemaphore(vk_device, p_copy->release, nullptr); }
++	if (p_copy->fence) { vkDestroyFence(vk_device, p_copy->fence, nullptr); }
++	if (p_copy->pool) { vkDestroyCommandPool(vk_device, p_copy->pool, nullptr); }
++	if (p_owned_source) {
++		vkDestroyImage(vk_device, p_copy->source, nullptr);
++		vkFreeMemory(vk_device, p_copy->memory, nullptr);
++	}
++	memdelete(p_copy);
++}
++
++Error RenderingDeviceDriverVulkan::texture_external_snapshot_poll(bool p_wait, bool p_export_release, int &r_release_fd) {
++	ERR_FAIL_NULL_V(external_snapshot_copy, ERR_DOES_NOT_EXIST);
++	ExternalSnapshotCopy *job = external_snapshot_copy;
++	r_release_fd = -1;
++	// Blocking wait is only used during normal device finalization, never cancel.
++	VkResult result = p_wait ? vkWaitForFences(vk_device, 1, &job->fence, VK_TRUE, UINT64_MAX) : vkGetFenceStatus(vk_device, job->fence);
++	if (result == VK_NOT_READY) { return ERR_BUSY; }
++	if (result != VK_SUCCESS && result != VK_ERROR_DEVICE_LOST) { return ERR_BUSY; }
++	if (result == VK_SUCCESS && p_export_release) {
++		VkSemaphoreGetFdInfoKHR info = {};
++		info.sType = VK_STRUCTURE_TYPE_SEMAPHORE_GET_FD_INFO_KHR;
++		info.semaphore = job->release;
++		info.handleType = VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_SYNC_FD_BIT;
++		result = vkGetSemaphoreFdKHR(vk_device, &info, &r_release_fd);
++	}
++	_external_snapshot_free(job, true); // fence complete, or device lost
++	external_snapshot_copy = nullptr;
++	return result == VK_SUCCESS ? OK : FAILED;
++}
++
+ PackedStringArray RenderingDeviceDriverVulkan::get_enabled_extensions() const {
+ 	PackedStringArray extensions;
+ 	for (const CharString &name : enabled_device_extension_names) {
+diff --git a/drivers/vulkan/rendering_device_driver_vulkan.h b/drivers/vulkan/rendering_device_driver_vulkan.h
+index b2f15b3..6fa2160 100644
+--- a/drivers/vulkan/rendering_device_driver_vulkan.h
++++ b/drivers/vulkan/rendering_device_driver_vulkan.h
+@@ -798,6 +798,19 @@ public:
+ 	virtual const MultiviewCapabilities &get_multiview_capabilities() override final;
+ 	virtual const FragmentShadingRateCapabilities &get_fragment_shading_rate_capabilities() override final;
+ 	virtual const FragmentDensityMapCapabilities &get_fragment_density_map_capabilities() override final;
++private:
++	struct ExternalSnapshotCopy {
++		VkImage source = VK_NULL_HANDLE;
++		VkDeviceMemory memory = VK_NULL_HANDLE;
++		VkCommandPool pool = VK_NULL_HANDLE;
++		VkFence fence = VK_NULL_HANDLE;
++		VkSemaphore release = VK_NULL_HANDLE;
++	};
++	ExternalSnapshotCopy *external_snapshot_copy = nullptr;
++	void _external_snapshot_free(ExternalSnapshotCopy *p_copy, bool p_owned_source);
++public:
++	virtual uint64_t texture_external_snapshot_submit(uint64_t p_source, uint64_t p_memory, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height) override final;
++	virtual Error texture_external_snapshot_poll(bool p_wait, bool p_export_release, int &r_release_fd) override final;
+ 	virtual Error texture_copy_external_snapshot(uint64_t p_source, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height) override final;
+ 	virtual String get_api_name() const override final;
+ 	virtual PackedStringArray get_enabled_extensions() const override final;
+diff --git a/servers/rendering/rendering_device.cpp b/servers/rendering/rendering_device.cpp
+index a8f632e..c847e4b 100644
+--- a/servers/rendering/rendering_device.cpp
++++ b/servers/rendering/rendering_device.cpp
+@@ -7849,6 +7849,81 @@ String RenderingDevice::get_device_api_name() const {
+ 	return driver->get_api_name();
+ }
+ 
++uint64_t RenderingDevice::texture_external_snapshot_submit(uint64_t p_image, uint64_t p_memory, uint32_t p_width, uint32_t p_height) {
++	ERR_RENDER_THREAD_GUARD_V(0);
++	ERR_FAIL_COND_V(external_snapshot_job.ticket || driver->get_api_name() != "Vulkan" || !p_image || !p_memory || !p_width || !p_height || p_width > 2048 || p_height > 2048, 0);
++	TextureFormat format;
++	format.texture_type = TEXTURE_TYPE_2D;
++	format.format = DATA_FORMAT_R8G8B8A8_UNORM;
++	format.width = p_width;
++	format.height = p_height;
++	format.usage_bits = TEXTURE_USAGE_SAMPLING_BIT | TEXTURE_USAGE_CAN_COPY_FROM_BIT | TEXTURE_USAGE_CAN_COPY_TO_BIT;
++	format.shareable_formats.push_back(DATA_FORMAT_R8G8B8A8_UNORM);
++	format.shareable_formats.push_back(DATA_FORMAT_R8G8B8A8_SRGB);
++	RID destination = texture_create(format, TextureView());
++	ERR_FAIL_COND_V(!destination.is_valid(), 0);
++	Texture *texture = texture_owner.get_or_null(destination);
++	if (!driver->texture_external_snapshot_submit(p_image, p_memory, texture->driver_id, main_queue, p_width, p_height)) {
++		free_rid(destination);
++		return 0;
++	}
++	external_snapshot_job.ticket = ++external_snapshot_sequence;
++	external_snapshot_job.texture = destination;
++	return external_snapshot_job.ticket;
++}
++
++Dictionary RenderingDevice::_external_snapshot_poll(bool p_wait) {
++	Dictionary result;
++	int release_fd = -1;
++	Error error = driver->texture_external_snapshot_poll(p_wait, !external_snapshot_job.discarded, release_fd);
++	if (error == ERR_BUSY) {
++		result["pending"] = true;
++		return result;
++	}
++	RID destination = external_snapshot_job.texture;
++	if (error != OK || external_snapshot_job.discarded) {
++		free_rid(destination);
++		result["error"] = external_snapshot_job.discarded ? "Cancelled" : "External copy failed";
++	} else {
++		Texture *texture = texture_owner.get_or_null(destination);
++		texture->has_initial_data = true;
++		texture->pending_clear = false;
++		texture->draw_tracker->usage = RDG::RESOURCE_USAGE_TEXTURE_SAMPLE;
++		texture->draw_tracker->usage_access = RDD::BARRIER_ACCESS_SHADER_READ_BIT;
++		texture->draw_tracker->current_frame_stages = RDD::PIPELINE_STAGE_ALL_COMMANDS_BIT;
++		result["texture_rd_rid"] = destination;
++		result["release_fd"] = release_fd; // owned FD, or -1 for already-signalled
++	}
++	external_snapshot_job = ExternalSnapshotJob();
++	return result;
++}
++
++Dictionary RenderingDevice::texture_external_snapshot_poll(uint64_t p_ticket) {
++	ERR_RENDER_THREAD_GUARD_V(Dictionary());
++	Dictionary error;
++	if (!p_ticket || p_ticket != external_snapshot_job.ticket || external_snapshot_job.discarded) {
++		error["error"] = "Unknown or discarded copy ticket";
++		return error;
++	}
++	return _external_snapshot_poll(false);
++}
++
++void RenderingDevice::texture_external_snapshot_discard(uint64_t p_ticket) {
++	ERR_RENDER_THREAD_GUARD();
++	if (p_ticket && p_ticket == external_snapshot_job.ticket) {
++		external_snapshot_job.discarded = true;
++		_external_snapshot_poll(false);
++	}
++}
++
++uint32_t RenderingDevice::texture_external_snapshot_pending_count() {
++	ERR_RENDER_THREAD_GUARD_V(0);
++	if (external_snapshot_job.ticket && external_snapshot_job.discarded) {
++		_external_snapshot_poll(false);
++	}
++	return external_snapshot_job.ticket ? 1 : 0;
++}
++
+ RID RenderingDevice::texture_create_from_external_snapshot(uint64_t p_image, uint32_t p_width, uint32_t p_height) {
+ 	ERR_RENDER_THREAD_GUARD_V(RID());
+ 	ERR_FAIL_COND_V(driver->get_api_name() != "Vulkan" || !p_image || !p_width || !p_height || p_width > 2048 || p_height > 2048, RID());
+@@ -8083,6 +8158,9 @@ uint64_t RenderingDevice::get_memory_usage(MemoryType p_type) const {
+ }
+ 
+ void RenderingDevice::_begin_frame(bool p_presented) {
++	if (external_snapshot_job.ticket && external_snapshot_job.discarded) {
++		_external_snapshot_poll(false);
++	}
+ 	GodotProfileZoneGroupedFirst(_profile_zone, "_stall_for_frame");
+ 	// Before writing to this frame, wait for it to be finished.
+ 	_stall_for_frame(frame);
+@@ -8903,6 +8981,11 @@ void RenderingDevice::finalize() {
+ 		_flush_and_stall_for_all_frames(false);
+ 	}
+ 
++	if (external_snapshot_job.ticket) {
++		external_snapshot_job.discarded = true;
++		_external_snapshot_poll(true); // shutdown only: retire before freeing textures/device
++	}
++
+ 	// Wait for transfer workers to finish.
+ 	_submit_transfer_workers();
+ 	_wait_for_transfer_workers();
+@@ -9257,6 +9340,10 @@ void RenderingDevice::_bind_methods() {
+ 	ClassDB::bind_method(D_METHOD("get_device_vendor_name"), &RenderingDevice::get_device_vendor_name);
+ 	ClassDB::bind_method(D_METHOD("get_device_name"), &RenderingDevice::get_device_name);
+ 	ClassDB::bind_method(D_METHOD("get_device_enabled_extensions"), &RenderingDevice::get_device_enabled_extensions);
++	ClassDB::bind_method(D_METHOD("texture_external_snapshot_submit", "image", "memory", "width", "height"), &RenderingDevice::texture_external_snapshot_submit);
++	ClassDB::bind_method(D_METHOD("texture_external_snapshot_poll", "ticket"), &RenderingDevice::texture_external_snapshot_poll);
++	ClassDB::bind_method(D_METHOD("texture_external_snapshot_discard", "ticket"), &RenderingDevice::texture_external_snapshot_discard);
++	ClassDB::bind_method(D_METHOD("texture_external_snapshot_pending_count"), &RenderingDevice::texture_external_snapshot_pending_count);
+ 	ClassDB::bind_method(D_METHOD("texture_create_from_external_snapshot", "image", "width", "height"), &RenderingDevice::texture_create_from_external_snapshot);
+ 	ClassDB::bind_method(D_METHOD("get_device_pipeline_cache_uuid"), &RenderingDevice::get_device_pipeline_cache_uuid);
+ 
+diff --git a/servers/rendering/rendering_device.h b/servers/rendering/rendering_device.h
+index 130eba0..4f86fee 100644
+--- a/servers/rendering/rendering_device.h
++++ b/servers/rendering/rendering_device.h
+@@ -1946,6 +1946,20 @@ public:
+ 	RenderingDeviceEnums::DeviceType get_device_type() const;
+ 	String get_device_api_name() const;
+ 	PackedStringArray get_device_enabled_extensions() const;
++private:
++	// One pending source/copy per RenderingDevice. Never published before completion.
++	struct ExternalSnapshotJob {
++		uint64_t ticket = 0;
++		RID texture;
++		bool discarded = false;
++	} external_snapshot_job;
++	uint64_t external_snapshot_sequence = 0;
++	Dictionary _external_snapshot_poll(bool p_wait);
++public:
++	uint64_t texture_external_snapshot_submit(uint64_t p_image, uint64_t p_memory, uint32_t p_width, uint32_t p_height);
++	Dictionary texture_external_snapshot_poll(uint64_t p_ticket);
++	void texture_external_snapshot_discard(uint64_t p_ticket);
++	uint32_t texture_external_snapshot_pending_count();
+ 	RID texture_create_from_external_snapshot(uint64_t p_image, uint32_t p_width, uint32_t p_height);
+ 	String get_device_api_version() const;
+ 	String get_device_pipeline_cache_uuid() const;
+diff --git a/servers/rendering/rendering_device_driver.h b/servers/rendering/rendering_device_driver.h
+index 0ee28c5..d9a3d6a 100644
+--- a/servers/rendering/rendering_device_driver.h
++++ b/servers/rendering/rendering_device_driver.h
+@@ -942,6 +942,9 @@ public:
+ 	virtual const MultiviewCapabilities &get_multiview_capabilities() = 0;
+ 	virtual const FragmentShadingRateCapabilities &get_fragment_shading_rate_capabilities() = 0;
+ 	virtual const FragmentDensityMapCapabilities &get_fragment_density_map_capabilities() = 0;
++	// One bounded asynchronous copy; successful submission adopts source image/memory.
++	virtual uint64_t texture_external_snapshot_submit(uint64_t p_source, uint64_t p_memory, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height) { return 0; }
++	virtual Error texture_external_snapshot_poll(bool p_wait, bool p_export_release, int &r_release_fd) { return ERR_UNAVAILABLE; }
+ 	// Diagnostic-only: ready RGBA8 image in GENERAL, released to EXTERNAL.
+ 	virtual Error texture_copy_external_snapshot(uint64_t p_source, TextureID p_destination, CommandQueueID p_queue, uint32_t p_width, uint32_t p_height) { return ERR_UNAVAILABLE; }
+ 	virtual String get_api_name() const = 0;

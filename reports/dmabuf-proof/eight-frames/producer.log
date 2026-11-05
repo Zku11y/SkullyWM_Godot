@@ -1,0 +1,77 @@
+[Vulkan Loader] LAYER:          Searching for implicit layer manifest files
+[Vulkan Loader] LAYER:             In following locations:
+[Vulkan Loader] LAYER:                /tmp/dwl-dmabuf-proof-rzfna2xh/config/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/xdg/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /tmp/dwl-dmabuf-proof-rzfna2xh/data/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /home/skully/.local/share/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /var/lib/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/local/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:             Found the following files:
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_anti_lag.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_device_select.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/nvidia_layers.json
+[Vulkan Loader] LAYER:          Searching for explicit layer manifest files
+[Vulkan Loader] LAYER:             In following locations:
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d
+[Vulkan Loader] LAYER:             Found the following files:
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_gfxreconstruct.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_api_dump.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_khronos_validation.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_khronos_synchronization2.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_screenshot.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_khronos_profiles.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_crash_diagnostic.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_khronos_shader_object.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_monitor.json
+[Vulkan Loader] WARNING | LAYER: env var 'VK_INSTANCE_LAYERS' defined and adding layers "VK_LAYER_KHRONOS_validation"
+[Vulkan Loader] WARNING | LAYER: env var 'VK_INSTANCE_LAYERS' defined and adding layers "VK_LAYER_KHRONOS_validation"
+[Vulkan Loader] DEBUG | LAYER:  Loading layer library /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/../../../lib/libVkLayer_khronos_validation.so
+[Vulkan Loader] INFO | LAYER:   Insert instance layer "VK_LAYER_KHRONOS_validation" (/home/skully/Downloads/1.4.350.1/x86_64/lib/libVkLayer_khronos_validation.so)
+[Vulkan Loader] DEBUG | LAYER:  Loading layer library libVkLayer_MESA_device_select.so
+[Vulkan Loader] INFO | LAYER:   Insert instance layer "VK_LAYER_MESA_device_select" (/usr/lib/libVkLayer_MESA_device_select.so)
+[Vulkan Loader] LAYER:          vkCreateInstance layer callstack setup to:
+[Vulkan Loader] LAYER:             <Application>
+[Vulkan Loader] LAYER:               ||
+[Vulkan Loader] LAYER:             <Loader>
+[Vulkan Loader] LAYER:               ||
+[Vulkan Loader] LAYER:             VK_LAYER_MESA_device_select
+[Vulkan Loader] LAYER:                     Type: Implicit
+[Vulkan Loader] LAYER:                     Enabled By: Implicit Layer
+[Vulkan Loader] LAYER:                         Disable Env Var:  NODEVICE_SELECT
+[Vulkan Loader] LAYER:                     Manifest: /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_device_select.json
+[Vulkan Loader] LAYER:                     Library:  /usr/lib/libVkLayer_MESA_device_select.so
+[Vulkan Loader] LAYER:               ||
+[Vulkan Loader] LAYER:             VK_LAYER_KHRONOS_validation
+[Vulkan Loader] LAYER:                     Type: Explicit
+[Vulkan Loader] LAYER:                     Enabled By: Environment Variable VK_INSTANCE_LAYERS
+[Vulkan Loader] LAYER:                     Manifest: /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_khronos_validation.json
+[Vulkan Loader] LAYER:                     Library:  /home/skully/Downloads/1.4.350.1/x86_64/lib/libVkLayer_khronos_validation.so
+[Vulkan Loader] LAYER:               ||
+[Vulkan Loader] LAYER:             <Drivers>
+[Vulkan Loader] INFO | LAYER:   Inserted device layer "VK_LAYER_KHRONOS_validation" (/home/skully/Downloads/1.4.350.1/x86_64/lib/libVkLayer_khronos_validation.so)
+[Vulkan Loader] INFO | LAYER:   Failed to find vkGetDeviceProcAddr in layer "/usr/lib/libVkLayer_MESA_device_select.so"
+[Vulkan Loader] DRIVER:         vkCreateDevice layer callstack setup to:
+[Vulkan Loader] DRIVER:            <Application>
+[Vulkan Loader] DRIVER:              ||
+[Vulkan Loader] DRIVER:            <Loader>
+[Vulkan Loader] DRIVER:              ||
+[Vulkan Loader] LAYER:             VK_LAYER_KHRONOS_validation
+[Vulkan Loader] LAYER:                     Type: Explicit
+[Vulkan Loader] LAYER:                     Enabled By: Environment Variable VK_INSTANCE_LAYERS
+[Vulkan Loader] LAYER:                     Manifest: /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_khronos_validation.json
+[Vulkan Loader] LAYER:                     Library:  /home/skully/Downloads/1.4.350.1/x86_64/lib/libVkLayer_khronos_validation.so
+[Vulkan Loader] LAYER:               ||
+[Vulkan Loader] DRIVER:            <Device>
+[Vulkan Loader] DRIVER:                Using "AMD Radeon 780M Graphics (RADV PHOENIX)" with driver: "/usr/lib/libvulkan_radeon.so"
+GPU_COPY_ACK 0
+GPU_COPY_ACK 1
+GPU_COPY_ACK 2
+GPU_COPY_ACK 3
+GPU_COPY_ACK 4
+GPU_COPY_ACK 5
+GPU_COPY_ACK 6
+GPU_COPY_ACK 7
+[Vulkan Loader] DEBUG | LAYER:  Unloading layer library /usr/lib/libVkLayer_MESA_device_select.so
+[Vulkan Loader] DEBUG | LAYER:  Unloading layer library /home/skully/Downloads/1.4.350.1/x86_64/lib/libVkLayer_khronos_validation.so

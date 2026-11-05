@@ -1,0 +1,32 @@
+{
+  "compositor_repository_head": "81e1333f5869a2c9426ebed1aa202238608dc828",
+  "branch": "main",
+  "godot_cpp_revision": "e83fd0904c13356ed1d4c3d09f8bb9132bdc6b77",
+  "binary_sha256": {
+    "dmabuf-proof/build/dmabuf-producer": "f88fb60fb265fc85a70bbe88fc7696839af5f890e47afd9137147e577e6d502a",
+    "godot-bridge/demo/bin/libdwl_bridge.so": "857587962bb4a428e6dcf48e3fb970341dfd0dd1e70dc71a1e57a592e2aaa73e",
+    "engine/source/bin/godot.linuxbsd.editor.x86_64.llvm.dwl_bridge": "1352e24ef35e232e0960fc30b635ba9ca57faf682f3a603fbd7b48227c12ecc4"
+  },
+  "source_sha256": {
+    "dmabuf-proof/protocol.h": "ddcb8c21d24d8a0412caf104d4ec37b3ac38b7ae1b07f5407764a8237014cb65",
+    "dmabuf-proof/vulkan_helpers.h": "84a3ba8a4dc2d1658c09b85e2c39d95e2f9fcc5d0e2da1797c018b40a902c074",
+    "dmabuf-proof/producer.cpp": "825e237ca0b4dee6d6e0abb5e09d8486b9221bdc64a638a91be736f1af3e43bf",
+    "dmabuf-proof/pattern.comp": "cdeec6f7a7488a71a20b59c96a3745cd66caff869898966a64f6e6d61e569f35",
+    "dmabuf-proof/CMakeLists.txt": "54135269a934e61ebdeff1fe9ed77910e54bf426c026dcf94a95181734b24a74",
+    "godot-bridge/CMakeLists.txt": "9acda5294beb34e8a2c92dbcc0cd8750fb44ca43c5a7943445b95c484bd98e77",
+    "godot-bridge/src/register_types.cpp": "62daa394e217d6bd2bfe27b221b4b407f32902511fe840258bfe32a33a0b2fc3",
+    "godot-bridge/src/dmabuf_receiver.cpp": "e3e32b062d4671d2dc2e1b94950b948cf574df7c6696b2feb940a96d097cfa54",
+    "godot-bridge/src/dmabuf_receiver.h": "ae9fcf69c761da95be2cbb63806e14f98962d6018258f373bd6b0deb47c575e7",
+    "godot-bridge/demo/dmabuf_proof.gd": "ce7f45212468d550ba83f55d2728f704b3c2a83b21858d017e43e3b187ee1677",
+    "godot-bridge/demo/dmabuf_proof.tscn": "58118bfa15c494505840635a54220a8303cdb914348996fe94441e85ee5f6a56",
+    "tests/test_dmabuf_proof.py": "d6311e1b82b80715d0ffccec1fd03995f4809b161e65f9d3e9419986f68a3879",
+    "engine/build.py": "f2bc3465d1cdce6f186c2f7025fabaf2a95ad5f5451ca0d67d68100accdf45c3",
+    "engine/patches/0001-optional-vulkan-extension-requests.patch": "2414cb4b33412462bd7e5f4656c6c16d65bfd19bdd314fdbe5941957b2131278",
+    "engine/patches/0002-expose-enabled-device-extensions.patch": "105b87a1f30800dc2580ebcbeefc8d504a720c70f2218ca23e49c5b7c39ae4da",
+    "engine/patches/0003-controlled-external-snapshot-copy.patch": "371fba3b90c74535cb19da83dfb0646550fb6510f3f3cd19898ec95eeffd9c6b"
+  },
+  "shm_regression": {
+    "artifacts": "/tmp/dwl-godot-visual-1du7_b_t",
+    "ppm_payload_equals_received_rgb": true
+  }
+}

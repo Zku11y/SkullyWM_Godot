@@ -1,0 +1,9 @@
+{
+  "command": "foot --app-id=bridge-gpu-test -o font=monospace:size=16 -- sh -c 'i=0; while true; do i=$((i+1)); printf \"\\033[H\\033[2JReal foot window through a DMA-BUF export\\nUpdate %s\\n\\033[31mRED \\033[32mGREEN \\033[34mBLUE\\033[0m\\n\" \"$i\"; sleep 0.08; done'",
+  "app_id": "bridge-gpu-test",
+  "fps": 10,
+  "gpu_index": 0,
+  "verify": true,
+  "auto_exit": true,
+  "engine": "/home/skully/projects/SkullyWM_Godot/engine/source/bin/godot.linuxbsd.editor.x86_64.llvm.dwl_bridge"
+}

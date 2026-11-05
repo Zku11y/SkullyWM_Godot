@@ -1,0 +1,9 @@
+{
+  "command": "foot --app-id=bridge-gpu-test -o cursor.blink=no -- sh -c 'printf \"INITIAL STATE\\n\"; sleep 0.25; printf \"\\033[H\\033[2JFINAL ONE-SHOT UPDATE\\n\"; sleep 30'",
+  "app_id": "bridge-gpu-test",
+  "fps": 1,
+  "gpu_index": 0,
+  "verify": true,
+  "auto_exit": true,
+  "engine": "/home/skully/projects/SkullyWM_Godot/engine/source/bin/godot.linuxbsd.editor.x86_64.llvm.dwl_bridge"
+}

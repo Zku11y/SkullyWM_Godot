@@ -1,0 +1,266 @@
+Godot Engine v4.7.2.stable.custom_build.ed1daf0bf (2026-08-17 01:18:38 UTC) - https://godotengine.org
+WARNING: xdg-toplevel-icon protocol not found! Cannot set window icon.
+     at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5642)
+WARNING: FIFO protocol not found! Frame pacing will be degraded.
+     at: init (platform/linuxbsd/wayland/wayland_thread.cpp:5657)
+[Vulkan Loader] LAYER:          Searching for implicit layer manifest files
+[Vulkan Loader] LAYER:             In following locations:
+[Vulkan Loader] LAYER:                /tmp/dwl-gpu-client-vh33zo3h/config/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/xdg/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /tmp/dwl-gpu-client-vh33zo3h/data/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /home/skully/.local/share/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /var/lib/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/local/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:             Found the following files:
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_anti_lag.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_device_select.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/nvidia_layers.json
+[Vulkan Loader] LAYER:          Searching for implicit layer manifest files
+[Vulkan Loader] LAYER:             In following locations:
+[Vulkan Loader] LAYER:                /tmp/dwl-gpu-client-vh33zo3h/config/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/xdg/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /tmp/dwl-gpu-client-vh33zo3h/data/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /home/skully/.local/share/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /var/lib/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/local/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:             Found the following files:
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_anti_lag.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_device_select.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/nvidia_layers.json
+[Vulkan Loader] LAYER:          Searching for implicit layer manifest files
+[Vulkan Loader] LAYER:             In following locations:
+[Vulkan Loader] LAYER:                /tmp/dwl-gpu-client-vh33zo3h/config/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/xdg/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /tmp/dwl-gpu-client-vh33zo3h/data/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /home/skully/.local/share/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /var/lib/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/local/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:             Found the following files:
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_anti_lag.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_device_select.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/nvidia_layers.json
+[Vulkan Loader] LAYER:          Searching for implicit layer manifest files
+[Vulkan Loader] LAYER:             In following locations:
+[Vulkan Loader] LAYER:                /tmp/dwl-gpu-client-vh33zo3h/config/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/xdg/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /tmp/dwl-gpu-client-vh33zo3h/data/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /home/skully/.local/share/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /var/lib/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/local/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:             Found the following files:
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_anti_lag.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_device_select.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/nvidia_layers.json
+[Vulkan Loader] LAYER:          Searching for implicit layer manifest files
+[Vulkan Loader] LAYER:             In following locations:
+[Vulkan Loader] LAYER:                /tmp/dwl-gpu-client-vh33zo3h/config/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/xdg/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /tmp/dwl-gpu-client-vh33zo3h/data/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /home/skully/.local/share/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /var/lib/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/local/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:             Found the following files:
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_anti_lag.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_device_select.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/nvidia_layers.json
+[Vulkan Loader] LAYER:          Searching for implicit layer manifest files
+[Vulkan Loader] LAYER:             In following locations:
+[Vulkan Loader] LAYER:                /tmp/dwl-gpu-client-vh33zo3h/config/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/xdg/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /etc/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /tmp/dwl-gpu-client-vh33zo3h/data/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /home/skully/.local/share/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /var/lib/flatpak/exports/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/local/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d
+[Vulkan Loader] LAYER:             Found the following files:
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_anti_lag.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_device_select.json
+[Vulkan Loader] LAYER:                /usr/share/vulkan/implicit_layer.d/nvidia_layers.json
+[Vulkan Loader] LAYER:          Searching for explicit layer manifest files
+[Vulkan Loader] LAYER:             In following locations:
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d
+[Vulkan Loader] LAYER:             Found the following files:
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_gfxreconstruct.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_api_dump.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_khronos_validation.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_khronos_synchronization2.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_screenshot.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_khronos_profiles.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_crash_diagnostic.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_khronos_shader_object.json
+[Vulkan Loader] LAYER:                /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_monitor.json
+[Vulkan Loader] WARNING | LAYER: env var 'VK_INSTANCE_LAYERS' defined and adding layers "VK_LAYER_KHRONOS_validation"
+[Vulkan Loader] WARNING | LAYER: env var 'VK_INSTANCE_LAYERS' defined and adding layers "VK_LAYER_KHRONOS_validation"
+[Vulkan Loader] DEBUG | LAYER:  Loading layer library /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/../../../lib/libVkLayer_khronos_validation.so
+[Vulkan Loader] INFO | LAYER:   Insert instance layer "VK_LAYER_KHRONOS_validation" (/home/skully/Downloads/1.4.350.1/x86_64/lib/libVkLayer_khronos_validation.so)
+[Vulkan Loader] DEBUG | LAYER:  Loading layer library libVkLayer_MESA_device_select.so
+[Vulkan Loader] INFO | LAYER:   Insert instance layer "VK_LAYER_MESA_device_select" (/usr/lib/libVkLayer_MESA_device_select.so)
+[Vulkan Loader] LAYER:          vkCreateInstance layer callstack setup to:
+[Vulkan Loader] LAYER:             <Application>
+[Vulkan Loader] LAYER:               ||
+[Vulkan Loader] LAYER:             <Loader>
+[Vulkan Loader] LAYER:               ||
+[Vulkan Loader] LAYER:             VK_LAYER_MESA_device_select
+[Vulkan Loader] LAYER:                     Type: Implicit
+[Vulkan Loader] LAYER:                     Enabled By: Implicit Layer
+[Vulkan Loader] LAYER:                         Disable Env Var:  NODEVICE_SELECT
+[Vulkan Loader] LAYER:                     Manifest: /usr/share/vulkan/implicit_layer.d/VkLayer_MESA_device_select.json
+[Vulkan Loader] LAYER:                     Library:  /usr/lib/libVkLayer_MESA_device_select.so
+[Vulkan Loader] LAYER:               ||
+[Vulkan Loader] LAYER:             VK_LAYER_KHRONOS_validation
+[Vulkan Loader] LAYER:                     Type: Explicit
+[Vulkan Loader] LAYER:                     Enabled By: Environment Variable VK_INSTANCE_LAYERS
+[Vulkan Loader] LAYER:                     Manifest: /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_khronos_validation.json
+[Vulkan Loader] LAYER:                     Library:  /home/skully/Downloads/1.4.350.1/x86_64/lib/libVkLayer_khronos_validation.so
+[Vulkan Loader] LAYER:               ||
+[Vulkan Loader] LAYER:             <Drivers>
+[Vulkan Loader] INFO | LAYER:   Inserted device layer "VK_LAYER_KHRONOS_validation" (/home/skully/Downloads/1.4.350.1/x86_64/lib/libVkLayer_khronos_validation.so)
+[Vulkan Loader] INFO | LAYER:   Failed to find vkGetDeviceProcAddr in layer "/usr/lib/libVkLayer_MESA_device_select.so"
+[Vulkan Loader] DRIVER:         vkCreateDevice layer callstack setup to:
+[Vulkan Loader] DRIVER:            <Application>
+[Vulkan Loader] DRIVER:              ||
+[Vulkan Loader] DRIVER:            <Loader>
+[Vulkan Loader] DRIVER:              ||
+[Vulkan Loader] LAYER:             VK_LAYER_KHRONOS_validation
+[Vulkan Loader] LAYER:                     Type: Explicit
+[Vulkan Loader] LAYER:                     Enabled By: Environment Variable VK_INSTANCE_LAYERS
+[Vulkan Loader] LAYER:                     Manifest: /home/skully/Downloads/1.4.350.1/x86_64/share/vulkan/explicit_layer.d/VkLayer_khronos_validation.json
+[Vulkan Loader] LAYER:                     Library:  /home/skully/Downloads/1.4.350.1/x86_64/lib/libVkLayer_khronos_validation.so
+[Vulkan Loader] LAYER:               ||
+[Vulkan Loader] DRIVER:            <Device>
+[Vulkan Loader] DRIVER:                Using "AMD Radeon 780M Graphics (RADV PHOENIX)" with driver: "/usr/lib/libvulkan_radeon.so"
+Vulkan 1.4.354 - Forward Mobile - Using Device #0: AMD - AMD Radeon 780M Graphics (RADV PHOENIX)
+
+DMABUF_GPU_COPY 0
+DMABUF_GPU_COPY 1
+DMABUF_GPU_COPY 2
+DMABUF_GPU_COPY 3
+DMABUF_GPU_COPY 4
+DMABUF_GPU_COPY 5
+DMABUF_GPU_COPY 6
+DMABUF_GPU_COPY 7
+DMABUF_GPU_COPY 8
+DMABUF_GPU_COPY 9
+DMABUF_GPU_COPY 10
+DMABUF_GPU_COPY 11
+DMABUF_GPU_COPY 12
+DMABUF_GPU_COPY 13
+DMABUF_GPU_COPY 14
+DMABUF_GPU_COPY 15
+DMABUF_GPU_COPY 16
+DMABUF_GPU_COPY 17
+DMABUF_GPU_COPY 18
+DMABUF_GPU_COPY 19
+DMABUF_GPU_COPY 20
+DMABUF_GPU_COPY 21
+DMABUF_GPU_COPY 22
+DMABUF_GPU_COPY 23
+DMABUF_GPU_COPY 24
+DMABUF_GPU_COPY 25
+DMABUF_GPU_COPY 26
+DMABUF_GPU_COPY 27
+DMABUF_GPU_COPY 28
+DMABUF_GPU_COPY 29
+DMABUF_GPU_COPY 30
+DMABUF_GPU_COPY 31
+DMABUF_GPU_COPY 32
+DMABUF_GPU_COPY 33
+DMABUF_GPU_COPY 34
+DMABUF_GPU_COPY 35
+DMABUF_GPU_COPY 36
+DMABUF_GPU_COPY 37
+DMABUF_GPU_COPY 38
+DMABUF_GPU_COPY 39
+DMABUF_GPU_COPY 40
+DMABUF_GPU_COPY 41
+DMABUF_GPU_COPY 42
+DMABUF_GPU_COPY 43
+DMABUF_GPU_COPY 44
+DMABUF_GPU_COPY 45
+DMABUF_GPU_COPY 46
+DMABUF_GPU_COPY 47
+DMABUF_GPU_COPY 48
+DMABUF_GPU_COPY 49
+DMABUF_GPU_COPY 50
+DMABUF_GPU_COPY 51
+DMABUF_GPU_COPY 52
+DMABUF_GPU_COPY 53
+DMABUF_GPU_COPY 54
+DMABUF_GPU_COPY 55
+DMABUF_GPU_COPY 56
+DMABUF_GPU_COPY 57
+DMABUF_GPU_COPY 58
+DMABUF_GPU_COPY 59
+DMABUF_GPU_COPY 60
+DMABUF_GPU_COPY 61
+DMABUF_GPU_COPY 62
+DMABUF_GPU_COPY 63
+DMABUF_GPU_COPY 64
+DMABUF_GPU_COPY 65
+DMABUF_GPU_COPY 66
+DMABUF_GPU_COPY 67
+DMABUF_GPU_COPY 68
+DMABUF_GPU_COPY 69
+DMABUF_GPU_COPY 70
+DMABUF_GPU_COPY 71
+DMABUF_GPU_COPY 72
+DMABUF_GPU_COPY 73
+DMABUF_GPU_COPY 74
+DMABUF_GPU_COPY 75
+DMABUF_GPU_COPY 76
+DMABUF_GPU_COPY 77
+DMABUF_GPU_COPY 78
+DMABUF_GPU_COPY 79
+DMABUF_GPU_COPY 80
+DMABUF_GPU_COPY 81
+DMABUF_GPU_COPY 82
+DMABUF_GPU_COPY 83
+DMABUF_GPU_COPY 84
+DMABUF_GPU_COPY 85
+DMABUF_GPU_COPY 86
+DMABUF_GPU_COPY 87
+DMABUF_GPU_COPY 88
+DMABUF_GPU_COPY 89
+DMABUF_GPU_COPY 90
+DMABUF_GPU_COPY 91
+DMABUF_GPU_COPY 92
+DMABUF_GPU_COPY 93
+DMABUF_GPU_COPY 94
+DMABUF_GPU_COPY 95
+DMABUF_GPU_COPY 96
+DMABUF_GPU_COPY 97
+DMABUF_GPU_COPY 98
+DMABUF_GPU_COPY 99
+DMABUF_GPU_COPY 100
+DMABUF_GPU_COPY 101
+DMABUF_GPU_COPY 102
+DMABUF_GPU_COPY 103
+DMABUF_GPU_COPY 104
+DMABUF_GPU_COPY 105
+DMABUF_GPU_COPY 106
+DMABUF_GPU_COPY 107
+DMABUF_GPU_COPY 108
+DMABUF_GPU_COPY 109
+DMABUF_GPU_COPY 110
+DMABUF_GPU_COPY 111
+DMABUF_GPU_COPY 112
+DMABUF_GPU_COPY 113
+DMABUF_GPU_COPY 114
+DMABUF_GPU_COPY 115
+DMABUF_GPU_COPY 116
+DMABUF_GPU_COPY 117
+DMABUF_GPU_COPY 118
+DMABUF_GPU_COPY 119
+DMABUF_GPU_COPY 120
+DMABUF_GPU_COPY 121

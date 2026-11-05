@@ -1,0 +1,13 @@
+scons: Reading SConscript files ...
+Using linker program: lld
+WARNING: The screen reader support driver requires dependencies to be installed.
+You can install them by running `python misc/scripts/install_accesskit.py`.
+See the documentation for more information:
+	https://docs.godotengine.org/en/latest/engine_details/development/compiling/compiling_for_linuxbsd.html
+Alternatively, disable this driver by compiling with `accesskit=no` explicitly.
+Building for platform "linuxbsd", architecture "x86_64", target "editor".
+scons: done reading SConscript files.
+scons: Building targets ...
+scons: `.' is up to date.
+scons: done building targets.
+INFO: Time elapsed: 00:00:07.70

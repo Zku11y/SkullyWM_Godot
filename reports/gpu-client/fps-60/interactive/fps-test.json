@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "requested_fps": 60,
+  "measured_export_updates_per_second": 59.979838709677416,
+  "measured_frames": 120,
+  "copied_frames_at_stop": 121,
+  "validation_clean": true,
+  "texture_readback": false,
+  "ctrl_c_cleanup": true,
+  "note": "Export/copy throughput, not measured presentation FPS."
+}

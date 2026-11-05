@@ -20,12 +20,18 @@ DEFAULT_COMMAND = (
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--engine", type=Path, default=REPO / "godot/Godot_v4.7.2-stable_linux.x86_64")
+    parser.add_argument("--project", type=Path, default=REPO / "godot-bridge/demo", help="source demo project to copy for this session")
+    parser.add_argument("--vulkan", action="store_true", help="run the editor with the Mobile Vulkan renderer")
+    parser.add_argument("--gpu-index", type=int, help="Vulkan GPU index")
     parser.add_argument("--nested", action="store_true", help="use a nested compositor (default in interactive mode)")
     parser.add_argument("--command", help="application shell command to run inside nested dwl; requires --app-id")
     parser.add_argument("--app-id", help="exact native Wayland app ID to capture; foot by default")
     parser.add_argument("--fps", type=int, choices=range(1, 31), default=10, metavar="1..30")
     parser.add_argument("--auto-exit", action="store_true", help="run the finite automated test instead of waiting for Ctrl+C")
     args = parser.parse_args()
+    if args.gpu_index is not None and not args.vulkan:
+        parser.error("--gpu-index requires --vulkan")
     if args.command is not None and not args.app_id:
         parser.error("--command requires --app-id so dwl captures the intended application")
     if args.app_id and not args.command:
@@ -33,7 +39,7 @@ def main():
     folder = Path(tempfile.mkdtemp(prefix="dwl-godot-editor-"))
     print(f"Artifacts: {folder}", flush=True)
     project = folder / "project"
-    shutil.copytree(REPO / "godot-bridge/demo", project, ignore=shutil.ignore_patterns(".godot", "bin"))
+    shutil.copytree(args.project.resolve(), project, ignore=shutil.ignore_patterns(".godot", "bin", "addons"))
     (project / "bin").mkdir()
     (project / "bin/libdwl_bridge.so").symlink_to(REPO / "godot-bridge/demo/bin/libdwl_bridge.so")
     shutil.copytree(REPO / "tests/fixtures/editor_live", project / "addons/editor_live")
@@ -51,10 +57,13 @@ def main():
     # Seed extension discovery; the graphical editor does the normal project scan.
     (project / ".godot").mkdir()
     (project / ".godot/extension_list.cfg").write_text("res://bridge.gdextension\n")
-    engine = str(REPO / "godot/Godot_v4.7.2-stable_linux.x86_64")
+    engine = str(args.engine.resolve())
+    renderer_options = ["--rendering-method", "mobile", "--rendering-driver", "vulkan"] if args.vulkan else []
+    if args.gpu_index is not None:
+        renderer_options += ["--gpu-index", str(args.gpu_index)]
     with (folder / "editor.log").open("w+") as log:
         proc = subprocess.Popen([engine, "--editor", "--path", str(project),
-                                 "--display-driver", "wayland", "--audio-driver", "Dummy"],
+                                 "--display-driver", "wayland", "--audio-driver", "Dummy", *renderer_options],
                                 env=env, stdout=log, stderr=subprocess.STDOUT)
         nested = None
         nested_log = (folder / "dwl.log").open("w")
