@@ -1,0 +1,5 @@
+/build/
+/vendor/
+/demo/.godot/
+/demo/bin/*.so
+*.uid

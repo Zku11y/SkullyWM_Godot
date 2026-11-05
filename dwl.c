@@ -77,6 +77,7 @@
 #endif
 
 #include "util.h"
+#include "bridge.h"
 
 /* macros */
 #define MAX(A, B)               ((A) > (B) ? (A) : (B))
@@ -708,6 +709,7 @@ checkidleinhibitor(struct wlr_surface *exclude)
 void
 cleanup(void)
 {
+	bridge_finish();
 	cleanuplisteners();
 #ifdef XWAYLAND
 	wlr_xwayland_destroy(xwayland);
@@ -1211,9 +1213,18 @@ capturecommit(struct wl_listener *listener, void *data)
 	size_t stride, width, height, size, pos;
 	size_t x, y;
 	FILE *file;
-	int ok;
+	int ok, capture, sendframe;
+	const char *socket_path = getenv("DWL_BRIDGE_SOCKET");
+	const char *excluded = getenv("DWL_BRIDGE_EXCLUDE_APP_ID");
+	const char *appid = client_get_appid(c);
 
-	if (access("bridge-capture.request", F_OK) != 0)
+	if (!strcmp(appid, "Godot") || !strcmp(appid, "org.godotengine.Godot")
+			|| (excluded && !strcmp(appid, excluded)))
+		return;
+	capture = access("bridge-capture.request", F_OK) == 0;
+	sendframe = socket_path && !bridge_busy()
+			&& access("bridge-send.request", F_OK) == 0;
+	if (!capture && !sendframe)
 		return;
 
 	if (!(surface->pending.committed & WLR_SURFACE_STATE_BUFFER))
@@ -1233,6 +1244,10 @@ capturecommit(struct wl_listener *listener, void *data)
 		return;
 
 	size = width * height * 3;
+	if (width > BRIDGE_MAX_DIM || height > BRIDGE_MAX_DIM || size > BRIDGE_MAX_BYTES) {
+		wlr_log(WLR_ERROR, "[bridge] Capture exceeds snapshot limits");
+		return;
+	}
 	rgb = malloc(size);
 	if (!rgb) {
 		wlr_log(WLR_ERROR, "[bridge] Capture allocation failed");
@@ -1278,32 +1293,32 @@ capturecommit(struct wl_listener *listener, void *data)
 		return;
 	}
 
-	file = fopen("bridge-frame.ppm", "wb");
-	if (!file) {
-		free(rgb);
-		wlr_log(WLR_ERROR, "[bridge] Cannot open capture file");
-		return;
-	}
-
-	ok = fprintf(file, "P6\n%zu %zu\n255\n", width, height) > 0;
-	if (ok)
-		ok = fwrite(rgb, 1, size, file) == size;
-	if (fclose(file) != 0)
+	/* The optional disk diagnostic uses these same bytes for comparison. */
+	if (capture) {
+		file = fopen("bridge-frame.ppm", "wb");
 		ok = 0;
-
-	free(rgb);
-
-	if (!ok) {
-		wlr_log(WLR_ERROR, "[bridge] Failed to write capture");
-		return;
+		if (file) {
+			ok = fprintf(file, "P6\n%zu %zu\n255\n", width, height) > 0;
+			if (ok)
+				ok = fwrite(rgb, 1, size, file) == size;
+			if (fclose(file) != 0)
+				ok = 0;
+		}
+		if (ok) {
+			if (unlink("bridge-capture.request") != 0)
+				wlr_log(WLR_ERROR, "[bridge] Cannot remove capture request");
+			wlr_log(WLR_DEBUG, "[bridge] CAPTURE saved bridge-frame.ppm size=%zux%zu", width, height);
+		} else {
+			wlr_log(WLR_ERROR, "[bridge] Failed to write capture");
+		}
 	}
-
-	if (unlink("bridge-capture.request") != 0)
-		wlr_log(WLR_ERROR, "[bridge] Cannot remove capture request");
-
-	wlr_log(WLR_DEBUG,
-			"[bridge] CAPTURE saved bridge-frame.ppm size=%zux%zu",
-			width, height);
+	if (sendframe && bridge_send(event_loop, socket_path, rgb, width, height)) {
+		/* A queued attempt consumes the request, even if it later disconnects. */
+		if (unlink("bridge-send.request") != 0)
+			wlr_log(WLR_ERROR, "[bridge] Cannot remove send request");
+	} else {
+		free(rgb);
+	}
 }
 
 void
