@@ -15,6 +15,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
+#include <sys/sysmacros.h>
 #include <time.h>
 #include <unistd.h>
 #include <wayland-server-core.h>
@@ -2681,6 +2683,7 @@ void
 setup(void)
 {
 	int drm_fd, i, sig[] = {SIGCHLD, SIGINT, SIGTERM, SIGPIPE};
+	struct stat renderer_device;
 	struct sigaction sa = {.sa_flags = SA_RESTART, .sa_handler = handlesig};
 	sigemptyset(&sa.sa_mask);
 
@@ -2716,6 +2719,12 @@ setup(void)
 	if (!(drw = wlr_renderer_autocreate(backend)))
 		die("couldn't create renderer");
 	wl_signal_add(&drw->events.lost, &gpu_reset);
+	drm_fd = wlr_renderer_get_drm_fd(drw);
+	if (drm_fd >= 0 && fstat(drm_fd, &renderer_device) == 0 && S_ISCHR(renderer_device.st_mode))
+		wlr_log(WLR_INFO, "[bridge] RENDER_DEVICE major=%u minor=%u",
+				major(renderer_device.st_rdev), minor(renderer_device.st_rdev));
+	else
+		wlr_log(WLR_INFO, "[bridge] RENDER_DEVICE unavailable");
 
 	/* Create shm, drm and linux_dmabuf interfaces by ourselves.
 	 * The simplest way is to call:

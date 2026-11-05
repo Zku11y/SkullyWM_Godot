@@ -3,10 +3,10 @@
 Opens a Godot window and a nested compositor; stops only processes it starts.
 Retains logs, source PPM, received RGB, and screenshot in a temporary directory.
 """
+import argparse
 import os
 from pathlib import Path
 import subprocess
-import sys
 import re
 import tempfile
 import time
@@ -25,21 +25,31 @@ def stop(proc):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--live", action="store_true")
+    parser.add_argument("--vulkan", action="store_true", help="override the demo's OpenGL renderer for this test")
+    parser.add_argument("--gpu-index", type=int, help="Godot Vulkan device index")
+    args = parser.parse_args()
+    if args.gpu_index is not None and not args.vulkan:
+        parser.error("--gpu-index requires --vulkan")
     folder = Path(tempfile.mkdtemp(prefix="dwl-godot-visual-"))
     print(f"Artifacts: {folder}", flush=True)
-    live = "--live" in sys.argv
+    live = args.live
     env = os.environ.copy()
     env.update(DWL_BRIDGE_SOCKET=str(folder / "frame.sock"),
                XDG_DATA_HOME=str(folder), XDG_CONFIG_HOME=str(folder), XDG_CACHE_HOME=str(folder))
     if live:
         env.update(DWL_BRIDGE_LIVE_APP_ID="foot", DWL_BRIDGE_FPS="10")
     viewer = nested = None
+    renderer_options = ["--rendering-method", "mobile", "--rendering-driver", "vulkan"] if args.vulkan else []
+    if args.gpu_index is not None:
+        renderer_options += ["--gpu-index", str(args.gpu_index)]
     with (folder / "godot.log").open("w") as godot_log, (folder / "dwl.log").open("w") as dwl_log:
         try:
             viewer = subprocess.Popen([
                 str(REPO / "godot/Godot_v4.7.2-stable_linux.x86_64"),
                 "--path", str(REPO / "godot-bridge/demo"), "--display-driver", "wayland",
-                "--audio-driver", "Dummy", "--",
+                "--audio-driver", "Dummy", *renderer_options, "--",
                 f"--capture-after={8 if live else 1}", f"--capture={folder / 'screenshot.png'}", f"--pixels-output={folder / 'received.rgb'}",
             ], env=env, stdout=godot_log, stderr=subprocess.STDOUT)
             deadline = time.monotonic() + 15
@@ -69,6 +79,8 @@ def main():
             assert (folder / "screenshot.png").stat().st_size > 1000
             log = (folder / "godot.log").read_text()
             assert "BRIDGE_DISPLAYED" in log and "SCRIPT ERROR" not in log, log
+            if args.vulkan:
+                assert "Vulkan" in log and "OpenGL API" not in log, log
             if live:
                 updates = re.findall(r"frames=(\d+) allocations=(\d+)", log)
                 assert int(updates[-1][0]) >= 8 and int(updates[-1][1]) < int(updates[-1][0]), log

@@ -9,8 +9,9 @@ the editor's 3D viewport.
 
 **Build**
 
-Requirements: CMake 3.20+, a C++17 compiler, Python 3, Git, and the supplied Linux
-Godot executable. No system installation is required. From the repository root:
+Requirements: CMake 3.20+, a C++17 compiler, Python 3, Git, Vulkan development
+headers/loader, and the supplied Linux Godot executable. No engine or compositor
+installation is required. From the repository root:
 
 ```sh
 # First build only; skip clone if the dependency is already present.
@@ -242,3 +243,21 @@ logs and working directory under the printed /tmp path. Ctrl+C stops its editor
 and nested compositor. Closing the editor also ends the runner. Use `--auto-exit`
 to retain the finite automated lifecycle test (`--nested --auto-exit` for real
 foot; `--auto-exit` alone for synthetic resize/reuse checks).
+
+**Vulkan feasibility audit**
+
+The read-only probe and measured results are described in
+[reports/vulkan/README.md](../reports/vulkan/README.md). On this machine Godot's
+default Vulkan device is NVIDIA, while nested dwl uses AMD. Selecting GPU index
+0 aligns them. Both drivers support the queried external-memory features, but
+the stock Godot device leaves DMA-BUF, DRM modifiers and semaphore-FD extensions
+disabled. An isolated engine capability patch is the next step before import.
+
+```sh
+python3 tools/probe_vulkan.py --gpu-index 0 --validation
+python3 tests/test_godot_nested.py --vulkan --gpu-index 0
+```
+
+The latter verifies our existing CPU-upload path with Vulkan rendering and was
+pixel-exact against the PPM diagnostic. The demo's saved renderer setting stays
+OpenGL; `--vulkan` is a test override. No DMA-BUF image has been imported yet.

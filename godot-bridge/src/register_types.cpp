@@ -1,9 +1,13 @@
 #include "bridge_receiver.h"
+#include "vulkan_probe.h"
 #include <godot_cpp/godot.hpp>
 
 using namespace godot;
 static void initialize(ModuleInitializationLevel level) {
-	if (level == MODULE_INITIALIZATION_LEVEL_SCENE) ClassDB::register_class<BridgeReceiver>();
+	if (level == MODULE_INITIALIZATION_LEVEL_SCENE) {
+		ClassDB::register_class<BridgeReceiver>();
+		ClassDB::register_class<BridgeVulkanProbe>();
+	}
 }
 static void terminate(ModuleInitializationLevel) {}
 

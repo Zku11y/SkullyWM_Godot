@@ -27,6 +27,18 @@ DMA-BUF/Vulkan. Applied-state tracking, multi-window identity, final-state deliv
 after throttling, and input are still deferred. The Vulkan capability audit is
 the next architectural checkpoint before pursuing GPU sharing.
 
+Progress 2026-11-05, Vulkan checkpoint: a read-only GDExtension probe and LunarG
+device-creation capture now distinguish support from actual enablement. Godot's
+default Vulkan GPU is NVIDIA (DRM 226:129), while nested dwl uses AMD (226:128).
+Godot GPU index 0 selects the matching AMD device. Both support the queried
+DMA-BUF/modifier and sync-FD features, but the stock engine enables only external
+memory FD support among the four baseline extensions. AMD queries ran with
+confirmed validation-layer activation and no validation errors. The existing
+SHM demo also rendered a pixel-exact captured frame through AMD Vulkan.
+Reports, provenance, source audit, reproduction and next engine-build steps are
+in `reports/vulkan/README.md`. No external image import, GPU buffer sharing, or
+engine patch is claimed by this checkpoint.
+
 The recommended target is a C++ GDExtension providing ordinary Texture2D
 resources and window nodes, supported by the smallest Godot Vulkan engine patch
 the feasibility tests show necessary. Initially import compatible DMA-BUFs and
