@@ -6,6 +6,8 @@ Retains logs, source PPM, received RGB, and screenshot in a temporary directory.
 import os
 from pathlib import Path
 import subprocess
+import sys
+import re
 import tempfile
 import time
 
@@ -25,9 +27,12 @@ def stop(proc):
 def main():
     folder = Path(tempfile.mkdtemp(prefix="dwl-godot-visual-"))
     print(f"Artifacts: {folder}", flush=True)
+    live = "--live" in sys.argv
     env = os.environ.copy()
     env.update(DWL_BRIDGE_SOCKET=str(folder / "frame.sock"),
                XDG_DATA_HOME=str(folder), XDG_CONFIG_HOME=str(folder), XDG_CACHE_HOME=str(folder))
+    if live:
+        env.update(DWL_BRIDGE_LIVE_APP_ID="foot", DWL_BRIDGE_FPS="10")
     viewer = nested = None
     with (folder / "godot.log").open("w") as godot_log, (folder / "dwl.log").open("w") as dwl_log:
         try:
@@ -35,7 +40,7 @@ def main():
                 str(REPO / "godot/Godot_v4.7.2-stable_linux.x86_64"),
                 "--path", str(REPO / "godot-bridge/demo"), "--display-driver", "wayland",
                 "--audio-driver", "Dummy", "--",
-                f"--capture={folder / 'screenshot.png'}", f"--pixels-output={folder / 'received.rgb'}",
+                f"--capture-after={8 if live else 1}", f"--capture={folder / 'screenshot.png'}", f"--pixels-output={folder / 'received.rgb'}",
             ], env=env, stdout=godot_log, stderr=subprocess.STDOUT)
             deadline = time.monotonic() + 15
             while not (folder / "frame.sock").exists() and viewer.poll() is None and time.monotonic() < deadline:
@@ -54,15 +59,25 @@ def main():
                 time.sleep(.02)
             # Capture populated content rather than foot's initial blank buffer.
             time.sleep(.5)
-            (folder / "bridge-capture.request").touch()
-            (folder / "bridge-send.request").touch()
+            if not live:
+                (folder / "bridge-capture.request").touch()
+                (folder / "bridge-send.request").touch()
             assert viewer.wait(timeout=25) == 0, "Viewer failed; inspect godot.log"
-            raw = (folder / "bridge-frame.ppm").read_bytes().split(b"\n", 3)[3]
-            assert raw == (folder / "received.rgb").read_bytes(), "Pixel mismatch"
+            if not live:
+                raw = (folder / "bridge-frame.ppm").read_bytes().split(b"\n", 3)[3]
+                assert raw == (folder / "received.rgb").read_bytes(), "Pixel mismatch"
             assert (folder / "screenshot.png").stat().st_size > 1000
             log = (folder / "godot.log").read_text()
             assert "BRIDGE_DISPLAYED" in log and "SCRIPT ERROR" not in log, log
-            print("PASS: nested SHM capture equals Godot's received RGB; rendered screenshot saved")
+            if live:
+                updates = re.findall(r"frames=(\d+) allocations=(\d+)", log)
+                assert int(updates[-1][0]) >= 8 and int(updates[-1][1]) < int(updates[-1][0]), log
+                times = re.findall(r"(\d+):(\d+):(\d+\.\d+) .*\[bridge\] SEND snapshot", (folder / "dwl.log").read_text())
+                seconds = [int(h) * 3600 + int(m) * 60 + float(s) for h, m, s in times]
+                assert len(seconds) >= 8 and all(b - a >= .095 for a, b in zip(seconds, seconds[1:])), seconds
+                print("PASS: live nested SHM updates, rate limit and texture reuse; screenshot saved")
+            else:
+                print("PASS: nested SHM capture equals Godot's received RGB; rendered screenshot saved")
         finally:
             stop(viewer)
             stop(nested)

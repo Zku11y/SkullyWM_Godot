@@ -1213,7 +1213,14 @@ capturecommit(struct wl_listener *listener, void *data)
 	size_t stride, width, height, size, pos;
 	size_t x, y;
 	FILE *file;
-	int ok, capture, sendframe;
+	int ok, capture, sendframe, request, live;
+	static uint64_t next_live_ns;
+	uint64_t now_ns;
+	struct timespec now;
+	long fps = 10;
+	char *end;
+	const char *rate = getenv("DWL_BRIDGE_FPS");
+	const char *live_appid = getenv("DWL_BRIDGE_LIVE_APP_ID");
 	const char *socket_path = getenv("DWL_BRIDGE_SOCKET");
 	const char *excluded = getenv("DWL_BRIDGE_EXCLUDE_APP_ID");
 	const char *appid = client_get_appid(c);
@@ -1222,8 +1229,22 @@ capturecommit(struct wl_listener *listener, void *data)
 			|| (excluded && !strcmp(appid, excluded)))
 		return;
 	capture = access("bridge-capture.request", F_OK) == 0;
-	sendframe = socket_path && !bridge_busy()
-			&& access("bridge-send.request", F_OK) == 0;
+	request = access("bridge-send.request", F_OK) == 0;
+	live = live_appid && *live_appid && !strcmp(appid, live_appid);
+	if (live && rate) {
+		fps = strtol(rate, &end, 10);
+		if (!*rate || *end || fps < 1 || fps > 30)
+			live = 0;
+	}
+	if (live) {
+		clock_gettime(CLOCK_MONOTONIC, &now);
+		now_ns = (uint64_t)now.tv_sec * 1000000000u + now.tv_nsec;
+		if (now_ns < next_live_ns || bridge_busy())
+			live = 0;
+		else
+			next_live_ns = now_ns + 1000000000u / (uint64_t)fps;
+	}
+	sendframe = socket_path && !bridge_busy() && (request || live);
 	if (!capture && !sendframe)
 		return;
 
@@ -1314,7 +1335,7 @@ capturecommit(struct wl_listener *listener, void *data)
 	}
 	if (sendframe && bridge_send(event_loop, socket_path, rgb, width, height)) {
 		/* A queued attempt consumes the request, even if it later disconnects. */
-		if (unlink("bridge-send.request") != 0)
+		if (request && unlink("bridge-send.request") != 0)
 			wlr_log(WLR_ERROR, "[bridge] Cannot remove send request");
 	} else {
 		free(rgb);

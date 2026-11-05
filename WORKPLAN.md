@@ -10,8 +10,22 @@ dwl/foot test transferred a populated 1404×1404 RGB frame, compared it exactly
 against the PPM diagnostic, and showed it in a TextureRect and on a 3D quad.
 The rendered screenshot was visually inspected. This used Compatibility/OpenGL
 on the AMD Radeon 780M, not Vulkan. Milestone 0's Vulkan capability audit and
-milestone 2's live/editor-preview work remain outstanding. See
+milestone 2's live/editor-preview work were still outstanding at that checkpoint. See
 `godot-bridge/README.md` for build, run, ownership and verification details.
+
+Progress 2026-11-05, milestone 2: bounded live SHM updates and a reusable `@tool`
+3D preview scene are implemented. An explicit app-ID selector enables automatic
+captures at 10 attempts/s by default (configurable 1–30). The proven v1 message
+format is retained with one connection per snapshot and a persistent listener.
+The receiver holds one latest complete frame, and same-size images update the
+existing texture. Native tests passed for replacement, malformed-frame recovery,
+restart and partial-read cancellation. Nested live runtime testing displayed
+eight frames with one texture allocation. Real-editor tests verified uploaded
+pixels, resize, and scene close/reopen; a separate nested foot test fed the
+editor's actual 3D viewport and survived close/reopen. These used OpenGL, not
+DMA-BUF/Vulkan. Applied-state tracking, multi-window identity, final-state delivery
+after throttling, and input are still deferred. The Vulkan capability audit is
+the next architectural checkpoint before pursuing GPU sharing.
 
 The recommended target is a C++ GDExtension providing ordinary Texture2D
 resources and window nodes, supported by the smallest Godot Vulkan engine patch

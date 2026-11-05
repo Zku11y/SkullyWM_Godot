@@ -1,9 +1,9 @@
 extends Control
 
-var receiver: BridgeReceiver
+var window_view: Node3D
+var live_toggle: CheckButton
+var capture_after := 1
 var preview: TextureRect
-var window_material: StandardMaterial3D
-var quad: QuadMesh
 var status_label: Label
 var path_edit: LineEdit
 var capture_path := ""
@@ -11,13 +11,11 @@ var capturing := false
 var pixels_output := ""
 
 func _ready() -> void:
-	receiver = BridgeReceiver.new()
-	add_child(receiver)
 	var layout := VBoxContainer.new()
 	layout.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(layout)
 	var title := Label.new()
-	title.text = "One captured window — TextureRect (left) and 3D mesh (right)"
+	title.text = "Window bridge — TextureRect (left) and 3D mesh (right)"
 	layout.add_child(title)
 	var controls := HBoxContainer.new()
 	layout.add_child(controls)
@@ -26,13 +24,17 @@ func _ready() -> void:
 	path_edit.placeholder_text = "Absolute socket path in an owned mode-0700 directory"
 	path_edit.text = OS.get_environment("DWL_BRIDGE_SOCKET")
 	controls.add_child(path_edit)
+	live_toggle = CheckButton.new()
+	live_toggle.text = "Live"
+	live_toggle.button_pressed = not OS.get_environment("DWL_BRIDGE_LIVE_APP_ID").is_empty()
+	controls.add_child(live_toggle)
 	var listen := Button.new()
-	listen.text = "Listen for one frame"
-	listen.pressed.connect(func(): receiver.start_listening(path_edit.text))
+	listen.text = "Start / reconnect"
+	listen.pressed.connect(func(): window_view.start(path_edit.text, live_toggle.button_pressed))
 	controls.add_child(listen)
 	var stop := Button.new()
 	stop.text = "Stop"
-	stop.pressed.connect(receiver.stop)
+	stop.pressed.connect(func(): window_view.stop())
 	controls.add_child(stop)
 	status_label = Label.new()
 	layout.add_child(status_label)
@@ -58,43 +60,34 @@ func _ready() -> void:
 	var camera := Camera3D.new()
 	camera.position = Vector3(0, 0, 3)
 	viewport.add_child(camera)
-	var mesh := MeshInstance3D.new()
-	quad = QuadMesh.new()
-	quad.size = Vector2(2.4, 1.6)
-	mesh.mesh = quad
-	mesh.rotation_degrees = Vector3(-8, -18, 0)
-	window_material = StandardMaterial3D.new()
-	window_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	window_material.cull_mode = BaseMaterial3D.CULL_DISABLED
-	mesh.material_override = window_material
-	viewport.add_child(mesh)
+	window_view = preload("res://window_preview.tscn").instantiate()
+	window_view.rotation_degrees = Vector3(-8, -18, 0)
+	viewport.add_child(window_view)
+	window_view.frame_displayed.connect(display_frame)
 	var note := Label.new()
-	note.text = "SHM snapshot via CPU upload. Start the listener, request a frame in nested dwl, then update foot."
+	note.text = "SHM CPU upload. Live captures need DWL_BRIDGE_LIVE_APP_ID in nested dwl. Stop keeps the last image."
 	layout.add_child(note)
 	for arg in OS.get_cmdline_user_args():
+		if arg.begins_with("--capture-after="):
+			capture_after = maxi(1, arg.trim_prefix("--capture-after=").to_int())
 		if arg.begins_with("--capture="):
 			capture_path = arg.trim_prefix("--capture=")
 		if arg.begins_with("--pixels-output="):
 			pixels_output = arg.trim_prefix("--pixels-output=")
 	if not path_edit.text.is_empty():
-		receiver.start_listening(path_edit.text)
+		window_view.start(path_edit.text, live_toggle.button_pressed)
 
 func _process(_delta: float) -> void:
-	status_label.text = receiver.get_status()
-	var frame := receiver.take_frame()
-	if frame.is_empty():
-		return
-	var image := Image.create_from_data(frame.width, frame.height, false, Image.FORMAT_RGB8, frame.pixels)
-	var texture := ImageTexture.create_from_image(image)
+	status_label.text = "%s — frames: %d, texture allocations: %d" % [window_view.get_status(), window_view.frames_displayed, window_view.allocations]
+
+func display_frame(texture: ImageTexture, width: int, height: int, pixels: PackedByteArray) -> void:
 	preview.texture = texture
-	window_material.albedo_texture = texture
-	quad.size = Vector2(2.4, 2.4 * float(frame.height) / float(frame.width))
-	print("BRIDGE_DISPLAYED ", frame.width, "x", frame.height)
+	print("BRIDGE_DISPLAYED ", width, "x", height, " frames=", window_view.frames_displayed, " allocations=", window_view.allocations)
 	if not pixels_output.is_empty():
 		var file := FileAccess.open(pixels_output, FileAccess.WRITE)
-		file.store_buffer(frame.pixels)
+		file.store_buffer(pixels)
 		file.close()
-	if not capture_path.is_empty() and not capturing:
+	if not capture_path.is_empty() and not capturing and window_view.frames_displayed >= capture_after:
 		capturing = true
 		save_capture()
 
@@ -106,5 +99,5 @@ func save_capture() -> void:
 	get_tree().quit(0 if error == OK else 1)
 
 func _exit_tree() -> void:
-	if is_instance_valid(receiver):
-		receiver.stop()
+	if is_instance_valid(window_view):
+		window_view.stop()

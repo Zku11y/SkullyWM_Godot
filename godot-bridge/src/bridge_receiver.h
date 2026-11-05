@@ -15,13 +15,17 @@ class BridgeReceiver : public godot::Node {
 	std::string status = "Disconnected";
 	std::vector<uint8_t> pixels;
 	uint32_t width = 0, height = 0;
-	void receive_one(int server, const std::string &path);
+	void receive_frames(int server, const std::string &path, bool live);
+	bool start(const godot::String &path, bool live);
+	uint64_t received_count = 0, replaced_count = 0;
 	void set_status(const std::string &value);
 protected:
 	static void _bind_methods();
 public:
 	~BridgeReceiver() override;
 	bool start_listening(const godot::String &path);
+	bool start_live(const godot::String &path);
+	godot::Dictionary get_stats();
 	void stop();
 	godot::String get_status();
 	godot::Dictionary take_frame();

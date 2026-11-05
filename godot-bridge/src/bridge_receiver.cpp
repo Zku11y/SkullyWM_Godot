@@ -51,6 +51,8 @@ bool read_exact(int fd, void *destination, size_t size, std::atomic<bool> &cance
 
 void BridgeReceiver::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("start_listening", "path"), &BridgeReceiver::start_listening);
+	ClassDB::bind_method(D_METHOD("start_live", "path"), &BridgeReceiver::start_live);
+	ClassDB::bind_method(D_METHOD("get_stats"), &BridgeReceiver::get_stats);
 	ClassDB::bind_method(D_METHOD("stop"), &BridgeReceiver::stop);
 	ClassDB::bind_method(D_METHOD("get_status"), &BridgeReceiver::get_status);
 	ClassDB::bind_method(D_METHOD("take_frame"), &BridgeReceiver::take_frame);
@@ -61,7 +63,10 @@ void BridgeReceiver::set_status(const std::string &value) {
 	status = value;
 }
 
-bool BridgeReceiver::start_listening(const String &value) {
+bool BridgeReceiver::start_listening(const String &value) { return start(value, false); }
+bool BridgeReceiver::start_live(const String &value) { return start(value, true); }
+
+bool BridgeReceiver::start(const String &value, bool live) {
 	stop();
 	std::string path = value.utf8().get_data();
 	sockaddr_un address{};
@@ -88,10 +93,11 @@ bool BridgeReceiver::start_listening(const String &value) {
 		set_status("Cannot prepare listening socket");
 		return false;
 	}
+	received_count = replaced_count = 0;
 	cancelled = false;
 	set_status("Listening: " + path);
 	try {
-		worker = std::thread(&BridgeReceiver::receive_one, this, server.fd, path);
+		worker = std::thread(&BridgeReceiver::receive_frames, this, server.fd, path, live);
 	} catch (...) {
 		unlink(path.c_str());
 		set_status("Cannot start receiver thread");
@@ -101,45 +107,59 @@ bool BridgeReceiver::start_listening(const String &value) {
 	return true;
 }
 
-void BridgeReceiver::receive_one(int server_fd, const std::string &path) {
-	OwnedFD server{server_fd}, peer{-1};
-	try {
-		while (!cancelled) {
-			if (!readable(server.fd, cancelled, Clock::now() + std::chrono::milliseconds(100))) continue;
-			peer.fd = accept4(server.fd, nullptr, nullptr, SOCK_NONBLOCK | SOCK_CLOEXEC);
-			if (peer.fd >= 0) break;
-			if (errno != EAGAIN && errno != EWOULDBLOCK && errno != EINTR)
-				throw std::runtime_error("Accept failed");
+void BridgeReceiver::receive_frames(int server_fd, const std::string &path, bool live) {
+	OwnedFD server{server_fd};
+	do {
+		OwnedFD peer{-1};
+		try {
+			while (!cancelled) {
+				if (!readable(server.fd, cancelled, Clock::now() + std::chrono::milliseconds(100))) continue;
+				peer.fd = accept4(server.fd, nullptr, nullptr, SOCK_NONBLOCK | SOCK_CLOEXEC);
+				if (peer.fd >= 0) break;
+				if (errno != EAGAIN && errno != EWOULDBLOCK && errno != EINTR)
+					throw std::runtime_error("Accept failed");
+			}
+			if (cancelled) { unlink(path.c_str()); return; }
+			set_status("Receiving one snapshot");
+			auto deadline = Clock::now() + std::chrono::seconds(5);
+			uint32_t header[8];
+			if (!read_exact(peer.fd, header, sizeof(header), cancelled, deadline))
+				throw std::runtime_error("Incomplete header, timeout, or cancellation");
+			for (auto &field : header) field = ntohl(field);
+			const uint32_t w = header[3], h = header[4];
+			const uint64_t size = uint64_t(w) * h * 3;
+			if (header[0] != 0x44574c42 || header[1] != 1 || header[2] != 32
+					|| !w || !h || w > MAX_DIM || h > MAX_DIM || header[5] != 1
+					|| uint64_t(header[6]) != uint64_t(w) * 3 || header[7] != size || size > MAX_BYTES)
+				throw std::runtime_error("Invalid or oversized DWLB v1 RGB888 header");
+			std::vector<uint8_t> received(static_cast<size_t>(size));
+			if (!read_exact(peer.fd, received.data(), received.size(), cancelled, deadline))
+				throw std::runtime_error("Incomplete pixels, timeout, or cancellation");
+			uint8_t extra;
+			if (!readable(peer.fd, cancelled, deadline) || recv(peer.fd, &extra, 1, 0) != 0)
+				throw std::runtime_error("Expected EOF after pixels");
+			{
+				std::lock_guard<std::mutex> lock(mutex);
+				if (!pixels.empty()) ++replaced_count;
+				++received_count;
+				pixels = std::move(received);
+				width = w; height = h;
+				status = "Frame ready";
+			}
+		} catch (const std::exception &error) {
+			set_status(error.what());
 		}
-		if (cancelled) { unlink(path.c_str()); return; }
-		set_status("Receiving one snapshot");
-		auto deadline = Clock::now() + std::chrono::seconds(5);
-		uint32_t header[8];
-		if (!read_exact(peer.fd, header, sizeof(header), cancelled, deadline))
-			throw std::runtime_error("Incomplete header, timeout, or cancellation");
-		for (auto &field : header) field = ntohl(field);
-		const uint32_t w = header[3], h = header[4];
-		const uint64_t size = uint64_t(w) * h * 3;
-		if (header[0] != 0x44574c42 || header[1] != 1 || header[2] != 32
-				|| !w || !h || w > MAX_DIM || h > MAX_DIM || header[5] != 1
-				|| uint64_t(header[6]) != uint64_t(w) * 3 || header[7] != size || size > MAX_BYTES)
-			throw std::runtime_error("Invalid or oversized DWLB v1 RGB888 header");
-		std::vector<uint8_t> received(static_cast<size_t>(size));
-		if (!read_exact(peer.fd, received.data(), received.size(), cancelled, deadline))
-			throw std::runtime_error("Incomplete pixels, timeout, or cancellation");
-		uint8_t extra;
-		if (!readable(peer.fd, cancelled, deadline) || recv(peer.fd, &extra, 1, 0) != 0)
-			throw std::runtime_error("Expected EOF after pixels");
-		{
-			std::lock_guard<std::mutex> lock(mutex);
-			pixels = std::move(received);
-			width = w; height = h;
-			status = "Frame ready";
-		}
-	} catch (const std::exception &error) {
-		set_status(error.what());
-	}
+	} while (live && !cancelled);
 	unlink(path.c_str());
+}
+
+Dictionary BridgeReceiver::get_stats() {
+	std::lock_guard<std::mutex> lock(mutex);
+	Dictionary result;
+	result["received"] = received_count;
+	result["replaced"] = replaced_count;
+	result["pending_bytes"] = static_cast<int64_t>(pixels.size());
+	return result;
 }
 
 Dictionary BridgeReceiver::take_frame() {
