@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bd63l8ufivtce" path="res://development_world.gd" id="1"]
 [ext_resource type="Script" uid="uid://cyvug7mqxax5p" path="res://bridge/session.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://b3rvldsaujy6c" path="res://modern_bedroom.glb" id="3_a0xct"]
 
 [sub_resource type="QuadMesh" id="WindowMesh"]
 resource_local_to_scene = true
@@ -14,11 +15,11 @@ script = ExtResource("1")
 script = ExtResource("2")
 
 [node name="Camera" type="Camera3D" parent="." unique_id=1292168697]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+transform = Transform3D(0.80965596, 0, 0.58690494, 0, 1, 0, -0.58690494, 0, 0.80965596, 2.081507, -0.022982597, 5.23674)
 current = true
 
 [node name="ApplicationWindow" type="MeshInstance3D" parent="." unique_id=1074576463]
-transform = Transform3D(0.9781476, 0.018120697, -0.20712054, 0, 0.9961947, 0.08715574, 0.2079117, -0.085251175, 0.9744255, 0.8, 0, 0)
+transform = Transform3D(-0.052335948, -0.0870363, 0.9948295, 0, 0.9961947, 0.08715574, -0.99862945, 0.004561376, -0.052136794, -3.1257532, -0.508034, 2.6001706)
 mesh = SubResource("WindowMesh")
 
 [node name="Interface" type="CanvasLayer" parent="." unique_id=2079088299]
@@ -50,9 +51,15 @@ offset_bottom = 120.0
 text = "Stop session"
 
 [node name="Preview" type="TextureRect" parent="Interface" unique_id=1062380100]
-offset_left = 20.0
-offset_top = 150.0
-offset_right = 340.0
-offset_bottom = 400.0
+offset_left = 1784.0
+offset_top = 891.0
+offset_right = 2104.0
+offset_bottom = 1141.0
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Sketchfab_Scene" parent="." unique_id=1686006627 instance=ExtResource("3_a0xct")]
+transform = Transform3D(-5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, -5.9604645e-08, 0.06737614, -2.602615, -1.470192)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2090394832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.1734085, 6.7002)
