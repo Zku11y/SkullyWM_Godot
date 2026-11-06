@@ -1,5 +1,10 @@
 Real application windows through compositor-owned DMA-BUFs
 
+For ordinary Godot development, use the new
+[Godot-managed session project](godot-bridge/world/README.md): choose an
+application in the Inspector and press Play. The commands below preserve the
+original standalone diagnostic runner and comparison path.
+
 Run from the repository root. This opens a Godot runtime viewer and a temporary
 nested dwl. The viewer shows the selected application's main surface in a
 TextureRect and on a 3D mesh. It stays open until Ctrl+C in the launching

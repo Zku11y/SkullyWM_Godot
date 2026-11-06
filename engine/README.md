@@ -57,6 +57,17 @@ extension. The controlled Vulkan producer retains EXTERNAL ownership by default.
 See [the real client guide](../GPU_BRIDGE.md) and
 [five-patch verification](../reports/gpu-client/README.md).
 
+`0006-wayland-shutdown-wakeup.patch` adds a private CLOEXEC pipe to the Wayland
+event thread's poll set. Closing its write end wakes shutdown reliably, before
+joining the thread. Previously a main-thread Wayland roundtrip could consume the
+very event intended to wake that thread, leaving it blocked forever. An empty
+Wayland project reproduced the hang without any bridge session or image import;
+the debugger found the Wayland event thread in `poll`. This is a local adaptation
+of the wakeup approach discussed in [upstream issue #123059](https://github.com/godotengine/godot/issues/123059)
+and [PR #123946](https://github.com/godotengine/godot/pull/123946), not a claim that
+the upstream PR is merged. The pipe closes only after the stop flag is set and
+its read end closes after thread join; runtime needs no periodic polling wakeup.
+
 **Prepare and build**
 
 Requirements are Godot's Linux build dependencies, Clang/LLD, Python with venv,
@@ -76,9 +87,11 @@ python3 engine/build.py --jobs 6
 ```
 
 Skip clone/venv setup when already present. The build helper verifies the exact
-base revision, applies the reviewed patches only to a clean checkout, or detects
-that they are already applied. It refuses a partial/unknown patch state instead
-of resetting the source. `--prepare-only` checks/applies without compiling.
+base revision, applies the reviewed patches to a clean checkout or extends an
+exact previously reviewed prefix, and detects when all patches are applied.
+It refuses partial/unknown changes instead of resetting the source. The entire
+series is replayed in a private tree before updating the checkout.
+`--prepare-only` checks/applies without compiling.
 
 Build options are Linux editor, Clang + LLD, no debug symbols, no optimization,
 no LTO, and suffix `dwl_bridge`. This is a development build; performance is not

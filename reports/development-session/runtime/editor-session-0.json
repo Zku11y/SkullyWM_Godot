@@ -1,0 +1,10 @@
+{
+  "dwl_pid": 37271,
+  "error": "",
+  "exit_code": -1,
+  "game_pid": 37224,
+  "runtime_directory": "/tmp/dwl-godot-session-jsTyIo",
+  "socket_path": "/tmp/dwl-godot-session-jsTyIo/gpu.sock",
+  "state": "running",
+  "supervisor_pid": 37270
+}

@@ -15,7 +15,8 @@ PATCHES = [ROOT / "patches/0001-optional-vulkan-extension-requests.patch",
            ROOT / "patches/0002-expose-enabled-device-extensions.patch",
            ROOT / "patches/0003-controlled-external-snapshot-copy.patch",
            ROOT / "patches/0004-async-external-copy-retirement.patch",
-           ROOT / "patches/0005-foreign-compositor-image-ownership.patch"]
+           ROOT / "patches/0005-foreign-compositor-image-ownership.patch",
+           ROOT / "patches/0006-wayland-shutdown-wakeup.patch"]
 BINARY = SOURCE / "bin/godot.linuxbsd.editor.x86_64.llvm.dwl_bridge"
 
 
@@ -33,9 +34,9 @@ def reviewed_sources_match():
     # small private tree instead of reverse-checking overlapping patches at once.
     paths = {line[6:] for patch in PATCHES for line in patch.read_text().splitlines()
              if line.startswith("+++ b/")}
-    changed = set(git("diff", "--name-only", capture_output=True, text=True, check=True).stdout.splitlines())
+    changed = set(git("diff", "HEAD", "--name-only", capture_output=True, text=True, check=True).stdout.splitlines())
     if not changed <= paths:
-        return False
+        return None
     with tempfile.TemporaryDirectory(prefix="dwl-engine-patches-") as directory:
         tree = Path(directory)
         subprocess.run(["git", "init", "-q", directory], check=True)
@@ -43,9 +44,14 @@ def reviewed_sources_match():
             target = tree / path
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(git("show", f"HEAD:{path}", capture_output=True, check=True).stdout)
-        for patch in PATCHES:
+        matched = None
+        for index, patch in enumerate(PATCHES):
+            if all((SOURCE / path).read_bytes() == (tree / path).read_bytes() for path in paths):
+                matched = index
             subprocess.run(["git", "-C", directory, "apply", str(patch)], check=True)
-        return all((SOURCE / path).read_bytes() == (tree / path).read_bytes() for path in paths)
+        if all((SOURCE / path).read_bytes() == (tree / path).read_bytes() for path in paths):
+            return len(PATCHES)
+        return matched
 
 
 def main():
@@ -61,13 +67,13 @@ def main():
     if revision != BASE:
         parser.error(f"Expected {BASE}; checkout is {revision}")
     applied = reviewed_sources_match()
-    if applied:
+    if applied == len(PATCHES):
         print("Reviewed engine patches are already applied.", flush=True)
     else:
-        if git("status", "--porcelain", capture_output=True, text=True, check=True).stdout.strip():
-            parser.error("Source has other changes or a partial patch; inspect it before applying")
-        # reviewed_sources_match() already replayed and checked the full series.
-        for patch in PATCHES:
+        if applied is None or git("ls-files", "--others", "--exclude-standard", capture_output=True, text=True, check=True).stdout.strip():
+            parser.error("Source has unknown changes or a partial patch; inspect it before applying")
+        # Accept only an exact reviewed prefix, including a fresh clean checkout.
+        for patch in PATCHES[applied:]:
             git("apply", str(patch), check=True)
         print("Applied engine patches.", flush=True)
     git("diff", "--check", check=True)
@@ -83,7 +89,7 @@ def main():
     print(f"Building in {SOURCE}; progress: {logs / 'build.log'}", flush=True)
     with (logs / "build.log").open("w") as log:
         subprocess.run(command, cwd=SOURCE, stdout=log, stderr=subprocess.STDOUT, check=True)
-    diff = git("diff", "--binary", capture_output=True, check=True).stdout
+    diff = git("diff", "HEAD", "--binary", capture_output=True, check=True).stdout
     manifest = {
         "base_revision": BASE,
         "built_at_utc": datetime.now(timezone.utc).isoformat(),

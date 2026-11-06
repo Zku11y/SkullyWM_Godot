@@ -1,0 +1,493 @@
+[New LWP 29951]
+[New LWP 29949]
+[New LWP 29948]
+[New LWP 29947]
+[New LWP 29946]
+[New LWP 29945]
+[New LWP 29944]
+[New LWP 29835]
+[New LWP 29829]
+[New LWP 29828]
+[New LWP 29827]
+[New LWP 29826]
+[New LWP 29822]
+[New LWP 29821]
+[New LWP 29820]
+[New LWP 29819]
+[New LWP 29818]
+[New LWP 29817]
+[New LWP 29816]
+[New LWP 29815]
+[New LWP 29814]
+[New LWP 29813]
+[New LWP 29812]
+[New LWP 29811]
+[New LWP 29810]
+[New LWP 29809]
+[New LWP 29808]
+[New LWP 29807]
+[New LWP 29806]
+[New LWP 29805]
+[New LWP 29804]
+[New LWP 29803]
+[New LWP 29802]
+[New LWP 29801]
+[New LWP 29800]
+[New LWP 29799]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/libthread_db.so.1".
+0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+
+Thread 37 (Thread 0x7f3b4f1ff6c0 (LWP 29799) "godot.linuxbsd."):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a3296f7a45 in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 36 (Thread 0x7f3b4e9fe6c0 (LWP 29800) "WorkerThread 0"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 35 (Thread 0x7f3b4e1fd6c0 (LWP 29801) "WorkerThread 1"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 34 (Thread 0x7f3b4d9fc6c0 (LWP 29802) "WorkerThread 2"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 33 (Thread 0x7f3b4d1fb6c0 (LWP 29803) "WorkerThread 3"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 32 (Thread 0x7f3b3ffff6c0 (LWP 29804) "WorkerThread 4"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 31 (Thread 0x7f3b4c9fa6c0 (LWP 29805) "WorkerThread 5"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 30 (Thread 0x7f3b3b7fe6c0 (LWP 29806) "WorkerThread 6"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 29 (Thread 0x7f3b32dff6c0 (LWP 29807) "WorkerThread 7"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 28 (Thread 0x7f3b3affd6c0 (LWP 29808) "WorkerThread 8"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 27 (Thread 0x7f3b3a7fc6c0 (LWP 29809) "WorkerThread 9"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 26 (Thread 0x7f3b39ffb6c0 (LWP 29810) "WorkerThread 10"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 25 (Thread 0x7f3b397fa6c0 (LWP 29811) "WorkerThread 11"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 24 (Thread 0x7f3b3f7fe6c0 (LWP 29812) "WorkerThread 12"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 23 (Thread 0x7f3b3effd6c0 (LWP 29813) "WorkerThread 13"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 22 (Thread 0x7f3b3e7fc6c0 (LWP 29814) "WorkerThread 14"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 21 (Thread 0x7f3b3dffb6c0 (LWP 29815) "WorkerThread 15"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x000055a32a578a21 in ?? ()
+#4  0x000055a32a05a1ad in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 20 (Thread 0x7f3b33fff6c0 (LWP 29816) "[pango] fontcon"):
+#0  0x00007f3b4fb1e46d in syscall () from /usr/lib/libc.so.6
+#1  0x00007f3b3d23c15e in g_cond_wait () from /usr/lib/libglib-2.0.so.0
+#2  0x00007f3b3d1d152d in ?? () from /usr/lib/libglib-2.0.so.0
+#3  0x00007f3b3d1d15a6 in g_async_queue_pop () from /usr/lib/libglib-2.0.so.0
+#4  0x00007f3b3d31a661 in ?? () from /usr/lib/libpangoft2-1.0.so.0
+#5  0x00007f3b3d245b14 in ?? () from /usr/lib/libglib-2.0.so.0
+#6  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#7  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 19 (Thread 0x7f3b337fe6c0 (LWP 29817) "pool-spawner"):
+#0  0x00007f3b4fb1e46d in syscall () from /usr/lib/libc.so.6
+#1  0x00007f3b3d23c15e in g_cond_wait () from /usr/lib/libglib-2.0.so.0
+#2  0x00007f3b3d1d152d in ?? () from /usr/lib/libglib-2.0.so.0
+#3  0x00007f3b3d246017 in ?? () from /usr/lib/libglib-2.0.so.0
+#4  0x00007f3b3d245b14 in ?? () from /usr/lib/libglib-2.0.so.0
+#5  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#6  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 18 (Thread 0x7f3b03fff6c0 (LWP 29818) "gmain"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fb119d7 in ppoll () from /usr/lib/libc.so.6
+#2  0x00007f3b3d20ef59 in ?? () from /usr/lib/libglib-2.0.so.0
+#3  0x00007f3b3d20f055 in g_main_context_iteration () from /usr/lib/libglib-2.0.so.0
+#4  0x00007f3b3d20f0a2 in ?? () from /usr/lib/libglib-2.0.so.0
+#5  0x00007f3b3d245b14 in ?? () from /usr/lib/libglib-2.0.so.0
+#6  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#7  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 17 (Thread 0x7f3b037fe6c0 (LWP 29819) "pool-0"):
+#0  0x00007f3b4fb1e46d in syscall () from /usr/lib/libc.so.6
+#1  0x00007f3b3d23cf9c in g_cond_wait_until () from /usr/lib/libglib-2.0.so.0
+#2  0x00007f3b3d1d14f7 in ?? () from /usr/lib/libglib-2.0.so.0
+#3  0x00007f3b3d1d166f in g_async_queue_timeout_pop () from /usr/lib/libglib-2.0.so.0
+#4  0x00007f3b3d246e31 in ?? () from /usr/lib/libglib-2.0.so.0
+#5  0x00007f3b3d245b14 in ?? () from /usr/lib/libglib-2.0.so.0
+#6  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#7  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 16 (Thread 0x7f3b02ffd6c0 (LWP 29820) "dconf worker"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fb119d7 in ppoll () from /usr/lib/libc.so.6
+#2  0x00007f3b3d20ef59 in ?? () from /usr/lib/libglib-2.0.so.0
+#3  0x00007f3b3d20f055 in g_main_context_iteration () from /usr/lib/libglib-2.0.so.0
+#4  0x00007f3b3be747be in ?? () from /usr/lib/gio/modules/libdconfsettings.so
+#5  0x00007f3b3d245b14 in ?? () from /usr/lib/libglib-2.0.so.0
+#6  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#7  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 15 (Thread 0x7f3b027fc6c0 (LWP 29821) "gdbus"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fb119d7 in ppoll () from /usr/lib/libc.so.6
+#2  0x00007f3b3d20ef59 in ?? () from /usr/lib/libglib-2.0.so.0
+#3  0x00007f3b3d20f217 in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#4  0x00007f3b3cfa7ed4 in ?? () from /usr/lib/libgio-2.0.so.0
+#5  0x00007f3b3d245b14 in ?? () from /usr/lib/libglib-2.0.so.0
+#6  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#7  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 14 (Thread 0x7f3b01ffb6c0 (LWP 29822) "Wayland Events"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fb112e5 in poll () from /usr/lib/libc.so.6
+#2  0x000055a32112fe6f in ?? ()
+#3  0x000055a329487d21 in ?? ()
+#4  0x000055a329488c0e in ?? ()
+#5  0x000055a329488b25 in ?? ()
+#6  0x000055a329488ae5 in ?? ()
+#7  0x000055a329488a75 in ?? ()
+#8  0x000055a3294887f9 in ?? ()
+#9  0x000055a32a617429 in ?? ()
+#10 0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#11 0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 13 (Thread 0x7f3ae93ff6c0 (LWP 29826) "godot.l:disk$0"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x00007f3af6793cde in ?? () from /usr/lib/libvulkan_radeon.so
+#4  0x00007f3af675d76d in ?? () from /usr/lib/libvulkan_radeon.so
+#5  0x00007f3af6793c4d in ?? () from /usr/lib/libvulkan_radeon.so
+#6  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#7  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 12 (Thread 0x7f3ae87ff6c0 (LWP 29827) "godot.l:disk$0"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x00007f3af6793cde in ?? () from /usr/lib/libvulkan_radeon.so
+#4  0x00007f3af675d76d in ?? () from /usr/lib/libvulkan_radeon.so
+#5  0x00007f3af6793c4d in ?? () from /usr/lib/libvulkan_radeon.so
+#6  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#7  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 11 (Thread 0x7f3ae7bff6c0 (LWP 29828) "gly-global-exec"):
+#0  0x00007f3b4fb1e46d in syscall () from /usr/lib/libc.so.6
+#1  0x00007f3b3bc9b445 in ?? () from /usr/lib/libglycin-2.so.0
+#2  0x00007f3b3bbdcb09 in ?? () from /usr/lib/libglycin-2.so.0
+#3  0x00007f3b3bbdb0f9 in ?? () from /usr/lib/libglycin-2.so.0
+#4  0x00007f3b3bbdb001 in ?? () from /usr/lib/libglycin-2.so.0
+#5  0x00007f3b3bd2aa70 in ?? () from /usr/lib/libglycin-2.so.0
+#6  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#7  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 10 (Thread 0x7f3ae79fe6c0 (LWP 29829) "async-io"):
+#0  0x00007f3b3bbe4c49 in ?? () from /usr/lib/libglycin-2.so.0
+#1  0x00007f3b3bbe4252 in ?? () from /usr/lib/libglycin-2.so.0
+#2  0x00007f3b3bbe409c in ?? () from /usr/lib/libglycin-2.so.0
+#3  0x00007f3b3bd2aa70 in ?? () from /usr/lib/libglycin-2.so.0
+#4  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#5  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 9 (Thread 0x7f3ae73fb6c0 (LWP 29835) "gly-hdl-loader"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fb054cb in wait4 () from /usr/lib/libc.so.6
+#2  0x00007f3b3bd2cc0b in ?? () from /usr/lib/libglycin-2.so.0
+#3  0x00007f3b3bb13d26 in ?? () from /usr/lib/libglycin-2.so.0
+#4  0x00007f3b3bb1d6e7 in ?? () from /usr/lib/libglycin-2.so.0
+#5  0x00007f3b3bd2aa70 in ?? () from /usr/lib/libglycin-2.so.0
+#6  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#7  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 8 (Thread 0x7f3ae11ea6c0 (LWP 29944) "godot.l:disk$1"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x00007f3af6793cde in ?? () from /usr/lib/libvulkan_radeon.so
+#4  0x00007f3af675d76d in ?? () from /usr/lib/libvulkan_radeon.so
+#5  0x00007f3af6793c4d in ?? () from /usr/lib/libvulkan_radeon.so
+#6  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#7  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 7 (Thread 0x7f3ae09e96c0 (LWP 29945) "godot.l:disk$2"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x00007f3af6793cde in ?? () from /usr/lib/libvulkan_radeon.so
+#4  0x00007f3af675d76d in ?? () from /usr/lib/libvulkan_radeon.so
+#5  0x00007f3af6793c4d in ?? () from /usr/lib/libvulkan_radeon.so
+#6  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#7  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 6 (Thread 0x7f3ae01e86c0 (LWP 29946) "godot.l:disk$3"):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x00007f3af6793cde in ?? () from /usr/lib/libvulkan_radeon.so
+#4  0x00007f3af675d76d in ?? () from /usr/lib/libvulkan_radeon.so
+#5  0x00007f3af6793c4d in ?? () from /usr/lib/libvulkan_radeon.so
+#6  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#7  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 5 (Thread 0x7f3adf9e76c0 (LWP 29947) "godot.linuxbsd."):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fae4aad in clock_nanosleep () from /usr/lib/libc.so.6
+#2  0x00007f3b4faf0ee7 in nanosleep () from /usr/lib/libc.so.6
+#3  0x000055a323e68bf3 in ?? ()
+#4  0x000055a32108ee05 in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 4 (Thread 0x7f3adf1e66c0 (LWP 29948) "godot.linuxbsd."):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fae4aad in clock_nanosleep () from /usr/lib/libc.so.6
+#2  0x00007f3b4faf0ee7 in nanosleep () from /usr/lib/libc.so.6
+#3  0x00007f3b4fb2020a in usleep () from /usr/lib/libc.so.6
+#4  0x000055a321099b74 in ?? ()
+#5  0x000055a329487d21 in ?? ()
+#6  0x000055a329488c0e in ?? ()
+#7  0x000055a329488b25 in ?? ()
+#8  0x000055a329488ae5 in ?? ()
+#9  0x000055a329488a75 in ?? ()
+#10 0x000055a3294887f9 in ?? ()
+#11 0x000055a32a617429 in ?? ()
+
+Thread 3 (Thread 0x7f3ade9e56c0 (LWP 29949) "godot.linuxbsd."):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x00007f3b388df971 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /usr/lib/libstdc++.so.6
+#4  0x00007f3aeabfe670 in vvl::Queue::NextSubmission (this=this@entry=0x55a35bace670) at /vulkan-sdk/1.4.350.1/source/Vulkan-ValidationLayers/layers/state_tracker/queue_state.cpp:288
+#5  0x00007f3aeabff4ad in vvl::Queue::ThreadFunc (this=0x55a35bace670) at /vulkan-sdk/1.4.350.1/source/Vulkan-ValidationLayers/layers/state_tracker/queue_state.cpp:329
+#6  0x00007f3b388ea859 in ?? () from /usr/lib/libstdc++.so.6
+#7  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#8  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 2 (Thread 0x7f3add9e36c0 (LWP 29951) "godot.linuxbsd."):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa974ec in pthread_cond_wait () from /usr/lib/libc.so.6
+#3  0x00007f3b388df971 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /usr/lib/libstdc++.so.6
+#4  0x00007f3aeabfe670 in vvl::Queue::NextSubmission (this=this@entry=0x55a35bace450) at /vulkan-sdk/1.4.350.1/source/Vulkan-ValidationLayers/layers/state_tracker/queue_state.cpp:288
+#5  0x00007f3aeabff4ad in vvl::Queue::ThreadFunc (this=0x55a35bace450) at /vulkan-sdk/1.4.350.1/source/Vulkan-ValidationLayers/layers/state_tracker/queue_state.cpp:329
+#6  0x00007f3b388ea859 in ?? () from /usr/lib/libstdc++.so.6
+#7  0x00007f3b4fa98042 in ?? () from /usr/lib/libc.so.6
+#8  0x00007f3b4fb2072c in ?? () from /usr/lib/libc.so.6
+
+Thread 1 (Thread 0x7f3b4fc93a00 (LWP 29796) "godot.linuxbsd."):
+#0  0x00007f3b4faa08f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f3b4fa94c79 in ?? () from /usr/lib/libc.so.6
+#2  0x00007f3b4fa99e8d in ?? () from /usr/lib/libc.so.6
+#3  0x000055a32a6174b4 in ?? ()
+#4  0x000055a329488001 in ?? ()
+#5  0x000055a321139f0c in ?? ()
+#6  0x000055a32110d252 in ?? ()
+#7  0x000055a321110478 in ?? ()
+#8  0x000055a32117be4c in ?? ()
+#9  0x000055a3211ab9eb in ?? ()
+#10 0x000055a32109a0ba in ?? ()
+#11 0x00007f3b4fa27781 in ?? () from /usr/lib/libc.so.6
+[Inferior 1 (process 29796) detached]

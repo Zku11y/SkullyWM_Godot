@@ -1,5 +1,9 @@
 Godot SHM bridge — snapshots and bounded live updates
 
+The new [development-session project](world/README.md) starts nested dwl and a
+configured application from Godot Play, using the working GPU export path.
+This document retains the original SHM demo and editor-preview instructions.
+
 The receiver accepts DWLB v1 RGB snapshots in a Linux C++ GDExtension and
 displays an ImageTexture in both a TextureRect and a tilted QuadMesh. It can
 listen once or continuously. The project runs with Godot's Compatibility renderer

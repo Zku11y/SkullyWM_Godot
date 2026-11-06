@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="dwl — Compositor World Development"
+run/main_scene="res://development_world.tscn"
+config/features=PackedStringArray("4.7")
+
+[display]
+
+window/size/viewport_height=720
+
+[editor]
+
+run/main_run_args="--gpu-index 0"
+
+[rendering]
+
+rendering_device/vulkan/additional_device_extensions=PackedStringArray("VK_KHR_external_memory_fd", "VK_EXT_external_memory_dma_buf", "VK_EXT_image_drm_format_modifier", "VK_KHR_external_semaphore_fd", "VK_EXT_queue_family_foreign")
+renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.035, 0.045, 0.065, 1)

@@ -3,6 +3,43 @@ Research and workplan — dwl windows inside Godot
 Prepared 2026-11-02. The milestone descriptions are the plan; dated progress
 entries below distinguish completed experiments from remaining work.
 
+Current execution checkpoint, 2026-11-06: the single-window development-session
+milestone is implemented in `godot-bridge/world/`. Pressing Play starts the
+existing GPU receiver, a native supervisor, nested dwl and one Inspector-configured
+application. Stop/restart and closing the game retire GPU work and clean owned
+processes. Editor Stop uses SIGKILL; the supervisor's private lease independently
+handles that exit. Native lifecycle tests, real foot/EGL runtime sessions and
+real editor Play/Stop/Play passed. Saved Run Arguments select the game GPU without
+requiring the editor to use the same GPU. See [the development guide](godot-bridge/world/README.md)
+and [verification](reports/development-session/README.md).
+
+An existing engine-exit stall was reproduced with an empty Wayland project and
+the debugger found its Wayland event thread blocked in poll. Engine patch 0006
+adds a deterministic shutdown wakeup. Ten empty-project exits and the session
+lifecycle tests passed after rebuilding. This is part of session shutdown
+correctness; the buffer transport remains unchanged. Original SHM receiver and
+byte-exact GPU-copy regressions passed.
+
+Execution agreement: one active milestone at a time. Before implementing each,
+research the exact installed/upstream APIs and ownership requirements, explain
+the chosen approach, then implement, verify and explain what was achieved.
+Do not start the next milestone while required checks in the current one remain
+unresolved. The original numbered milestones below remain architectural context;
+the next focused sequence is:
+
+1. Godot-managed single-window development session — completed as above.
+2. Stable window identity and multiple-window lifecycle.
+3. Mesh input and application control through dwl's seat.
+4. Godot-only presentation with correct pacing; retain flat view as a debug option.
+5. GPU editor-preview lifecycle and reusable window scenes.
+6. Complete surface trees, popups, alpha and compatibility.
+7. Patched export templates, helper packaging and standalone session startup.
+8. Sustained performance/recovery work and selective direct-buffer optimization.
+
+Synchronization, bounded ownership and regressions remain acceptance requirements
+at every step. Neither direct sampling nor exported-runtime support is claimed
+by the current checkpoint.
+
 Progress 2026-11-05: milestone 1 is implemented in `godot-bridge/`. The C++
 receiver and demo were built and exercised in Godot 4.7.2 using pinned 4.5
 godot-cpp bindings. Four headless test groups passed. A graphical nested

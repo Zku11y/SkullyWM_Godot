@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-06",
+  "branch": "main",
+  "base_compositor_commit": "fa6d08d",
+  "artifacts": {
+    "runtime": "/tmp/dwl-bridge-session-test-xlaapp2s",
+    "native": "/tmp/dwl-session-process-test-nx0yosea",
+    "shutdown_after": "/tmp/dwl-bridge-session-test-eztpd_4v",
+    "shutdown_before": "/tmp/dwl-bridge-session-test-oc5uomrv",
+    "legacy_gpu": "/tmp/dwl-gpu-client-b97q_m74"
+  },
+  "sha256": {
+    "dwl": "7375ea6b683ea8e50130639393776afd04269f0ee3b69839193753d5e02bc15c",
+    "godot-bridge/demo/bin/libdwl_bridge.so": "cc555cf4ff9adacf8f41b978e03abd5e52bc541f4e4a57814d8b81055799b6b5",
+    "godot-bridge/world/bin/bridge_session_host": "484a50fd024b54db079858f582283369f0a61d0cfa79d742b8ddb7a6ef5bc9a5",
+    "godot-bridge/src/session_process.cpp": "1e144fd926f189d5ac195bc5171a9ff49cdaadd338213f6505a0fbaa4454dd59",
+    "godot-bridge/src/session_host.c": "d80607e56c12be65dd267d8d22e2644f06782100417bdb492d4677c959a67f45",
+    "godot-bridge/src/session_process.h": "1be0da643a2f5d2da9e4b6cab5d2aa24094be77c65ed5d55a7d8c77113f1bdc5",
+    "godot-bridge/world/development_world.gd": "9b008afb1049062577b8430c9106b97421a4f8d2e8a3bbe61ae0df0e24e277ea",
+    "godot-bridge/world/development_world.tscn": "d320add5e28e5eec1b19d86d201a9480b9b1525c43405af22b2235bba35d4c6c",
+    "godot-bridge/world/bridge/session_gpu.gd": "ed0aa9b5d3efe5a3d15498181e1116be2a09ef78232b8b596186b99614c1b9ab",
+    "godot-bridge/world/bridge/session.gd": "290be51932fe12dfc0081cd108171408a2c11c31499b01f34acc2b34dde0a52e",
+    "godot-bridge/world/project.godot": "ef56f98d09652723d86e26505e8f12b28cfd85d1060b39f541415a88aa5ffdb5",
+    "godot-bridge/world/bridge.gdextension": "abae2524e803da3b0fe7d354d57705bc6ebf16b08f7babfdc850c6c63b1c2c13",
+    "tests/test_bridge_session.py": "6c0d06fc638dc12d5fd12a4b8adbda865e330f8bda2c1c198869e4b4d929fa04",
+    "tests/test_session_process.py": "c040c34f689ce48aefe76b2674f928e52f772fd3056cb6bb0ac92d2593eb7e53",
+    "godot-bridge/CMakeLists.txt": "335c25e6e7243005e59bd2bcd65b2d1b1c3bb58d0c4006f19f4c8d5e5056e1a5",
+    "godot-bridge/src/register_types.cpp": "2b1e8030f557d6face159cf11a9dbc1c290e21d95c797e1354c50c7558f7e8c2",
+    "engine/build.py": "4ee26dcd624f3e3ccfba52aaa48f61563aa57ba19567d1df8c19d4a3d7e0e81e"
+  },
+  "results": {
+    "native_lifecycle": "passed",
+    "runtime_foot_and_egl": "passed",
+    "editor_play_stop_play": "passed",
+    "empty_wayland_exits_after_fix": 10,
+    "original_shm_test_groups": 4,
+    "original_gpu_byte_exact_frames": 8,
+    "active_desktop_restarted": false,
+    "pushed": false,
+    "synchronization_validation": "explicitly enabled, clean final runtime/editor run",
+    "mesh_after_restart": "rendered center checked and screenshot inspected"
+  }
+}

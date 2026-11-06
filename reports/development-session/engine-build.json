@@ -1,0 +1,31 @@
+{
+  "base_revision": "ed1daf0bf001b61586d9930840f2f1394092c079",
+  "built_at_utc": "2026-11-06T14:54:46.046586+00:00",
+  "command": [
+    "/home/skully/projects/SkullyWM_Godot/engine/venv/bin/scons",
+    "platform=linuxbsd",
+    "target=editor",
+    "use_llvm=yes",
+    "linker=lld",
+    "debug_symbols=no",
+    "optimize=none",
+    "lto=none",
+    "extra_suffix=dwl_bridge",
+    "-j6"
+  ],
+  "patch_sha256": {
+    "0001-optional-vulkan-extension-requests.patch": "2414cb4b33412462bd7e5f4656c6c16d65bfd19bdd314fdbe5941957b2131278",
+    "0002-expose-enabled-device-extensions.patch": "105b87a1f30800dc2580ebcbeefc8d504a720c70f2218ca23e49c5b7c39ae4da",
+    "0003-controlled-external-snapshot-copy.patch": "371fba3b90c74535cb19da83dfb0646550fb6510f3f3cd19898ec95eeffd9c6b",
+    "0004-async-external-copy-retirement.patch": "61e8beb7946d43fca78ac3feaebc7dbe3769e90dfd9daa2d72bbf0c2a14e5f58",
+    "0005-foreign-compositor-image-ownership.patch": "d91ec757b92a3fadeeba3d84ab538eddfa4818f9ae55f133e21d5dae0f46e4bc",
+    "0006-wayland-shutdown-wakeup.patch": "609347d4693bba0f2b6a02cb882777129d13faf5bd106adc2bdd37c714be6013"
+  },
+  "working_diff_sha256": "d98a1917ac7d4f0e75535020a6554e2179b0ca9644eb0a4b2eebe7d54e6a935a",
+  "binary": "/home/skully/projects/SkullyWM_Godot/engine/source/bin/godot.linuxbsd.editor.x86_64.llvm.dwl_bridge",
+  "binary_sha256": "f7780d64c7efbf77787a0f8a1f82f13b9102113ca826ac1979bf5d95167bc697",
+  "version": "4.7.2.stable.custom_build.ed1daf0bf",
+  "scons": "4.10.1",
+  "compiler": "clang version 22.1.8",
+  "linker": "LLD 22.1.8 (compatible with GNU linkers)"
+}

@@ -2,4 +2,6 @@
 /vendor/
 /demo/.godot/
 /demo/bin/*.so
+/world/bin/
+/world/.godot/
 *.uid

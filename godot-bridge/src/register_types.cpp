@@ -1,6 +1,7 @@
 #include "bridge_receiver.h"
 #include "vulkan_probe.h"
 #include "dmabuf_receiver.h"
+#include "session_process.h"
 #include <godot_cpp/godot.hpp>
 
 using namespace godot;
@@ -9,9 +10,13 @@ static void initialize(ModuleInitializationLevel level) {
 		ClassDB::register_class<BridgeReceiver>();
 		ClassDB::register_class<BridgeVulkanProbe>();
 		ClassDB::register_class<BridgeDMABufReceiver>();
+		ClassDB::register_class<BridgeSessionProcess>();
 	}
 }
-static void terminate(ModuleInitializationLevel) {}
+static void terminate(ModuleInitializationLevel level) {
+	if (level == MODULE_INITIALIZATION_LEVEL_SCENE)
+		BridgeSessionProcess::finish_reapers();
+}
 
 extern "C" GDExtensionBool GDE_EXPORT bridge_library_init(
 		GDExtensionInterfaceGetProcAddress get_proc_address,
